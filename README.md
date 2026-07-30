@@ -1,5 +1,7 @@
 # Draft Goblin
 
+## YouTube Demo: https://youtu.be/PYyGXFjrtps
+
 <p align="center">
   <img src="store-assets/draft-goblin-mark-transparent.png" alt="Draft Goblin logo" width="180">
 </p>
