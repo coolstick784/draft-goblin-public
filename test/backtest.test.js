@@ -1,0 +1,4 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { brierScore, calibration, walkForward } from "../core/backtest.js";
+test("computes probability metrics",()=>{const rows=[{probability:.8,outcome:1},{probability:.2,outcome:0}];assert.ok(Math.abs(brierScore(rows)-.04)<1e-9);assert.ok(calibration(rows).expectedCalibrationError<.21)});
+test("walk-forward uses earlier seasons",()=>{const records=[{season:2022,snapshotAt:1,draftAt:2,champion:false},{season:2023,snapshotAt:2,draftAt:3,champion:true}];const out=walkForward(records,(row,train)=>{assert.equal(train.length,1);return .7});assert.equal(out.rows.length,1)});
+test("leakage guard rejects future snapshot",()=>assert.throws(()=>walkForward([{season:2022,snapshotAt:1,draftAt:2},{season:2023,snapshotAt:4,draftAt:3}],()=>.5),/leakage/));

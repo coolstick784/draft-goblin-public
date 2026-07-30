@@ -1,0 +1,4 @@
+import test from"node:test";import assert from"node:assert/strict";import fs from"node:fs";import{projectedOutcome}from"../core/projected-outcome.js";
+const report=JSON.parse(fs.readFileSync(new URL("../data/research/multi-source-projection-calibration.json",import.meta.url)));
+test("calibrates a source projection into expected points and empirical ranges",()=>{const result=projectedOutcome(report,{source:"fantasy-nfl",position:"WR",projected:12});assert.ok(result.expectedPoints>0);assert.ok(result.range.p05<result.range.p50&&result.range.p50<result.range.p95);assert.ok(result.historicalRmse>0);assert.ok(result.holdout.rows>0)});
+test("refuses to borrow calibration from a different source",()=>assert.throws(()=>projectedOutcome(report,{source:"unknown",position:"WR",projected:12}),/no calibration model/));

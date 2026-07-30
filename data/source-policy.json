@@ -1,0 +1,26 @@
+{
+  "policyVersion": 1,
+  "rules": {
+    "requireHistoricalTimestamps": true,
+    "requireTermsReview": true,
+    "requireRedistributionPermission": true,
+    "respectRobotsTxt": true,
+    "allowBrowserVisibleAlone": false,
+    "allowBrowserVisibleRuntimeOnly": true
+  },
+  "sources": [
+    { "id": "user-import", "type": "projection", "status": "allowed", "license": "user-supplied", "notes": "CSV import owned or licensed by the user." },
+    { "id": "sleeper-api", "type": "draft-state", "status": "allowed", "license": "official-read-only-api", "notes": "Cache player catalog daily; keep draft polling below published limits." },
+    { "id": "current-site-visible-projection", "type": "current-projections", "status": "runtime-only-user-session", "license": "user-session", "notes": "May be read only from the user's open draft context for an in-browser blend. Do not collect raw values, transmit them, or redistribute them. A locally derived blend may appear in the user's private saved draft report." },
+    { "id": "sleeper-projections", "type": "current-projections", "status": "pending-redistribution-rights", "license": "not established", "notes": "The local runtime may read current projections for the user's private draft, but must not publish snapshots until written redistribution permission or replacement with an expressly licensed source." },
+    { "id": "espn-page", "type": "draft-state", "status": "adapter-only", "license": "user-session", "notes": "Read the user's open draft page; do not collect or transmit credentials." },
+    { "id": "fantasypros-current", "type": "current-projections", "status": "pending-commercial-api-agreement", "license": "not established", "notes": "FantasyPros states that Commercial API plans include redistribution rights. Do not publish until a Commercial agreement is executed and its authorization reference and API key are configured as repository secrets." },
+    { "id": "nflverse", "type": "historical-results", "status": "allowed-with-attribution-and-upstream-review", "license": "CC-BY-4.0", "notes": "The nflverse-data repository is CC-BY-4.0, but nflverse cautions that underlying NFL data can remain subject to the respective owners' terms. Preserve attribution, review each dataset before expanded use, and never redistribute raw rows through the extension or public feed." },
+    { "id": "fantasy-football-calculator-adp", "type": "current-market-adp", "status": "allowed-with-attribution", "license": "API is free for personal and commercial use; attribution requested", "notes": "Fetch no more than daily. Use current ADP as a provider-independent market feature and preserve Fantasy Football Calculator attribution." },
+    { "id": "ffopportunity", "type": "expected-points", "status": "allowed-with-attribution", "license": "CC-BY-SA-4.0", "notes": "Expected-points models and data; keep derived-data licensing compatible." },
+    { "id": "hvpkod-nfl-data", "type": "historical-weekly-projections", "status": "allowed-for-research-with-attribution", "license": "MIT repository license", "notes": "Use for historical accuracy and calibration research. Preserve MIT notice. Underlying Fantasy.NFL.com data rights remain with their owner; do not ship the raw vendor dataset in the extension." },
+    { "id": "fantasypros-historical", "type": "historical-rankings", "status": "research-only-pending-terms-review", "license": "not established", "notes": "Year/week query parameters are useful for discovery, but browser visibility is not permission to scrape or redistribute. Do not automate collection until terms or written permission allow it." },
+    { "id": "espn-wayback-projections", "type": "historical-projections", "status": "research-only-pending-terms-review", "license": "not established", "notes": "Archived pages preserve ESPN content but do not grant reuse rights. Record snapshot timestamps and ignore current team/opponent fields if permission is obtained." }
+    ,{ "id": "fantasy-data-pros-2019-espn", "type": "historical-weekly-projections", "status": "allowed-for-research", "license": "publisher states free to download and use", "notes": "One 20-team ESPN league; rostered-player selection bias means it is evaluated separately and not automatically weighted." }
+  ]
+}

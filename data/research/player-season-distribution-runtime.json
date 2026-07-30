@@ -1,0 +1,4170 @@
+{
+  "schemaVersion": "quantile-v1",
+  "runtimeStatus": "promoted",
+  "unit": "season-performance-ratio",
+  "season": 2026,
+  "modelId": "player-season-ratio-empirical-bayes",
+  "modelVersion": "2021-2024-rolling-v1",
+  "calibrationId": "weekly-to-season-distribution-backtest:2021-2024",
+  "generatedAt": "2026-07-22T04:01:44.965Z",
+  "forecastAsOf": "2026-07-22T04:01:44.965Z",
+  "trainedThrough": "2024-12-31T23:59:59.000Z",
+  "sourceSnapshotIds": [
+    "hvpkod:weekly-projections:2021-2024",
+    "nflverse:weekly-rosters-and-stats:2021-2024"
+  ],
+  "conditionedOn": "active-role",
+  "availabilityModel": "availability-calibration-2026",
+  "dataQuality": {
+    "promotionGatePassed": true,
+    "supportedScoringFormats": [
+      "half-ppr",
+      "standard"
+    ],
+    "unsupportedScoringFormats": [
+      "ppr"
+    ],
+    "rookiePolicy": "No unvalidated rookie multiplier is applied; rookies use the promoted position-volume baseline."
+  },
+  "scoringFormats": {
+    "half-ppr": {
+      "playerShrinkage": 216,
+      "recencyDecay": 1,
+      "personalizedPositions": [
+        "QB",
+        "TE"
+      ],
+      "positions": {
+        "QB": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": true,
+          "buckets": [
+            {
+              "maxMean": 35.11,
+              "ratioQuantiles": [
+                0,
+                0.233656,
+                1.110294
+              ],
+              "meanRatio": 0.468661,
+              "rows": 90,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 172.67000000000002,
+              "ratioQuantiles": [
+                0.594917,
+                0.863891,
+                1.18828
+              ],
+              "meanRatio": 0.874746,
+              "rows": 89,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.792726,
+                0.972631,
+                1.148292
+              ],
+              "meanRatio": 0.967625,
+              "rows": 89,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "RB": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 26.15,
+              "ratioQuantiles": [
+                0.165975,
+                0.803191,
+                1.987879
+              ],
+              "meanRatio": 0.962952,
+              "rows": 169,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 85.72,
+              "ratioQuantiles": [
+                0.555556,
+                0.976562,
+                1.574327
+              ],
+              "meanRatio": 1.028557,
+              "rows": 168,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.786692,
+                1.043569,
+                1.278826
+              ],
+              "meanRatio": 1.040219,
+              "rows": 169,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "WR": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 27.11666666666666,
+              "ratioQuantiles": [
+                0,
+                0.728762,
+                1.937669
+              ],
+              "meanRatio": 0.899804,
+              "rows": 257,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 85.52000000000002,
+              "ratioQuantiles": [
+                0.507741,
+                0.931456,
+                1.392906
+              ],
+              "meanRatio": 0.948847,
+              "rows": 257,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.766585,
+                1.009754,
+                1.215926
+              ],
+              "meanRatio": 0.997418,
+              "rows": 256,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "TE": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": true,
+          "buckets": [
+            {
+              "maxMean": 13.659999999999998,
+              "ratioQuantiles": [
+                0,
+                0.902579,
+                2.571203
+              ],
+              "meanRatio": 1.058084,
+              "rows": 140,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 48.23333333333331,
+              "ratioQuantiles": [
+                0.525554,
+                1.094629,
+                1.729323
+              ],
+              "meanRatio": 1.076287,
+              "rows": 139,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.731734,
+                1.030968,
+                1.360074
+              ],
+              "meanRatio": 1.034605,
+              "rows": 140,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "K": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 93.93666666666665,
+              "ratioQuantiles": [
+                0.669437,
+                1.077051,
+                1.394523
+              ],
+              "meanRatio": 1.081287,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 105.38,
+              "ratioQuantiles": [
+                0.808021,
+                1.120233,
+                1.40463
+              ],
+              "meanRatio": 1.109218,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.915374,
+                1.104352,
+                1.30992
+              ],
+              "meanRatio": 1.123533,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        }
+      },
+      "players": {
+        "kylermurray:QB": {
+          "observedProjected": 869.74,
+          "observedActual": 828.36,
+          "seasons": 4
+        },
+        "patrickmahomes:QB": {
+          "observedProjected": 1249.3,
+          "observedActual": 1169.87,
+          "seasons": 4
+        },
+        "jaredgoff:QB": {
+          "observedProjected": 943.49,
+          "observedActual": 943.87,
+          "seasons": 4
+        },
+        "jalenhurts:QB": {
+          "observedProjected": 1195.27,
+          "observedActual": 1276.38,
+          "seasons": 4
+        },
+        "tombrady:QB": {
+          "observedProjected": 549.59,
+          "observedActual": 532.4,
+          "seasons": 2
+        },
+        "dakprescott:QB": {
+          "observedProjected": 879.05,
+          "observedActual": 827.87,
+          "seasons": 4
+        },
+        "matthewstafford:QB": {
+          "observedProjected": 921.93,
+          "observedActual": 850.33,
+          "seasons": 4
+        },
+        "derekcarr:QB": {
+          "observedProjected": 879.05,
+          "observedActual": 766.92,
+          "seasons": 4
+        },
+        "kirkcousins:QB": {
+          "observedProjected": 844.34,
+          "observedActual": 767.66,
+          "seasons": 4
+        },
+        "tyrodtaylor:QB": {
+          "observedProjected": 146.52,
+          "observedActual": 135.61,
+          "seasons": 3
+        },
+        "danieljones:QB": {
+          "observedProjected": 643.6,
+          "observedActual": 556.14,
+          "seasons": 4
+        },
+        "teddybridgewater:QB": {
+          "observedProjected": 182.48,
+          "observedActual": 175,
+          "seasons": 3
+        },
+        "trevorlawrence:QB": {
+          "observedProjected": 860.77,
+          "observedActual": 806.62,
+          "seasons": 4
+        },
+        "samdarnold:QB": {
+          "observedProjected": 441.98,
+          "observedActual": 451.98,
+          "seasons": 4
+        },
+        "joeburrow:QB": {
+          "observedProjected": 1005.52,
+          "observedActual": 1075.51,
+          "seasons": 4
+        },
+        "lamarjackson:QB": {
+          "observedProjected": 1114.65,
+          "observedActual": 1156.38,
+          "seasons": 4
+        },
+        "carsonwentz:QB": {
+          "observedProjected": 335.25,
+          "observedActual": 319.87,
+          "seasons": 3
+        },
+        "zachwilson:QB": {
+          "observedProjected": 425.95,
+          "observedActual": 353.27,
+          "seasons": 3
+        },
+        "joshallen:QB": {
+          "observedProjected": 1311.1,
+          "observedActual": 1401.64,
+          "seasons": 4
+        },
+        "tuatagovailoa:QB": {
+          "observedProjected": 833.47,
+          "observedActual": 773.04,
+          "seasons": 4
+        },
+        "jimmygaroppolo:QB": {
+          "observedProjected": 477.94,
+          "observedActual": 404.46,
+          "seasons": 3
+        },
+        "ryantannehill:QB": {
+          "observedProjected": 546.78,
+          "observedActual": 434.41,
+          "seasons": 3
+        },
+        "justinherbert:QB": {
+          "observedProjected": 1055.39,
+          "observedActual": 1004.47,
+          "seasons": 4
+        },
+        "macjones:QB": {
+          "observedProjected": 613.52,
+          "observedActual": 444.03,
+          "seasons": 4
+        },
+        "bakermayfield:QB": {
+          "observedProjected": 739.16,
+          "observedActual": 757.45,
+          "seasons": 4
+        },
+        "taylorheinicke:QB": {
+          "observedProjected": 374.2,
+          "observedActual": 352.57,
+          "seasons": 3
+        },
+        "benroethlisberger:QB": {
+          "observedProjected": 239.52,
+          "observedActual": 177.82,
+          "seasons": 1
+        },
+        "justinfields:QB": {
+          "observedProjected": 668.76,
+          "observedActual": 681.26,
+          "seasons": 4
+        },
+        "andydalton:QB": {
+          "observedProjected": 351.34,
+          "observedActual": 291.05,
+          "seasons": 4
+        },
+        "mattryan:QB": {
+          "observedProjected": 428.98,
+          "observedActual": 341.59,
+          "seasons": 2
+        },
+        "treylance:QB": {
+          "observedProjected": 63.93,
+          "observedActual": 64.52,
+          "seasons": 1
+        },
+        "marcusmariota:QB": {
+          "observedProjected": 246.79,
+          "observedActual": 203.9,
+          "seasons": 3
+        },
+        "aaronrodgers:QB": {
+          "observedProjected": 736.08,
+          "observedActual": 692.99,
+          "seasons": 3
+        },
+        "jordanlove:QB": {
+          "observedProjected": 525.99,
+          "observedActual": 526.51,
+          "seasons": 4
+        },
+        "jacobybrissett:QB": {
+          "observedProjected": 314.1,
+          "observedActual": 286.67,
+          "seasons": 4
+        },
+        "taysomhill:QB": {
+          "observedProjected": 65.44,
+          "observedActual": 105.33,
+          "seasons": 1
+        },
+        "brandonallen:QB": {
+          "observedProjected": 19.54,
+          "observedActual": 6.4,
+          "seasons": 2
+        },
+        "cjbeathard:QB": {
+          "observedProjected": 44.89,
+          "observedActual": 21.12,
+          "seasons": 3
+        },
+        "davidblough:QB": {
+          "observedProjected": 3.88,
+          "observedActual": -1.4,
+          "seasons": 1
+        },
+        "jacobeason:QB": {
+          "observedProjected": 4.67,
+          "observedActual": -1,
+          "seasons": 1
+        },
+        "joeflacco:QB": {
+          "observedProjected": 181.06,
+          "observedActual": 192.91,
+          "seasons": 4
+        },
+        "blainegabbert:QB": {
+          "observedProjected": 33.79,
+          "observedActual": -1.02,
+          "seasons": 3
+        },
+        "mikeglennon:QB": {
+          "observedProjected": 58.86,
+          "observedActual": 28.3,
+          "seasons": 1
+        },
+        "chadhenne:QB": {
+          "observedProjected": 14.86,
+          "observedActual": -0.02,
+          "seasons": 2
+        },
+        "brianhoyer:QB": {
+          "observedProjected": 44.49,
+          "observedActual": 11.5,
+          "seasons": 3
+        },
+        "tylerhuntley:QB": {
+          "observedProjected": 98.62,
+          "observedActual": 100.9,
+          "seasons": 3
+        },
+        "casekeenum:QB": {
+          "observedProjected": 28.04,
+          "observedActual": 13.22,
+          "seasons": 2
+        },
+        "drewlock:QB": {
+          "observedProjected": 81.35,
+          "observedActual": 58.22,
+          "seasons": 3
+        },
+        "seanmannion:QB": {
+          "observedProjected": 16.75,
+          "observedActual": 12.96,
+          "seasons": 1
+        },
+        "davismills:QB": {
+          "observedProjected": 319.44,
+          "observedActual": 281.64,
+          "seasons": 3
+        },
+        "joshrosen:QB": {
+          "observedProjected": 4.14,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "masonrudolph:QB": {
+          "observedProjected": 75.46,
+          "observedActual": 91.8,
+          "seasons": 3
+        },
+        "cooperrush:QB": {
+          "observedProjected": 206.09,
+          "observedActual": 165.67,
+          "seasons": 4
+        },
+        "genosmith:QB": {
+          "observedProjected": 767.52,
+          "observedActual": 736.9,
+          "seasons": 4
+        },
+        "mitchelltrubisky:QB": {
+          "observedProjected": 142.53,
+          "observedActual": 133.42,
+          "seasons": 3
+        },
+        "mikewhite:QB": {
+          "observedProjected": 87.22,
+          "observedActual": 94.89,
+          "seasons": 3
+        },
+        "johnwolford:QB": {
+          "observedProjected": 54.74,
+          "observedActual": 8.9,
+          "seasons": 2
+        },
+        "loganwoodside:QB": {
+          "observedProjected": 7.97,
+          "observedActual": -0.6,
+          "seasons": 1
+        },
+        "robgronkowski:TE": {
+          "observedProjected": 85.97,
+          "observedActual": 116.4,
+          "seasons": 1
+        },
+        "traviskelce:TE": {
+          "observedProjected": 800.28,
+          "observedActual": 713.1,
+          "seasons": 4
+        },
+        "tjhockenson:TE": {
+          "observedProjected": 429.42,
+          "observedActual": 437,
+          "seasons": 4
+        },
+        "darrenwaller:TE": {
+          "observedProjected": 258.99,
+          "observedActual": 210.5,
+          "seasons": 3
+        },
+        "juwanjohnson:TE": {
+          "observedProjected": 235.92,
+          "observedActual": 288,
+          "seasons": 4
+        },
+        "dallasgoedert:TE": {
+          "observedProjected": 375.03,
+          "observedActual": 395.6,
+          "seasons": 4
+        },
+        "georgekittle:TE": {
+          "observedProjected": 536.42,
+          "observedActual": 612.6,
+          "seasons": 4
+        },
+        "tylerhigbee:TE": {
+          "observedProjected": 300.29,
+          "observedActual": 259.1,
+          "seasons": 3
+        },
+        "noahfant:TE": {
+          "observedProjected": 342.13,
+          "observedActual": 317.6,
+          "seasons": 4
+        },
+        "davidnjoku:TE": {
+          "observedProjected": 350.6,
+          "observedActual": 465.8,
+          "seasons": 4
+        },
+        "geraldeverett:TE": {
+          "observedProjected": 294.66,
+          "observedActual": 257,
+          "seasons": 4
+        },
+        "pharaohbrown:TE": {
+          "observedProjected": 105.55,
+          "observedActual": 83,
+          "seasons": 4
+        },
+        "chrismanhertz:TE": {
+          "observedProjected": 28.27,
+          "observedActual": 28.4,
+          "seasons": 3
+        },
+        "jaredcook:TE": {
+          "observedProjected": 105.04,
+          "observedActual": 94.3,
+          "seasons": 1
+        },
+        "daltonschultz:TE": {
+          "observedProjected": 437.99,
+          "observedActual": 427.9,
+          "seasons": 4
+        },
+        "albertokwuegbunam:TE": {
+          "observedProjected": 104.23,
+          "observedActual": 58.8,
+          "seasons": 3
+        },
+        "colekmet:TE": {
+          "observedProjected": 396.22,
+          "observedActual": 420.5,
+          "seasons": 4
+        },
+        "jonnusmith:TE": {
+          "observedProjected": 285.35,
+          "observedActual": 330.6,
+          "seasons": 4
+        },
+        "tylerconklin:TE": {
+          "observedProjected": 332.34,
+          "observedActual": 327.4,
+          "seasons": 4
+        },
+        "dawsonknox:TE": {
+          "observedProjected": 291,
+          "observedActual": 302.7,
+          "seasons": 4
+        },
+        "willdissly:TE": {
+          "observedProjected": 193.6,
+          "observedActual": 205.2,
+          "seasons": 4
+        },
+        "anthonyfirkser:TE": {
+          "observedProjected": 69.63,
+          "observedActual": 49.07,
+          "seasons": 2
+        },
+        "kylepitts:TE": {
+          "observedProjected": 442.34,
+          "observedActual": 396.3,
+          "seasons": 4
+        },
+        "haydenhurst:TE": {
+          "observedProjected": 218.6,
+          "observedActual": 168.9,
+          "seasons": 4
+        },
+        "hunterhenry:TE": {
+          "observedProjected": 357.65,
+          "observedActual": 386.5,
+          "seasons": 4
+        },
+        "cjuzomah:TE": {
+          "observedProjected": 145.49,
+          "observedActual": 163.4,
+          "seasons": 3
+        },
+        "zachertz:TE": {
+          "observedProjected": 269.93,
+          "observedActual": 302.8,
+          "seasons": 3
+        },
+        "austinhooper:TE": {
+          "observedProjected": 251.58,
+          "observedActual": 237.8,
+          "seasons": 4
+        },
+        "harrisonbryant:TE": {
+          "observedProjected": 122.63,
+          "observedActual": 148.3,
+          "seasons": 4
+        },
+        "ryangriffin:TE": {
+          "observedProjected": 56.8,
+          "observedActual": 55,
+          "seasons": 2
+        },
+        "jackdoyle:TE": {
+          "observedProjected": 76.32,
+          "observedActual": 55,
+          "seasons": 1
+        },
+        "markandrews:TE": {
+          "observedProjected": 538.42,
+          "observedActual": 592.6,
+          "seasons": 4
+        },
+        "adamtrautman:TE": {
+          "observedProjected": 155.16,
+          "observedActual": 137.97,
+          "seasons": 4
+        },
+        "stephenanderson:TE": {
+          "observedProjected": 32.25,
+          "observedActual": 52.3,
+          "seasons": 2
+        },
+        "patfreiermuth:TE": {
+          "observedProjected": 341.92,
+          "observedActual": 379.2,
+          "seasons": 4
+        },
+        "ericebron:TE": {
+          "observedProjected": 31.98,
+          "observedActual": 14.3,
+          "seasons": 1
+        },
+        "marcedeslewis:TE": {
+          "observedProjected": 50.03,
+          "observedActual": 42.3,
+          "seasons": 2
+        },
+        "durhamsmythe:TE": {
+          "observedProjected": 147.84,
+          "observedActual": 137.8,
+          "seasons": 4
+        },
+        "ianthomas:TE": {
+          "observedProjected": 87.05,
+          "observedActual": 68.3,
+          "seasons": 4
+        },
+        "kylerudolph:TE": {
+          "observedProjected": 61.26,
+          "observedActual": 43.7,
+          "seasons": 2
+        },
+        "mikegesicki:TE": {
+          "observedProjected": 324.4,
+          "observedActual": 319.6,
+          "seasons": 4
+        },
+        "demetriusharris:TE": {
+          "observedProjected": 6.61,
+          "observedActual": 14.3,
+          "seasons": 1
+        },
+        "kadensmith:TE": {
+          "observedProjected": 8.13,
+          "observedActual": 8.2,
+          "seasons": 1
+        },
+        "danarnold:TE": {
+          "observedProjected": 80.06,
+          "observedActual": 61.5,
+          "seasons": 2
+        },
+        "jimmygraham:TE": {
+          "observedProjected": 58.03,
+          "observedActual": 70.2,
+          "seasons": 2
+        },
+        "ericsaubert:TE": {
+          "observedProjected": 41.65,
+          "observedActual": 52,
+          "seasons": 3
+        },
+        "blakebell:TE": {
+          "observedProjected": 25.26,
+          "observedActual": 21.5,
+          "seasons": 2
+        },
+        "danielbrown:TE": {
+          "observedProjected": 4.41,
+          "observedActual": 0.8,
+          "seasons": 1
+        },
+        "zachgentry:TE": {
+          "observedProjected": 49.42,
+          "observedActual": 41.3,
+          "seasons": 2
+        },
+        "jordanakins:TE": {
+          "observedProjected": 186.58,
+          "observedActual": 162.6,
+          "seasons": 4
+        },
+        "moaliecox:TE": {
+          "observedProjected": 154.68,
+          "observedActual": 165.2,
+          "seasons": 4
+        },
+        "antonyauclair:TE": {
+          "observedProjected": 3.91,
+          "observedActual": 13.7,
+          "seasons": 1
+        },
+        "johnbates:TE": {
+          "observedProjected": 89.84,
+          "observedActual": 97.9,
+          "seasons": 4
+        },
+        "cameronbrate:TE": {
+          "observedProjected": 102.2,
+          "observedActual": 80.5,
+          "seasons": 2
+        },
+        "cethancarter:TE": {
+          "observedProjected": 6.34,
+          "observedActual": 7.5,
+          "seasons": 1
+        },
+        "dominiquedafney:TE": {
+          "observedProjected": 2.67,
+          "observedActual": 7.7,
+          "seasons": 1
+        },
+        "darrelldaniels:TE": {
+          "observedProjected": 9.34,
+          "observedActual": 4.6,
+          "seasons": 1
+        },
+        "josiahdeguara:TE": {
+          "observedProjected": 69.13,
+          "observedActual": 62.2,
+          "seasons": 3
+        },
+        "rossdwelley:TE": {
+          "observedProjected": 37.71,
+          "observedActual": 37.9,
+          "seasons": 3
+        },
+        "lukefarrell:TE": {
+          "observedProjected": 57.25,
+          "observedActual": 54.5,
+          "seasons": 4
+        },
+        "kylengranson:TE": {
+          "observedProjected": 148.51,
+          "observedActual": 151.9,
+          "seasons": 4
+        },
+        "noahgray:TE": {
+          "observedProjected": 157.82,
+          "observedActual": 214,
+          "seasons": 4
+        },
+        "garrettgriffin:TE": {
+          "observedProjected": 5.14,
+          "observedActual": 5.3,
+          "seasons": 1
+        },
+        "chrisherndon:TE": {
+          "observedProjected": 8.61,
+          "observedActual": 10.1,
+          "seasons": 1
+        },
+        "jpholtz:TE": {
+          "observedProjected": 4.69,
+          "observedActual": 5,
+          "seasons": 1
+        },
+        "brycenhopkins:TE": {
+          "observedProjected": 31.64,
+          "observedActual": 12.3,
+          "seasons": 3
+        },
+        "ojhoward:TE": {
+          "observedProjected": 77.61,
+          "observedActual": 53.4,
+          "seasons": 2
+        },
+        "jessejames:TE": {
+          "observedProjected": 12.98,
+          "observedActual": 20.9,
+          "seasons": 1
+        },
+        "hunterlong:TE": {
+          "observedProjected": 14.31,
+          "observedActual": 17.4,
+          "seasons": 4
+        },
+        "tylermabry:TE": {
+          "observedProjected": 3.51,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "fostermoreau:TE": {
+          "observedProjected": 189.87,
+          "observedActual": 224,
+          "seasons": 4
+        },
+        "josholiver:TE": {
+          "observedProjected": 97.59,
+          "observedActual": 144.6,
+          "seasons": 4
+        },
+        "donaldparham:TE": {
+          "observedProjected": 76.74,
+          "observedActual": 93.1,
+          "seasons": 2
+        },
+        "mycolepruitt:TE": {
+          "observedProjected": 20.01,
+          "observedActual": 44.1,
+          "seasons": 2
+        },
+        "drewsample:TE": {
+          "observedProjected": 68.87,
+          "observedActual": 78.1,
+          "seasons": 3
+        },
+        "rickysealsjones:TE": {
+          "observedProjected": 23.74,
+          "observedActual": 42,
+          "seasons": 1
+        },
+        "leesmith:TE": {
+          "observedProjected": 13.82,
+          "observedActual": 18.7,
+          "seasons": 1
+        },
+        "geoffswaim:TE": {
+          "observedProjected": 74.49,
+          "observedActual": 68.9,
+          "seasons": 2
+        },
+        "tommysweeney:TE": {
+          "observedProjected": 26.92,
+          "observedActual": 14.1,
+          "seasons": 2
+        },
+        "tommytremble:TE": {
+          "observedProjected": 133.15,
+          "observedActual": 160.5,
+          "seasons": 4
+        },
+        "trevonwesco:TE": {
+          "observedProjected": 13.79,
+          "observedActual": 16,
+          "seasons": 3
+        },
+        "mitchellwilcox:TE": {
+          "observedProjected": 19.5,
+          "observedActual": 25.2,
+          "seasons": 2
+        },
+        "charliewoerner:TE": {
+          "observedProjected": 33.1,
+          "observedActual": 51.4,
+          "seasons": 4
+        },
+        "kyleallen:QB": {
+          "observedProjected": 47.61,
+          "observedActual": 17.41,
+          "seasons": 3
+        },
+        "trevorsiemian:QB": {
+          "observedProjected": 83.24,
+          "observedActual": 64.39,
+          "seasons": 3
+        },
+        "giovanniricci:TE": {
+          "observedProjected": 12.03,
+          "observedActual": 34.1,
+          "seasons": 3
+        },
+        "adamshaheen:TE": {
+          "observedProjected": 16.04,
+          "observedActual": 9.7,
+          "seasons": 1
+        },
+        "erictomlinson:TE": {
+          "observedProjected": 8.02,
+          "observedActual": 19.3,
+          "seasons": 2
+        },
+        "jeffdriskel:QB": {
+          "observedProjected": 10.55,
+          "observedActual": 11.74,
+          "seasons": 2
+        },
+        "nickfoles:QB": {
+          "observedProjected": 23.3,
+          "observedActual": 14.8,
+          "seasons": 2
+        },
+        "feleipefranks:QB": {
+          "observedProjected": 6.85,
+          "observedActual": 0.6,
+          "seasons": 1
+        },
+        "bretthundley:QB": {
+          "observedProjected": 5.51,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "coltmccoy:QB": {
+          "observedProjected": 68.05,
+          "observedActual": 46.93,
+          "seasons": 2
+        },
+        "reidsinnett:QB": {
+          "observedProjected": 4.25,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "jacobhollister:TE": {
+          "observedProjected": 13.34,
+          "observedActual": 15.6,
+          "seasons": 1
+        },
+        "evanengram:TE": {
+          "observedProjected": 400.09,
+          "observedActual": 422.7,
+          "seasons": 4
+        },
+        "andrewbeck:TE": {
+          "observedProjected": 12.85,
+          "observedActual": 9.1,
+          "seasons": 2
+        },
+        "jeremysprinkle:TE": {
+          "observedProjected": 3.11,
+          "observedActual": 1.7,
+          "seasons": 1
+        },
+        "chasedaniel:QB": {
+          "observedProjected": 11.88,
+          "observedActual": -0.2,
+          "seasons": 2
+        },
+        "tylerdavis:TE": {
+          "observedProjected": 16.31,
+          "observedActual": 23.5,
+          "seasons": 2
+        },
+        "colbyparkinson:TE": {
+          "observedProjected": 133.74,
+          "observedActual": 131.4,
+          "seasons": 4
+        },
+        "jackstoll:TE": {
+          "observedProjected": 40.52,
+          "observedActual": 36,
+          "seasons": 4
+        },
+        "jesperhorsted:TE": {
+          "observedProjected": 23.62,
+          "observedActual": 26.3,
+          "seasons": 3
+        },
+        "sammisreyes:TE": {
+          "observedProjected": 4.94,
+          "observedActual": 1.6,
+          "seasons": 1
+        },
+        "kennyyeboah:TE": {
+          "observedProjected": 7.12,
+          "observedActual": 15.5,
+          "seasons": 3
+        },
+        "lukestocker:TE": {
+          "observedProjected": 6.23,
+          "observedActual": 3.9,
+          "seasons": 1
+        },
+        "pjwalker:QB": {
+          "observedProjected": 83.79,
+          "observedActual": 65.56,
+          "seasons": 3
+        },
+        "kendallblanton:TE": {
+          "observedProjected": 14.14,
+          "observedActual": 4,
+          "seasons": 1
+        },
+        "joshjohnson:QB": {
+          "observedProjected": 19.32,
+          "observedActual": 45.89,
+          "seasons": 1
+        },
+        "gardnerminshew:QB": {
+          "observedProjected": 328.8,
+          "observedActual": 297.57,
+          "seasons": 4
+        },
+        "brevinjordan:TE": {
+          "observedProjected": 78.17,
+          "observedActual": 104.3,
+          "seasons": 3
+        },
+        "tremckitty:TE": {
+          "observedProjected": 30.87,
+          "observedActual": 17.7,
+          "seasons": 3
+        },
+        "samehlinger:QB": {
+          "observedProjected": 46.78,
+          "observedActual": 13.56,
+          "seasons": 3
+        },
+        "kevinrader:TE": {
+          "observedProjected": 9.02,
+          "observedActual": 13.6,
+          "seasons": 2
+        },
+        "danielhelm:TE": {
+          "observedProjected": 3.62,
+          "observedActual": 0.4,
+          "seasons": 1
+        },
+        "seanmckeon:TE": {
+          "observedProjected": 11.86,
+          "observedActual": 9.7,
+          "seasons": 3
+        },
+        "russellwilson:QB": {
+          "observedProjected": 677.49,
+          "observedActual": 662.57,
+          "seasons": 4
+        },
+        "camnewton:QB": {
+          "observedProjected": 69.91,
+          "observedActual": 43.15,
+          "seasons": 1
+        },
+        "timboyle:QB": {
+          "observedProjected": 55.7,
+          "observedActual": 31.09,
+          "seasons": 2
+        },
+        "chrismyarick:TE": {
+          "observedProjected": 22.49,
+          "observedActual": 33.6,
+          "seasons": 2
+        },
+        "nickvannett:TE": {
+          "observedProjected": 41.67,
+          "observedActual": 40.1,
+          "seasons": 4
+        },
+        "jamesoshaughnessy:TE": {
+          "observedProjected": 25.47,
+          "observedActual": 29.4,
+          "seasons": 1
+        },
+        "nickboyle:TE": {
+          "observedProjected": 8.3,
+          "observedActual": 1.5,
+          "seasons": 2
+        },
+        "jakefromm:QB": {
+          "observedProjected": 20.23,
+          "observedActual": 1.48,
+          "seasons": 1
+        },
+        "jameiswinston:QB": {
+          "observedProjected": 164.74,
+          "observedActual": 171.93,
+          "seasons": 3
+        },
+        "tracemcsorley:QB": {
+          "observedProjected": 10.44,
+          "observedActual": 5.04,
+          "seasons": 1
+        },
+        "joshuadobbs:QB": {
+          "observedProjected": 205.63,
+          "observedActual": 193.46,
+          "seasons": 2
+        },
+        "nickmullens:QB": {
+          "observedProjected": 47.95,
+          "observedActual": 44.14,
+          "seasons": 2
+        },
+        "kennypickett:QB": {
+          "observedProjected": 309.18,
+          "observedActual": 219.61,
+          "seasons": 2
+        },
+        "desmondridder:QB": {
+          "observedProjected": 204.68,
+          "observedActual": 164.04,
+          "seasons": 2
+        },
+        "brettrypien:QB": {
+          "observedProjected": 51.61,
+          "observedActual": 18.83,
+          "seasons": 2
+        },
+        "jarrettstidham:QB": {
+          "observedProjected": 31.86,
+          "observedActual": 16.44,
+          "seasons": 2
+        },
+        "natesudfeld:QB": {
+          "observedProjected": 9.99,
+          "observedActual": -0.1,
+          "seasons": 1
+        },
+        "malikwillis:QB": {
+          "observedProjected": 47.77,
+          "observedActual": 13.57,
+          "seasons": 2
+        },
+        "taysomhill:TE": {
+          "observedProjected": 212.06,
+          "observedActual": 329.1,
+          "seasons": 3
+        },
+        "loganthomas:TE": {
+          "observedProjected": 158.95,
+          "observedActual": 141.8,
+          "seasons": 2
+        },
+        "roberttonyan:TE": {
+          "observedProjected": 117.82,
+          "observedActual": 89.8,
+          "seasons": 2
+        },
+        "cadeotton:TE": {
+          "observedProjected": 235.19,
+          "observedActual": 283,
+          "seasons": 3
+        },
+        "johnnymundt:TE": {
+          "observedProjected": 76.14,
+          "observedActual": 87.4,
+          "seasons": 3
+        },
+        "parkerhesse:TE": {
+          "observedProjected": 20.01,
+          "observedActual": 14.4,
+          "seasons": 1
+        },
+        "chigoziemokonkwo:TE": {
+          "observedProjected": 130.51,
+          "observedActual": 155.1,
+          "seasons": 2
+        },
+        "connorheyward:TE": {
+          "observedProjected": 61.69,
+          "observedActual": 80.8,
+          "seasons": 3
+        },
+        "benellefson:TE": {
+          "observedProjected": 1.58,
+          "observedActual": 7.5,
+          "seasons": 1
+        },
+        "danielbellinger:TE": {
+          "observedProjected": 103.46,
+          "observedActual": 115.2,
+          "seasons": 3
+        },
+        "jakeferguson:TE": {
+          "observedProjected": 220.78,
+          "observedActual": 238.7,
+          "seasons": 3
+        },
+        "kokieft:TE": {
+          "observedProjected": 24.49,
+          "observedActual": 45.4,
+          "seasons": 2
+        },
+        "isaiahlikely:TE": {
+          "observedProjected": 182.31,
+          "observedActual": 219.9,
+          "seasons": 3
+        },
+        "richardrodgers:TE": {
+          "observedProjected": 9.65,
+          "observedActual": 0.9,
+          "seasons": 1
+        },
+        "irvsmith:TE": {
+          "observedProjected": 88.69,
+          "observedActual": 67,
+          "seasons": 2
+        },
+        "jaketonges:TE": {
+          "observedProjected": 3.14,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "maxxwilliams:TE": {
+          "observedProjected": 9.9,
+          "observedActual": 3.3,
+          "seasons": 1
+        },
+        "jelaniwoods:TE": {
+          "observedProjected": 23.18,
+          "observedActual": 49.1,
+          "seasons": 1
+        },
+        "brockwright:TE": {
+          "observedProjected": 57.67,
+          "observedActual": 63.8,
+          "seasons": 2
+        },
+        "shanezylstra:TE": {
+          "observedProjected": 12.22,
+          "observedActual": 13.9,
+          "seasons": 2
+        },
+        "willgrier:QB": {
+          "observedProjected": 2.83,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "tannerhudson:TE": {
+          "observedProjected": 81.82,
+          "observedActual": 108.8,
+          "seasons": 3
+        },
+        "stephensullivan:TE": {
+          "observedProjected": 23.1,
+          "observedActual": 26.6,
+          "seasons": 2
+        },
+        "quintinmorris:TE": {
+          "observedProjected": 37.68,
+          "observedActual": 46.2,
+          "seasons": 3
+        },
+        "tylerkroft:TE": {
+          "observedProjected": 12.18,
+          "observedActual": 6.3,
+          "seasons": 2
+        },
+        "treymcbride:TE": {
+          "observedProjected": 264.15,
+          "observedActual": 315.2,
+          "seasons": 3
+        },
+        "jeremyruckert:TE": {
+          "observedProjected": 54.67,
+          "observedActual": 45.2,
+          "seasons": 3
+        },
+        "brockpurdy:QB": {
+          "observedProjected": 567.24,
+          "observedActual": 577.7,
+          "seasons": 3
+        },
+        "grantcalcaterra:TE": {
+          "observedProjected": 45.14,
+          "observedActual": 40.97,
+          "seasons": 3
+        },
+        "devinasiasi:TE": {
+          "observedProjected": 6.79,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "millerforristall:TE": {
+          "observedProjected": 2.26,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "baileyzappe:QB": {
+          "observedProjected": 114.91,
+          "observedActual": 103.3,
+          "seasons": 2
+        },
+        "skylarthompson:QB": {
+          "observedProjected": 24.29,
+          "observedActual": 4.49,
+          "seasons": 1
+        },
+        "jamesmitchell:TE": {
+          "observedProjected": 19.23,
+          "observedActual": 16.4,
+          "seasons": 2
+        },
+        "nickmuse:TE": {
+          "observedProjected": 3.48,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "coleturner:TE": {
+          "observedProjected": 24.37,
+          "observedActual": 22.3,
+          "seasons": 2
+        },
+        "bryceperkins:QB": {
+          "observedProjected": 26.36,
+          "observedActual": 16.44,
+          "seasons": 1
+        },
+        "gregdulcich:TE": {
+          "observedProjected": 79.9,
+          "observedActual": 63,
+          "seasons": 2
+        },
+        "peytonhendershot:TE": {
+          "observedProjected": 20.72,
+          "observedActual": 38.8,
+          "seasons": 2
+        },
+        "samhowell:QB": {
+          "observedProjected": 270.83,
+          "observedActual": 244.12,
+          "seasons": 2
+        },
+        "teaganquitoriano:TE": {
+          "observedProjected": 23.22,
+          "observedActual": 24.7,
+          "seasons": 2
+        },
+        "nikolakalinic:TE": {
+          "observedProjected": 2.1,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "tyreejackson:TE": {
+          "observedProjected": 4.82,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "anthonyrichardson:QB": {
+          "observedProjected": 242.4,
+          "observedActual": 227.27,
+          "seasons": 2
+        },
+        "deshaunwatson:QB": {
+          "observedProjected": 206.41,
+          "observedActual": 155.25,
+          "seasons": 2
+        },
+        "cjstroud:QB": {
+          "observedProjected": 493.76,
+          "observedActual": 452.78,
+          "seasons": 2
+        },
+        "bryceyoung:QB": {
+          "observedProjected": 320.22,
+          "observedActual": 284.42,
+          "seasons": 2
+        },
+        "eastonstick:QB": {
+          "observedProjected": 52.39,
+          "observedActual": 49.54,
+          "seasons": 1
+        },
+        "dorianthompsonrobinson:QB": {
+          "observedProjected": 45.84,
+          "observedActual": 19.43,
+          "seasons": 1
+        },
+        "kyletrask:QB": {
+          "observedProjected": 10.5,
+          "observedActual": -0.1,
+          "seasons": 1
+        },
+        "claytontune:QB": {
+          "observedProjected": 22.43,
+          "observedActual": 5.21,
+          "seasons": 1
+        },
+        "jakebrowning:QB": {
+          "observedProjected": 105.97,
+          "observedActual": 121.9,
+          "seasons": 1
+        },
+        "seanclifford:QB": {
+          "observedProjected": 12.77,
+          "observedActual": 0.25,
+          "seasons": 1
+        },
+        "lukemusgrave:TE": {
+          "observedProjected": 71.97,
+          "observedActual": 61.3,
+          "seasons": 2
+        },
+        "samlaporta:TE": {
+          "observedProjected": 254.02,
+          "observedActual": 310.6,
+          "seasons": 2
+        },
+        "daltonkincaid:TE": {
+          "observedProjected": 195.22,
+          "observedActual": 178.3,
+          "seasons": 2
+        },
+        "lawrencecager:TE": {
+          "observedProjected": 13.76,
+          "observedActual": 11.6,
+          "seasons": 1
+        },
+        "andrewogletree:TE": {
+          "observedProjected": 39.55,
+          "observedActual": 57,
+          "seasons": 2
+        },
+        "davisallen:TE": {
+          "observedProjected": 37.94,
+          "observedActual": 27.4,
+          "seasons": 2
+        },
+        "charliekolar:TE": {
+          "observedProjected": 28.19,
+          "observedActual": 49,
+          "seasons": 2
+        },
+        "tuckerkraft:TE": {
+          "observedProjected": 130.85,
+          "observedActual": 191.1,
+          "seasons": 2
+        },
+        "michaelmayer:TE": {
+          "observedProjected": 68.32,
+          "observedActual": 81.6,
+          "seasons": 2
+        },
+        "lukeschoonmaker:TE": {
+          "observedProjected": 56.4,
+          "observedActual": 70.7,
+          "seasons": 2
+        },
+        "stonesmartt:TE": {
+          "observedProjected": 36.01,
+          "observedActual": 51.7,
+          "seasons": 2
+        },
+        "brentonstrange:TE": {
+          "observedProjected": 62.26,
+          "observedActual": 75.7,
+          "seasons": 2
+        },
+        "darnellwashington:TE": {
+          "observedProjected": 47.17,
+          "observedActual": 43.8,
+          "seasons": 2
+        },
+        "davidwells:TE": {
+          "observedProjected": 5.33,
+          "observedActual": -2,
+          "seasons": 1
+        },
+        "joshwhyle:TE": {
+          "observedProjected": 53.5,
+          "observedActual": 66.5,
+          "seasons": 2
+        },
+        "willmallory:TE": {
+          "observedProjected": 30.14,
+          "observedActual": 33.6,
+          "seasons": 2
+        },
+        "nateadkins:TE": {
+          "observedProjected": 7.44,
+          "observedActual": 4.8,
+          "seasons": 1
+        },
+        "johnfitzpatrick:TE": {
+          "observedProjected": 3.17,
+          "observedActual": 1.5,
+          "seasons": 1
+        },
+        "bensims:TE": {
+          "observedProjected": 8.75,
+          "observedActual": 10.1,
+          "seasons": 1
+        },
+        "braydenwillis:TE": {
+          "observedProjected": 4.61,
+          "observedActual": 1.5,
+          "seasons": 1
+        },
+        "bradyrussell:TE": {
+          "observedProjected": 7.31,
+          "observedActual": 8.7,
+          "seasons": 1
+        },
+        "julianhill:TE": {
+          "observedProjected": 19.11,
+          "observedActual": 15.2,
+          "seasons": 2
+        },
+        "aidanoconnell:QB": {
+          "observedProjected": 174.47,
+          "observedActual": 157.33,
+          "seasons": 2
+        },
+        "tysonbagent:QB": {
+          "observedProjected": 63.44,
+          "observedActual": 52.26,
+          "seasons": 1
+        },
+        "jarenhall:QB": {
+          "observedProjected": 36.76,
+          "observedActual": 2.12,
+          "seasons": 1
+        },
+        "tommydevito:QB": {
+          "observedProjected": 89.37,
+          "observedActual": 91.95,
+          "seasons": 1
+        },
+        "paynedurham:TE": {
+          "observedProjected": 24.68,
+          "observedActual": 17.3,
+          "seasons": 2
+        },
+        "tuckerfisk:TE": {
+          "observedProjected": 8.97,
+          "observedActual": 7.3,
+          "seasons": 2
+        },
+        "willlevis:QB": {
+          "observedProjected": 269.86,
+          "observedActual": 202.29,
+          "seasons": 2
+        },
+        "mattbarkley:QB": {
+          "observedProjected": 2.38,
+          "observedActual": -0.3,
+          "seasons": 1
+        },
+        "lucaskrull:TE": {
+          "observedProjected": 35.75,
+          "observedActual": 43.4,
+          "seasons": 2
+        },
+        "ajmccarron:QB": {
+          "observedProjected": 4.8,
+          "observedActual": -0.04,
+          "seasons": 1
+        },
+        "jaydendaniels:QB": {
+          "observedProjected": 275.49,
+          "observedActual": 310.05,
+          "seasons": 1
+        },
+        "bonix:QB": {
+          "observedProjected": 202.57,
+          "observedActual": 259.23,
+          "seasons": 1
+        },
+        "calebwilliams:QB": {
+          "observedProjected": 217.53,
+          "observedActual": 231.21,
+          "seasons": 1
+        },
+        "chigokonkwo:TE": {
+          "observedProjected": 59.9,
+          "observedActual": 82.3,
+          "seasons": 1
+        },
+        "brockbowers:TE": {
+          "observedProjected": 149.8,
+          "observedActual": 187.1,
+          "seasons": 1
+        },
+        "elijahhiggins:TE": {
+          "observedProjected": 31.42,
+          "observedActual": 37.4,
+          "seasons": 1
+        },
+        "jatavionsanders:TE": {
+          "observedProjected": 63.02,
+          "observedActual": 49.77,
+          "seasons": 1
+        },
+        "ajbarner:TE": {
+          "observedProjected": 27.2,
+          "observedActual": 54.6,
+          "seasons": 1
+        },
+        "jaheimbell:TE": {
+          "observedProjected": 8.52,
+          "observedActual": 2.1,
+          "seasons": 1
+        },
+        "tipreiman:TE": {
+          "observedProjected": 8.25,
+          "observedActual": 7.7,
+          "seasons": 1
+        },
+        "bensinnott:TE": {
+          "observedProjected": 22,
+          "observedActual": 14.3,
+          "seasons": 1
+        },
+        "cadestover:TE": {
+          "observedProjected": 27.79,
+          "observedActual": 35.2,
+          "seasons": 1
+        },
+        "jaredwiley:TE": {
+          "observedProjected": 7.94,
+          "observedActual": 1.2,
+          "seasons": 1
+        },
+        "erickall:TE": {
+          "observedProjected": 22.76,
+          "observedActual": 21.6,
+          "seasons": 1
+        },
+        "dallinholker:TE": {
+          "observedProjected": 3.22,
+          "observedActual": 2.1,
+          "seasons": 1
+        },
+        "drakemaye:QB": {
+          "observedProjected": 130.2,
+          "observedActual": 164.18,
+          "seasons": 1
+        },
+        "spencerrattler:QB": {
+          "observedProjected": 39.9,
+          "observedActual": 28.69,
+          "seasons": 1
+        },
+        "brevynspannford:TE": {
+          "observedProjected": 5.65,
+          "observedActual": 4.3,
+          "seasons": 1
+        }
+      }
+    },
+    "standard": {
+      "playerShrinkage": 216,
+      "recencyDecay": 1,
+      "personalizedPositions": [
+        "QB",
+        "WR"
+      ],
+      "positions": {
+        "QB": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": true,
+          "buckets": [
+            {
+              "maxMean": 35.11,
+              "ratioQuantiles": [
+                0,
+                0.289697,
+                1.110294
+              ],
+              "meanRatio": 0.49484,
+              "rows": 90,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 172.67000000000002,
+              "ratioQuantiles": [
+                0.632963,
+                0.894079,
+                1.21351
+              ],
+              "meanRatio": 0.884318,
+              "rows": 89,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.8301,
+                0.999432,
+                1.17623
+              ],
+              "meanRatio": 0.989079,
+              "rows": 89,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "RB": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 23.383333333333333,
+              "ratioQuantiles": [
+                0,
+                0.330396,
+                1.307835
+              ],
+              "meanRatio": 0.497218,
+              "rows": 169,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 75.22999999999995,
+              "ratioQuantiles": [
+                0.376085,
+                0.879441,
+                1.490746
+              ],
+              "meanRatio": 0.906787,
+              "rows": 168,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.751781,
+                1.034316,
+                1.305832
+              ],
+              "meanRatio": 1.037101,
+              "rows": 169,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "WR": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": true,
+          "buckets": [
+            {
+              "maxMean": 22.475,
+              "ratioQuantiles": [
+                0,
+                0.36177,
+                1.316726
+              ],
+              "meanRatio": 0.55534,
+              "rows": 255,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 67.85000000000001,
+              "ratioQuantiles": [
+                0.356101,
+                0.835735,
+                1.39446
+              ],
+              "meanRatio": 0.857993,
+              "rows": 254,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.647545,
+                0.969094,
+                1.241947
+              ],
+              "meanRatio": 0.944793,
+              "rows": 254,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "TE": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 11.04,
+              "ratioQuantiles": [
+                0,
+                0.153061,
+                1.439646
+              ],
+              "meanRatio": 0.4488,
+              "rows": 139,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 35.79333333333333,
+              "ratioQuantiles": [
+                0.205843,
+                0.767494,
+                1.380597
+              ],
+              "meanRatio": 0.806437,
+              "rows": 139,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0.632616,
+                1.007982,
+                1.424328
+              ],
+              "meanRatio": 1.001303,
+              "rows": 139,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        },
+        "K": {
+          "estimationLevel": "position-volume-tier",
+          "personalized": false,
+          "buckets": [
+            {
+              "maxMean": 93.93666666666665,
+              "ratioQuantiles": [
+                0,
+                0,
+                0
+              ],
+              "meanRatio": 0,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": 105.38,
+              "ratioQuantiles": [
+                0,
+                0,
+                0
+              ],
+              "meanRatio": 0,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            },
+            {
+              "maxMean": null,
+              "ratioQuantiles": [
+                0,
+                0,
+                0
+              ],
+              "meanRatio": 0,
+              "rows": 45,
+              "estimationLevel": "position-volume-tier"
+            }
+          ]
+        }
+      },
+      "players": {
+        "kylermurray:QB": {
+          "observedProjected": 869.74,
+          "observedActual": 865.8,
+          "seasons": 4
+        },
+        "patrickmahomes:QB": {
+          "observedProjected": 1249.3,
+          "observedActual": 1181.1,
+          "seasons": 4
+        },
+        "jaredgoff:QB": {
+          "observedProjected": 942.99,
+          "observedActual": 954.88,
+          "seasons": 4
+        },
+        "jalenhurts:QB": {
+          "observedProjected": 1195.27,
+          "observedActual": 1303.68,
+          "seasons": 4
+        },
+        "tombrady:QB": {
+          "observedProjected": 549.59,
+          "observedActual": 532.7,
+          "seasons": 2
+        },
+        "dakprescott:QB": {
+          "observedProjected": 879.05,
+          "observedActual": 841.5,
+          "seasons": 4
+        },
+        "matthewstafford:QB": {
+          "observedProjected": 921.93,
+          "observedActual": 859.3,
+          "seasons": 4
+        },
+        "derekcarr:QB": {
+          "observedProjected": 879.05,
+          "observedActual": 792.36,
+          "seasons": 4
+        },
+        "kirkcousins:QB": {
+          "observedProjected": 844.34,
+          "observedActual": 808.32,
+          "seasons": 4
+        },
+        "tyrodtaylor:QB": {
+          "observedProjected": 146.52,
+          "observedActual": 143.64,
+          "seasons": 3
+        },
+        "danieljones:QB": {
+          "observedProjected": 643.1,
+          "observedActual": 568.08,
+          "seasons": 4
+        },
+        "teddybridgewater:QB": {
+          "observedProjected": 182.48,
+          "observedActual": 174.2,
+          "seasons": 3
+        },
+        "trevorlawrence:QB": {
+          "observedProjected": 860.77,
+          "observedActual": 816.26,
+          "seasons": 4
+        },
+        "samdarnold:QB": {
+          "observedProjected": 441.98,
+          "observedActual": 465.94,
+          "seasons": 4
+        },
+        "joeburrow:QB": {
+          "observedProjected": 1005.52,
+          "observedActual": 1090.84,
+          "seasons": 4
+        },
+        "lamarjackson:QB": {
+          "observedProjected": 1114.65,
+          "observedActual": 1169.84,
+          "seasons": 4
+        },
+        "carsonwentz:QB": {
+          "observedProjected": 335.25,
+          "observedActual": 327.24,
+          "seasons": 3
+        },
+        "zachwilson:QB": {
+          "observedProjected": 425.45,
+          "observedActual": 358.06,
+          "seasons": 3
+        },
+        "joshallen:QB": {
+          "observedProjected": 1311.1,
+          "observedActual": 1418.04,
+          "seasons": 4
+        },
+        "tuatagovailoa:QB": {
+          "observedProjected": 833.47,
+          "observedActual": 803.76,
+          "seasons": 4
+        },
+        "jimmygaroppolo:QB": {
+          "observedProjected": 477.94,
+          "observedActual": 412.62,
+          "seasons": 3
+        },
+        "ryantannehill:QB": {
+          "observedProjected": 546.78,
+          "observedActual": 442.1,
+          "seasons": 3
+        },
+        "justinherbert:QB": {
+          "observedProjected": 1053.89,
+          "observedActual": 1011.4,
+          "seasons": 4
+        },
+        "macjones:QB": {
+          "observedProjected": 613.52,
+          "observedActual": 457.4,
+          "seasons": 4
+        },
+        "bakermayfield:QB": {
+          "observedProjected": 739.16,
+          "observedActual": 789.72,
+          "seasons": 4
+        },
+        "taylorheinicke:QB": {
+          "observedProjected": 373.2,
+          "observedActual": 349.6,
+          "seasons": 3
+        },
+        "benroethlisberger:QB": {
+          "observedProjected": 239.52,
+          "observedActual": 183.82,
+          "seasons": 1
+        },
+        "justinfields:QB": {
+          "observedProjected": 668.76,
+          "observedActual": 732.26,
+          "seasons": 4
+        },
+        "andydalton:QB": {
+          "observedProjected": 351.34,
+          "observedActual": 290.68,
+          "seasons": 4
+        },
+        "mattryan:QB": {
+          "observedProjected": 428.98,
+          "observedActual": 364.56,
+          "seasons": 2
+        },
+        "treylance:QB": {
+          "observedProjected": 63.93,
+          "observedActual": 64.52,
+          "seasons": 1
+        },
+        "marcusmariota:QB": {
+          "observedProjected": 246.79,
+          "observedActual": 210.2,
+          "seasons": 3
+        },
+        "aaronrodgers:QB": {
+          "observedProjected": 735.58,
+          "observedActual": 703.36,
+          "seasons": 3
+        },
+        "jordanlove:QB": {
+          "observedProjected": 525.99,
+          "observedActual": 543.04,
+          "seasons": 4
+        },
+        "jacobybrissett:QB": {
+          "observedProjected": 314.1,
+          "observedActual": 293.9,
+          "seasons": 4
+        },
+        "taysomhill:QB": {
+          "observedProjected": 64.16,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "brandonallen:QB": {
+          "observedProjected": 19.04,
+          "observedActual": 4.9,
+          "seasons": 2
+        },
+        "cjbeathard:QB": {
+          "observedProjected": 44.89,
+          "observedActual": 23.12,
+          "seasons": 3
+        },
+        "davidblough:QB": {
+          "observedProjected": 3.88,
+          "observedActual": 0.6,
+          "seasons": 1
+        },
+        "jacobeason:QB": {
+          "observedProjected": 4.67,
+          "observedActual": -1,
+          "seasons": 1
+        },
+        "joeflacco:QB": {
+          "observedProjected": 181.06,
+          "observedActual": 197.68,
+          "seasons": 4
+        },
+        "blainegabbert:QB": {
+          "observedProjected": 33.79,
+          "observedActual": -1.02,
+          "seasons": 3
+        },
+        "mikeglennon:QB": {
+          "observedProjected": 58.86,
+          "observedActual": 30.9,
+          "seasons": 1
+        },
+        "chadhenne:QB": {
+          "observedProjected": 14.86,
+          "observedActual": 3.18,
+          "seasons": 2
+        },
+        "brianhoyer:QB": {
+          "observedProjected": 44.49,
+          "observedActual": 11.5,
+          "seasons": 3
+        },
+        "tylerhuntley:QB": {
+          "observedProjected": 98.62,
+          "observedActual": 104.04,
+          "seasons": 3
+        },
+        "casekeenum:QB": {
+          "observedProjected": 28.04,
+          "observedActual": 13.22,
+          "seasons": 2
+        },
+        "drewlock:QB": {
+          "observedProjected": 80.85,
+          "observedActual": 58.02,
+          "seasons": 3
+        },
+        "seanmannion:QB": {
+          "observedProjected": 16.75,
+          "observedActual": 12.96,
+          "seasons": 1
+        },
+        "davismills:QB": {
+          "observedProjected": 319.44,
+          "observedActual": 287.24,
+          "seasons": 3
+        },
+        "joshrosen:QB": {
+          "observedProjected": 4.14,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "masonrudolph:QB": {
+          "observedProjected": 75.46,
+          "observedActual": 96,
+          "seasons": 3
+        },
+        "cooperrush:QB": {
+          "observedProjected": 206.09,
+          "observedActual": 175,
+          "seasons": 4
+        },
+        "genosmith:QB": {
+          "observedProjected": 767.02,
+          "observedActual": 752.5,
+          "seasons": 4
+        },
+        "mitchelltrubisky:QB": {
+          "observedProjected": 142.53,
+          "observedActual": 131.62,
+          "seasons": 3
+        },
+        "mikewhite:QB": {
+          "observedProjected": 87.22,
+          "observedActual": 97.02,
+          "seasons": 3
+        },
+        "johnwolford:QB": {
+          "observedProjected": 54.74,
+          "observedActual": 12.9,
+          "seasons": 2
+        },
+        "loganwoodside:QB": {
+          "observedProjected": 7.97,
+          "observedActual": -0.6,
+          "seasons": 1
+        },
+        "amaricooper:WR": {
+          "observedProjected": 490.32,
+          "observedActual": 476.8,
+          "seasons": 4
+        },
+        "tyreekhill:WR": {
+          "observedProjected": 715.32,
+          "observedActual": 719.6,
+          "seasons": 4
+        },
+        "deebosamuel:WR": {
+          "observedProjected": 432.4,
+          "observedActual": 0,
+          "seasons": 3
+        },
+        "adamthielen:WR": {
+          "observedProjected": 341.9,
+          "observedActual": 381.4,
+          "seasons": 4
+        },
+        "coreydavis:WR": {
+          "observedProjected": 116.14,
+          "observedActual": 116.9,
+          "seasons": 2
+        },
+        "tylerlockett:WR": {
+          "observedProjected": 473.205,
+          "observedActual": 450.5,
+          "seasons": 4
+        },
+        "deandrehopkins:WR": {
+          "observedProjected": 404.405,
+          "observedActual": 400.8,
+          "seasons": 4
+        },
+        "christiankirk:WR": {
+          "observedProjected": 375.095,
+          "observedActual": 392.48,
+          "seasons": 4
+        },
+        "antoniobrown:WR": {
+          "observedProjected": 43.58,
+          "observedActual": 66.4,
+          "seasons": 1
+        },
+        "sterlingshepard:WR": {
+          "observedProjected": 109.335,
+          "observedActual": 84.1,
+          "seasons": 3
+        },
+        "chrisgodwin:WR": {
+          "observedProjected": 375,
+          "observedActual": 0,
+          "seasons": 4
+        },
+        "cooperkupp:WR": {
+          "observedProjected": 566.835,
+          "observedActual": 599.6,
+          "seasons": 4
+        },
+        "ceedeelamb:WR": {
+          "observedProjected": 614.615,
+          "observedActual": 682.8,
+          "seasons": 4
+        },
+        "jamarrchase:WR": {
+          "observedProjected": 597.825,
+          "observedActual": 756.92,
+          "seasons": 4
+        },
+        "zachpascal:WR": {
+          "observedProjected": 126.49,
+          "observedActual": 75.3,
+          "seasons": 4
+        },
+        "mikewilliams:WR": {
+          "observedProjected": 263.075,
+          "observedActual": 260.3,
+          "seasons": 3
+        },
+        "ajbrown:WR": {
+          "observedProjected": 567.325,
+          "observedActual": 599.1,
+          "seasons": 4
+        },
+        "jarvislandry:WR": {
+          "observedProjected": 154.95,
+          "observedActual": 89.9,
+          "seasons": 2
+        },
+        "marquisebrown:WR": {
+          "observedProjected": 278.6,
+          "observedActual": 291,
+          "seasons": 3
+        },
+        "marvinjones:WR": {
+          "observedProjected": 198.41,
+          "observedActual": 144.1,
+          "seasons": 2
+        },
+        "devontasmith:WR": {
+          "observedProjected": 454.125,
+          "observedActual": 466.9,
+          "seasons": 4
+        },
+        "nelsonagholor:WR": {
+          "observedProjected": 205.035,
+          "observedActual": 189.5,
+          "seasons": 4
+        },
+        "brandincooks:WR": {
+          "observedProjected": 390.13,
+          "observedActual": 342.5,
+          "seasons": 4
+        },
+        "vanjefferson:WR": {
+          "observedProjected": 244.52,
+          "observedActual": 206.7,
+          "seasons": 4
+        },
+        "deonteharris:WR": {
+          "observedProjected": 67.65,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "jaylenwaddle:WR": {
+          "observedProjected": 472.49,
+          "observedActual": 483,
+          "seasons": 4
+        },
+        "dkmetcalf:WR": {
+          "observedProjected": 546.975,
+          "observedActual": 550.3,
+          "seasons": 4
+        },
+        "jalenreagor:WR": {
+          "observedProjected": 105.465,
+          "observedActual": 77.3,
+          "seasons": 4
+        },
+        "teehiggins:WR": {
+          "observedProjected": 461.005,
+          "observedActual": 481.3,
+          "seasons": 4
+        },
+        "keenanallen:WR": {
+          "observedProjected": 406.425,
+          "observedActual": 466.46,
+          "seasons": 4
+        },
+        "djmoore:WR": {
+          "observedProjected": 519.765,
+          "observedActual": 528.3,
+          "seasons": 4
+        },
+        "robbyanderson:WR": {
+          "observedProjected": 87.8,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "diontaejohnson:WR": {
+          "observedProjected": 415.37,
+          "observedActual": 360.6,
+          "seasons": 4
+        },
+        "dannyamendola:WR": {
+          "observedProjected": 15.56,
+          "observedActual": 19.5,
+          "seasons": 1
+        },
+        "timpatrick:WR": {
+          "observedProjected": 141.61,
+          "observedActual": 148.4,
+          "seasons": 2
+        },
+        "zayjones:WR": {
+          "observedProjected": 160.975,
+          "observedActual": 189.3,
+          "seasons": 4
+        },
+        "sammywatkins:WR": {
+          "observedProjected": 74.42,
+          "observedActual": 55.8,
+          "seasons": 2
+        },
+        "stefondiggs:WR": {
+          "observedProjected": 582.52,
+          "observedActual": 554.52,
+          "seasons": 4
+        },
+        "gabrieldavis:WR": {
+          "observedProjected": 39.89,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "robertwoods:WR": {
+          "observedProjected": 295.115,
+          "observedActual": 203.6,
+          "seasons": 4
+        },
+        "jerryjeudy:WR": {
+          "observedProjected": 382.38,
+          "observedActual": 350.4,
+          "seasons": 4
+        },
+        "bryanedwards:WR": {
+          "observedProjected": 85.35,
+          "observedActual": 55.2,
+          "seasons": 2
+        },
+        "anthonyschwartz:WR": {
+          "observedProjected": 41.12,
+          "observedActual": 36.6,
+          "seasons": 2
+        },
+        "justinjefferson:WR": {
+          "observedProjected": 644.87,
+          "observedActual": 688.34,
+          "seasons": 4
+        },
+        "colebeasley:WR": {
+          "observedProjected": 95.2,
+          "observedActual": 70.4,
+          "seasons": 1
+        },
+        "hunterrenfrow:WR": {
+          "observedProjected": 212.87,
+          "observedActual": 167,
+          "seasons": 3
+        },
+        "laviskashenaultjr:WR": {
+          "observedProjected": 152.41,
+          "observedActual": 111.4,
+          "seasons": 4
+        },
+        "trentsherfield:WR": {
+          "observedProjected": 88.37,
+          "observedActual": 81.3,
+          "seasons": 4
+        },
+        "rondalemoore:WR": {
+          "observedProjected": 168.2,
+          "observedActual": 141.8,
+          "seasons": 3
+        },
+        "chaseclaypool:WR": {
+          "observedProjected": 220.43,
+          "observedActual": 154.74,
+          "seasons": 3
+        },
+        "kennygolladay:WR": {
+          "observedProjected": 129.13,
+          "observedActual": 53.8,
+          "seasons": 2
+        },
+        "terrymclaurin:WR": {
+          "observedProjected": 486.33,
+          "observedActual": 517.9,
+          "seasons": 4
+        },
+        "chesterrogers:WR": {
+          "observedProjected": 37.43,
+          "observedActual": 31.6,
+          "seasons": 1
+        },
+        "davanteadams:WR": {
+          "observedProjected": 631.195,
+          "observedActual": 672.5,
+          "seasons": 4
+        },
+        "dariusslayton:WR": {
+          "observedProjected": 275.395,
+          "observedActual": 257.7,
+          "seasons": 4
+        },
+        "braxtonberrios:WR": {
+          "observedProjected": 124.315,
+          "observedActual": 92.18,
+          "seasons": 4
+        },
+        "calvinridley:WR": {
+          "observedProjected": 320.79,
+          "observedActual": 296.2,
+          "seasons": 3
+        },
+        "jakobimeyers:WR": {
+          "observedProjected": 410.52,
+          "observedActual": 393.98,
+          "seasons": 4
+        },
+        "kalifraymond:WR": {
+          "observedProjected": 215.46,
+          "observedActual": 211.7,
+          "seasons": 4
+        },
+        "emmanuelsanders:WR": {
+          "observedProjected": 96.75,
+          "observedActual": 82,
+          "seasons": 1
+        },
+        "allenrobinson:WR": {
+          "observedProjected": 210.21,
+          "observedActual": 125.6,
+          "seasons": 4
+        },
+        "jalenguyton:WR": {
+          "observedProjected": 79.35,
+          "observedActual": 73.9,
+          "seasons": 2
+        },
+        "mikeevans:WR": {
+          "observedProjected": 531.755,
+          "observedActual": 585,
+          "seasons": 4
+        },
+        "darnellmooney:WR": {
+          "observedProjected": 388.945,
+          "observedActual": 342.9,
+          "seasons": 4
+        },
+        "tylerboyd:WR": {
+          "observedProjected": 344.55,
+          "observedActual": 327.76,
+          "seasons": 4
+        },
+        "denzelmims:WR": {
+          "observedProjected": 48.75,
+          "observedActual": 28.4,
+          "seasons": 2
+        },
+        "juliojones:WR": {
+          "observedProjected": 154.4,
+          "observedActual": 105.3,
+          "seasons": 3
+        },
+        "michaelpittman:WR": {
+          "observedProjected": 426.69,
+          "observedActual": 432.8,
+          "seasons": 4
+        },
+        "terracemarshalljr:WR": {
+          "observedProjected": 92.77,
+          "observedActual": 64.2,
+          "seasons": 3
+        },
+        "randallcobb:WR": {
+          "observedProjected": 126.9,
+          "observedActual": 104.1,
+          "seasons": 3
+        },
+        "quezwatkins:WR": {
+          "observedProjected": 155.74,
+          "observedActual": 105.6,
+          "seasons": 3
+        },
+        "chrisconley:WR": {
+          "observedProjected": 105.28,
+          "observedActual": 43.9,
+          "seasons": 4
+        },
+        "mikestrachan:WR": {
+          "observedProjected": 16.65,
+          "observedActual": 4.9,
+          "seasons": 2
+        },
+        "ajgreen:WR": {
+          "observedProjected": 124.24,
+          "observedActual": 101.1,
+          "seasons": 2
+        },
+        "trinitybenson:WR": {
+          "observedProjected": 9.88,
+          "observedActual": 8.6,
+          "seasons": 1
+        },
+        "damierebyrd:WR": {
+          "observedProjected": 78.04,
+          "observedActual": 67.8,
+          "seasons": 2
+        },
+        "ashtondulin:WR": {
+          "observedProjected": 53.725,
+          "observedActual": 68,
+          "seasons": 3
+        },
+        "mecolehardman:WR": {
+          "observedProjected": 196.52,
+          "observedActual": 160.1,
+          "seasons": 4
+        },
+        "amonrastbrown:WR": {
+          "observedProjected": 506.575,
+          "observedActual": 627.18,
+          "seasons": 4
+        },
+        "marcuskemp:WR": {
+          "observedProjected": 7.13,
+          "observedActual": 0.8,
+          "seasons": 1
+        },
+        "marquezvaldesscantling:WR": {
+          "observedProjected": 288.665,
+          "observedActual": 211.2,
+          "seasons": 4
+        },
+        "deseanjackson:WR": {
+          "observedProjected": 56.41,
+          "observedActual": 67,
+          "seasons": 2
+        },
+        "camsims:WR": {
+          "observedProjected": 44.14,
+          "observedActual": 32.2,
+          "seasons": 2
+        },
+        "allenlazard:WR": {
+          "observedProjected": 295.09,
+          "observedActual": 287.2,
+          "seasons": 4
+        },
+        "amarirodgers:WR": {
+          "observedProjected": 25.11,
+          "observedActual": 9.9,
+          "seasons": 2
+        },
+        "kendrickbourne:WR": {
+          "observedProjected": 220.95,
+          "observedActual": 221.5,
+          "seasons": 4
+        },
+        "joshpalmer:WR": {
+          "observedProjected": 235,
+          "observedActual": 262.7,
+          "seasons": 4
+        },
+        "adamhumphries:WR": {
+          "observedProjected": 67.85,
+          "observedActual": 34.5,
+          "seasons": 1
+        },
+        "jameswashington:WR": {
+          "observedProjected": 43.81,
+          "observedActual": 33.1,
+          "seasons": 1
+        },
+        "marquezcallaway:WR": {
+          "observedProjected": 134.92,
+          "observedActual": 109.3,
+          "seasons": 2
+        },
+        "courtlandsutton:WR": {
+          "observedProjected": 447.11,
+          "observedActual": 425.7,
+          "seasons": 4
+        },
+        "pennyhart:WR": {
+          "observedProjected": 12.25,
+          "observedActual": 3.3,
+          "seasons": 2
+        },
+        "mackhollins:WR": {
+          "observedProjected": 189.685,
+          "observedActual": 205.06,
+          "seasons": 4
+        },
+        "dedewestbrook:WR": {
+          "observedProjected": 19.24,
+          "observedActual": 6.1,
+          "seasons": 1
+        },
+        "nickwestbrookikhine:WR": {
+          "observedProjected": 216.52,
+          "observedActual": 241.8,
+          "seasons": 4
+        },
+        "demarcusrobinson:WR": {
+          "observedProjected": 200.89,
+          "observedActual": 199.7,
+          "seasons": 4
+        },
+        "nicocollins:WR": {
+          "observedProjected": 346.745,
+          "observedActual": 384.9,
+          "seasons": 4
+        },
+        "mohamedsanu:WR": {
+          "observedProjected": 17.9,
+          "observedActual": 17.7,
+          "seasons": 1
+        },
+        "tyronjohnson:WR": {
+          "observedProjected": 18.1,
+          "observedActual": 1.6,
+          "seasons": 2
+        },
+        "byronpringle:WR": {
+          "observedProjected": 86.1,
+          "observedActual": 104.2,
+          "seasons": 3
+        },
+        "mikethomas:WR": {
+          "observedProjected": 21.97,
+          "observedActual": 9.8,
+          "seasons": 2
+        },
+        "donovanpeoplesjones:WR": {
+          "observedProjected": 205.96,
+          "observedActual": 177.7,
+          "seasons": 3
+        },
+        "jjarcegawhiteside:WR": {
+          "observedProjected": 7.92,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "kadariustoney:WR": {
+          "observedProjected": 119.83,
+          "observedActual": 84.36,
+          "seasons": 3
+        },
+        "freddieswain:WR": {
+          "observedProjected": 39.48,
+          "observedActual": 53,
+          "seasons": 1
+        },
+        "dyamibrown:WR": {
+          "observedProjected": 116.255,
+          "observedActual": 93.3,
+          "seasons": 4
+        },
+        "elijahmoore:WR": {
+          "observedProjected": 269.725,
+          "observedActual": 239.2,
+          "seasons": 4
+        },
+        "devinduvernay:WR": {
+          "observedProjected": 139.93,
+          "observedActual": 125.8,
+          "seasons": 4
+        },
+        "jamalagnew:WR": {
+          "observedProjected": 95.82,
+          "observedActual": 109.4,
+          "seasons": 3
+        },
+        "brandonaiyuk:WR": {
+          "observedProjected": 449.79,
+          "observedActual": 413.7,
+          "seasons": 4
+        },
+        "christianblake:WR": {
+          "observedProjected": 9.25,
+          "observedActual": 1.3,
+          "seasons": 1
+        },
+        "deandrecarter:WR": {
+          "observedProjected": 129.845,
+          "observedActual": 111.4,
+          "seasons": 4
+        },
+        "alexerickson:WR": {
+          "observedProjected": 20.19,
+          "observedActual": 29.3,
+          "seasons": 2
+        },
+        "simifehoko:WR": {
+          "observedProjected": 22.06,
+          "observedActual": 17,
+          "seasons": 4
+        },
+        "russellgage:WR": {
+          "observedProjected": 160.09,
+          "observedActual": 128.8,
+          "seasons": 2
+        },
+        "jakeemgrant:WR": {
+          "observedProjected": 22.32,
+          "observedActual": -2.7,
+          "seasons": 1
+        },
+        "rashardhiggins:WR": {
+          "observedProjected": 62.26,
+          "observedActual": 31.8,
+          "seasons": 2
+        },
+        "liljordanhumphrey:WR": {
+          "observedProjected": 70.6,
+          "observedActual": 79.3,
+          "seasons": 3
+        },
+        "andyisabella:WR": {
+          "observedProjected": 8.55,
+          "observedActual": 1.3,
+          "seasons": 1
+        },
+        "jauanjennings:WR": {
+          "observedProjected": 201.43,
+          "observedActual": 230.1,
+          "seasons": 4
+        },
+        "tylerjohnson:WR": {
+          "observedProjected": 65.98,
+          "observedActual": 42.7,
+          "seasons": 2
+        },
+        "jakekumerow:WR": {
+          "observedProjected": 13.89,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "rayraymccloud:WR": {
+          "observedProjected": 140.95,
+          "observedActual": 123.6,
+          "seasons": 4
+        },
+        "jaydonmickens:WR": {
+          "observedProjected": 6.34,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "daxmilne:WR": {
+          "observedProjected": 19.66,
+          "observedActual": 14,
+          "seasons": 2
+        },
+        "stanleymorgan:WR": {
+          "observedProjected": 11.63,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "gunnerolszewski:WR": {
+          "observedProjected": 27.91,
+          "observedActual": 12.3,
+          "seasons": 3
+        },
+        "jamesproche:WR": {
+          "observedProjected": 43.76,
+          "observedActual": 7,
+          "seasons": 3
+        },
+        "tajaesharpe:WR": {
+          "observedProjected": 24.02,
+          "observedActual": 15.1,
+          "seasons": 1
+        },
+        "jeffsmith:WR": {
+          "observedProjected": 15.24,
+          "observedActual": 9.2,
+          "seasons": 2
+        },
+        "ihmirsmithmarsette:WR": {
+          "observedProjected": 23.08,
+          "observedActual": 29.2,
+          "seasons": 4
+        },
+        "williesnead:WR": {
+          "observedProjected": 18.07,
+          "observedActual": 5.2,
+          "seasons": 2
+        },
+        "diontaespencer:WR": {
+          "observedProjected": 14.01,
+          "observedActual": -0.3,
+          "seasons": 1
+        },
+        "audentate:WR": {
+          "observedProjected": 13.54,
+          "observedActual": 9.9,
+          "seasons": 1
+        },
+        "tylanwallace:WR": {
+          "observedProjected": 36.2,
+          "observedActual": 35.5,
+          "seasons": 4
+        },
+        "gregward:WR": {
+          "observedProjected": 18.59,
+          "observedActual": 15,
+          "seasons": 1
+        },
+        "nsimbawebster:WR": {
+          "observedProjected": 3.33,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "albertwilson:WR": {
+          "observedProjected": 42.45,
+          "observedActual": 10.9,
+          "seasons": 1
+        },
+        "olamidezaccheaus:WR": {
+          "observedProjected": 225.79,
+          "observedActual": 183.5,
+          "seasons": 4
+        },
+        "isaiahmckenzie:WR": {
+          "observedProjected": 118.93,
+          "observedActual": 89.7,
+          "seasons": 3
+        },
+        "kyleallen:QB": {
+          "observedProjected": 47.61,
+          "observedActual": 22.54,
+          "seasons": 3
+        },
+        "trevorsiemian:QB": {
+          "observedProjected": 83.24,
+          "observedActual": 69.56,
+          "seasons": 3
+        },
+        "kjosborn:WR": {
+          "observedProjected": 236.28,
+          "observedActual": 244,
+          "seasons": 4
+        },
+        "marquisegoodwin:WR": {
+          "observedProjected": 91.92,
+          "observedActual": 88.4,
+          "seasons": 3
+        },
+        "kendallhinton:WR": {
+          "observedProjected": 50.96,
+          "observedActual": 49.74,
+          "seasons": 2
+        },
+        "andreroberts:WR": {
+          "observedProjected": 12.86,
+          "observedActual": 11,
+          "seasons": 1
+        },
+        "matthewslater:WR": {
+          "observedProjected": 9.3,
+          "observedActual": 0,
+          "seasons": 3
+        },
+        "prestonwilliams:WR": {
+          "observedProjected": 20.44,
+          "observedActual": 7.8,
+          "seasons": 1
+        },
+        "equanimeousstbrown:WR": {
+          "observedProjected": 71.52,
+          "observedActual": 49.4,
+          "seasons": 3
+        },
+        "noahbrown:WR": {
+          "observedProjected": 167.06,
+          "observedActual": 205.8,
+          "seasons": 4
+        },
+        "keelancole:WR": {
+          "observedProjected": 76.79,
+          "observedActual": 57.3,
+          "seasons": 2
+        },
+        "kjhill:WR": {
+          "observedProjected": 3.85,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "khadarelhodge:WR": {
+          "observedProjected": 80.125,
+          "observedActual": 64.2,
+          "seasons": 4
+        },
+        "joshreynolds:WR": {
+          "observedProjected": 226.305,
+          "observedActual": 219.9,
+          "seasons": 4
+        },
+        "maliktaylor:WR": {
+          "observedProjected": 8.35,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "laquontreadwell:WR": {
+          "observedProjected": 33.73,
+          "observedActual": 38.1,
+          "seasons": 2
+        },
+        "jeffdriskel:QB": {
+          "observedProjected": 10.55,
+          "observedActual": 11.74,
+          "seasons": 2
+        },
+        "nickfoles:QB": {
+          "observedProjected": 23.3,
+          "observedActual": 16.8,
+          "seasons": 2
+        },
+        "feleipefranks:QB": {
+          "observedProjected": 6.85,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "bretthundley:QB": {
+          "observedProjected": 5.51,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "coltmccoy:QB": {
+          "observedProjected": 68.05,
+          "observedActual": 51,
+          "seasons": 2
+        },
+        "reidsinnett:QB": {
+          "observedProjected": 4.25,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "benskowronek:WR": {
+          "observedProjected": 76.22,
+          "observedActual": 64.9,
+          "seasons": 3
+        },
+        "codywhite:WR": {
+          "observedProjected": 10.89,
+          "observedActual": 1.7,
+          "seasons": 1
+        },
+        "kennystills:WR": {
+          "observedProjected": 22.39,
+          "observedActual": 12.5,
+          "seasons": 1
+        },
+        "chrismoore:WR": {
+          "observedProjected": 103.8,
+          "observedActual": 110.8,
+          "seasons": 4
+        },
+        "jaelondarden:WR": {
+          "observedProjected": 12.77,
+          "observedActual": 4.9,
+          "seasons": 2
+        },
+        "codythompson:WR": {
+          "observedProjected": 9.35,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "chasedaniel:QB": {
+          "observedProjected": 11.88,
+          "observedActual": -0.2,
+          "seasons": 2
+        },
+        "jamisoncrowder:WR": {
+          "observedProjected": 111.03,
+          "observedActual": 56.3,
+          "seasons": 3
+        },
+        "curtissamuel:WR": {
+          "observedProjected": 285.85,
+          "observedActual": 224.4,
+          "seasons": 4
+        },
+        "trentonirwin:WR": {
+          "observedProjected": 67.175,
+          "observedActual": 62.7,
+          "seasons": 4
+        },
+        "nkealharry:WR": {
+          "observedProjected": 22.65,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "tavonaustin:WR": {
+          "observedProjected": 24.49,
+          "observedActual": 27.6,
+          "seasons": 1
+        },
+        "collinjohnson:WR": {
+          "observedProjected": 24.54,
+          "observedActual": 5.4,
+          "seasons": 1
+        },
+        "frankdarby:WR": {
+          "observedProjected": 16.62,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "malikturner:WR": {
+          "observedProjected": 14.42,
+          "observedActual": 15.8,
+          "seasons": 1
+        },
+        "johnross:WR": {
+          "observedProjected": 26.02,
+          "observedActual": 14.7,
+          "seasons": 1
+        },
+        "tyriecleveland:WR": {
+          "observedProjected": 9.96,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "joshgordon:WR": {
+          "observedProjected": 15.72,
+          "observedActual": 8.5,
+          "seasons": 1
+        },
+        "isaiahford:WR": {
+          "observedProjected": 23.61,
+          "observedActual": 19.7,
+          "seasons": 1
+        },
+        "travisbenjamin:WR": {
+          "observedProjected": 6.25,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "milesboykin:WR": {
+          "observedProjected": 24.78,
+          "observedActual": 1.7,
+          "seasons": 3
+        },
+        "antoniogandygolden:WR": {
+          "observedProjected": 4.03,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "tyhilton:WR": {
+          "observedProjected": 46.06,
+          "observedActual": 44.1,
+          "seasons": 1
+        },
+        "rashodbateman:WR": {
+          "observedProjected": 220.32,
+          "observedActual": 242.2,
+          "seasons": 4
+        },
+        "shismith:WR": {
+          "observedProjected": 57.69,
+          "observedActual": 26.4,
+          "seasons": 2
+        },
+        "marcusjohnson:WR": {
+          "observedProjected": 38.78,
+          "observedActual": 6.9,
+          "seasons": 2
+        },
+        "pjwalker:QB": {
+          "observedProjected": 83.79,
+          "observedActual": 67.46,
+          "seasons": 3
+        },
+        "trequansmith:WR": {
+          "observedProjected": 112.09,
+          "observedActual": 48,
+          "seasons": 2
+        },
+        "joshjohnson:QB": {
+          "observedProjected": 19.32,
+          "observedActual": 46.32,
+          "seasons": 1
+        },
+        "gardnerminshew:QB": {
+          "observedProjected": 328.8,
+          "observedActual": 306,
+          "seasons": 4
+        },
+        "kevinwhite:WR": {
+          "observedProjected": 9.25,
+          "observedActual": 11.2,
+          "seasons": 2
+        },
+        "danchisena:WR": {
+          "observedProjected": 5.43,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "samehlinger:QB": {
+          "observedProjected": 46.78,
+          "observedActual": 13.56,
+          "seasons": 3
+        },
+        "antoinewesley:WR": {
+          "observedProjected": 8.85,
+          "observedActual": 30.1,
+          "seasons": 1
+        },
+        "dezmonpatmon:WR": {
+          "observedProjected": 4.25,
+          "observedActual": 8.1,
+          "seasons": 1
+        },
+        "pharohcooper:WR": {
+          "observedProjected": 11.38,
+          "observedActual": 3.6,
+          "seasons": 1
+        },
+        "jjkoski:WR": {
+          "observedProjected": 5.46,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "dillonstoner:WR": {
+          "observedProjected": 4.42,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "russellwilson:QB": {
+          "observedProjected": 676.99,
+          "observedActual": 676.3,
+          "seasons": 4
+        },
+        "camnewton:QB": {
+          "observedProjected": 69.91,
+          "observedActual": 48.48,
+          "seasons": 1
+        },
+        "timboyle:QB": {
+          "observedProjected": 55.7,
+          "observedActual": 36.26,
+          "seasons": 2
+        },
+        "odellbeckhamjr:WR": {
+          "observedProjected": 150.97,
+          "observedActual": 134.9,
+          "seasons": 3
+        },
+        "brandonzylstra:WR": {
+          "observedProjected": 8.97,
+          "observedActual": 8.6,
+          "seasons": 1
+        },
+        "scottmiller:WR": {
+          "observedProjected": 53.795,
+          "observedActual": 35,
+          "seasons": 4
+        },
+        "dwayneeskridge:WR": {
+          "observedProjected": 32.15,
+          "observedActual": 0,
+          "seasons": 3
+        },
+        "tomkennedy:WR": {
+          "observedProjected": 18.73,
+          "observedActual": 14.1,
+          "seasons": 2
+        },
+        "marquezstevenson:WR": {
+          "observedProjected": 10.68,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "jakefromm:QB": {
+          "observedProjected": 20.23,
+          "observedActual": 3.48,
+          "seasons": 1
+        },
+        "devanteparker:WR": {
+          "observedProjected": 186.03,
+          "observedActual": 114.4,
+          "seasons": 3
+        },
+        "rivercracraft:WR": {
+          "observedProjected": 29.275,
+          "observedActual": 17.5,
+          "seasons": 4
+        },
+        "raceymcmath:WR": {
+          "observedProjected": 3.9,
+          "observedActual": -1.2,
+          "seasons": 1
+        },
+        "brandonpowell:WR": {
+          "observedProjected": 102.27,
+          "observedActual": 59.3,
+          "seasons": 4
+        },
+        "jameiswinston:QB": {
+          "observedProjected": 164.74,
+          "observedActual": 177.5,
+          "seasons": 3
+        },
+        "tracemcsorley:QB": {
+          "observedProjected": 10.44,
+          "observedActual": 4.04,
+          "seasons": 1
+        },
+        "joshuadobbs:QB": {
+          "observedProjected": 205.63,
+          "observedActual": 200.66,
+          "seasons": 2
+        },
+        "nickmullens:QB": {
+          "observedProjected": 47.95,
+          "observedActual": 48.14,
+          "seasons": 2
+        },
+        "kennypickett:QB": {
+          "observedProjected": 309.18,
+          "observedActual": 222.58,
+          "seasons": 2
+        },
+        "desmondridder:QB": {
+          "observedProjected": 204.18,
+          "observedActual": 168.18,
+          "seasons": 2
+        },
+        "brettrypien:QB": {
+          "observedProjected": 51.61,
+          "observedActual": 23,
+          "seasons": 2
+        },
+        "jarrettstidham:QB": {
+          "observedProjected": 31.86,
+          "observedActual": 16.44,
+          "seasons": 2
+        },
+        "natesudfeld:QB": {
+          "observedProjected": 9.99,
+          "observedActual": -0.1,
+          "seasons": 1
+        },
+        "malikwillis:QB": {
+          "observedProjected": 47.77,
+          "observedActual": 12.14,
+          "seasons": 2
+        },
+        "jahandotson:WR": {
+          "observedProjected": 192.93,
+          "observedActual": 158.7,
+          "seasons": 3
+        },
+        "gabedavis:WR": {
+          "observedProjected": 309.405,
+          "observedActual": 261.5,
+          "seasons": 3
+        },
+        "djchark:WR": {
+          "observedProjected": 135.305,
+          "observedActual": 130.8,
+          "seasons": 3
+        },
+        "drakelondon:WR": {
+          "observedProjected": 376.615,
+          "observedActual": 323.08,
+          "seasons": 3
+        },
+        "gregdortch:WR": {
+          "observedProjected": 119.15,
+          "observedActual": 100.1,
+          "seasons": 3
+        },
+        "richiejames:WR": {
+          "observedProjected": 75.29,
+          "observedActual": 68.8,
+          "seasons": 2
+        },
+        "garrettwilson:WR": {
+          "observedProjected": 380.2,
+          "observedActual": 371,
+          "seasons": 3
+        },
+        "chrisolave:WR": {
+          "observedProjected": 332.39,
+          "observedActual": 289.4,
+          "seasons": 3
+        },
+        "treylonburks:WR": {
+          "observedProjected": 103.86,
+          "observedActual": 70.5,
+          "seasons": 3
+        },
+        "jujusmithschuster:WR": {
+          "observedProjected": 179.64,
+          "observedActual": 163.9,
+          "seasons": 3
+        },
+        "parriscampbell:WR": {
+          "observedProjected": 110.89,
+          "observedActual": 91.5,
+          "seasons": 3
+        },
+        "christianwatson:WR": {
+          "observedProjected": 217.46,
+          "observedActual": 255.1,
+          "seasons": 3
+        },
+        "codyhollister:WR": {
+          "observedProjected": 9.84,
+          "observedActual": 5.4,
+          "seasons": 1
+        },
+        "skyymoore:WR": {
+          "observedProjected": 95.385,
+          "observedActual": 50,
+          "seasons": 3
+        },
+        "wandalerobinson:WR": {
+          "observedProjected": 178.605,
+          "observedActual": 165.6,
+          "seasons": 3
+        },
+        "deonteharty:WR": {
+          "observedProjected": 47.125,
+          "observedActual": 19.8,
+          "seasons": 3
+        },
+        "georgepickens:WR": {
+          "observedProjected": 317.87,
+          "observedActual": 332.6,
+          "seasons": 3
+        },
+        "andrebaccellia:WR": {
+          "observedProjected": 14.04,
+          "observedActual": 3.2,
+          "seasons": 2
+        },
+        "davidbell:WR": {
+          "observedProjected": 51.26,
+          "observedActual": 32.8,
+          "seasons": 2
+        },
+        "quintezcephus:WR": {
+          "observedProjected": 8.08,
+          "observedActual": 1.5,
+          "seasons": 1
+        },
+        "britaincovey:WR": {
+          "observedProjected": 9.975,
+          "observedActual": 3.4,
+          "seasons": 2
+        },
+        "phillipdorsett:WR": {
+          "observedProjected": 53.98,
+          "observedActual": 25.8,
+          "seasons": 1
+        },
+        "kjhamler:WR": {
+          "observedProjected": 23.06,
+          "observedActual": 18.8,
+          "seasons": 1
+        },
+        "timjones:WR": {
+          "observedProjected": 33.54,
+          "observedActual": 5.6,
+          "seasons": 3
+        },
+        "jalennailor:WR": {
+          "observedProjected": 73.015,
+          "observedActual": 63.3,
+          "seasons": 3
+        },
+        "alecpierce:WR": {
+          "observedProjected": 227.41,
+          "observedActual": 220.9,
+          "seasons": 3
+        },
+        "davidsills:WR": {
+          "observedProjected": 19.72,
+          "observedActual": 6.9,
+          "seasons": 1
+        },
+        "trenttaylor:WR": {
+          "observedProjected": 13.25,
+          "observedActual": 4,
+          "seasons": 2
+        },
+        "djturner:WR": {
+          "observedProjected": 15.09,
+          "observedActual": 2.6,
+          "seasons": 2
+        },
+        "kavontaeturpin:WR": {
+          "observedProjected": 81.34,
+          "observedActual": 105.3,
+          "seasons": 3
+        },
+        "montrellwashington:WR": {
+          "observedProjected": 22.26,
+          "observedActual": 3.2,
+          "seasons": 2
+        },
+        "justinwatson:WR": {
+          "observedProjected": 111.505,
+          "observedActual": 113.5,
+          "seasons": 3
+        },
+        "darekeyoung:WR": {
+          "observedProjected": 9.53,
+          "observedActual": 0,
+          "seasons": 2
+        },
+        "breshadperriman:WR": {
+          "observedProjected": 21.48,
+          "observedActual": 13.4,
+          "seasons": 1
+        },
+        "willgrier:QB": {
+          "observedProjected": 2.83,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "romeodoubs:WR": {
+          "observedProjected": 233.645,
+          "observedActual": 242.9,
+          "seasons": 3
+        },
+        "tutuatwell:WR": {
+          "observedProjected": 164.3,
+          "observedActual": 145.1,
+          "seasons": 3
+        },
+        "dannygray:WR": {
+          "observedProjected": 11.46,
+          "observedActual": 1,
+          "seasons": 1
+        },
+        "dantepettis:WR": {
+          "observedProjected": 45.76,
+          "observedActual": 26.1,
+          "seasons": 1
+        },
+        "khalilshakir:WR": {
+          "observedProjected": 187.79,
+          "observedActual": 186.4,
+          "seasons": 3
+        },
+        "brockpurdy:QB": {
+          "observedProjected": 567.24,
+          "observedActual": 585.6,
+          "seasons": 3
+        },
+        "jalentolbert:WR": {
+          "observedProjected": 105.05,
+          "observedActual": 99.4,
+          "seasons": 3
+        },
+        "lancemccutcheon:WR": {
+          "observedProjected": 8.08,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "baileyzappe:QB": {
+          "observedProjected": 114.41,
+          "observedActual": 107,
+          "seasons": 2
+        },
+        "skylarthompson:QB": {
+          "observedProjected": 24.29,
+          "observedActual": 4.52,
+          "seasons": 1
+        },
+        "michaelgallup:WR": {
+          "observedProjected": 155.54,
+          "observedActual": 105.7,
+          "seasons": 2
+        },
+        "michaelbandy:WR": {
+          "observedProjected": 22.66,
+          "observedActual": 8.9,
+          "seasons": 1
+        },
+        "velusjonesjr:WR": {
+          "observedProjected": 30.18,
+          "observedActual": 18.6,
+          "seasons": 2
+        },
+        "tyquanthornton:WR": {
+          "observedProjected": 71.835,
+          "observedActual": 49.1,
+          "seasons": 3
+        },
+        "stevensims:WR": {
+          "observedProjected": 22.74,
+          "observedActual": 11.7,
+          "seasons": 1
+        },
+        "bryceperkins:QB": {
+          "observedProjected": 26.36,
+          "observedActual": 15.64,
+          "seasons": 1
+        },
+        "mikewoods:WR": {
+          "observedProjected": 10.02,
+          "observedActual": 2,
+          "seasons": 1
+        },
+        "isaiahhodgins:WR": {
+          "observedProjected": 84.09,
+          "observedActual": 69.4,
+          "seasons": 2
+        },
+        "samhowell:QB": {
+          "observedProjected": 270.83,
+          "observedActual": 250.12,
+          "seasons": 2
+        },
+        "rashidshaheed:WR": {
+          "observedProjected": 161.05,
+          "observedActual": 206.9,
+          "seasons": 3
+        },
+        "samoritoure:WR": {
+          "observedProjected": 31.78,
+          "observedActual": 21.8,
+          "seasons": 2
+        },
+        "raleighwebb:WR": {
+          "observedProjected": 4.16,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "cjboard:WR": {
+          "observedProjected": 3.48,
+          "observedActual": 0.6,
+          "seasons": 1
+        },
+        "jalenvirgil:WR": {
+          "observedProjected": 9.95,
+          "observedActual": 0.9,
+          "seasons": 1
+        },
+        "anthonyrichardson:QB": {
+          "observedProjected": 242.4,
+          "observedActual": 235.04,
+          "seasons": 2
+        },
+        "deshaunwatson:QB": {
+          "observedProjected": 206.41,
+          "observedActual": 163.52,
+          "seasons": 2
+        },
+        "cjstroud:QB": {
+          "observedProjected": 493.26,
+          "observedActual": 462.74,
+          "seasons": 2
+        },
+        "bryceyoung:QB": {
+          "observedProjected": 320.22,
+          "observedActual": 290.92,
+          "seasons": 2
+        },
+        "eastonstick:QB": {
+          "observedProjected": 52.39,
+          "observedActual": 51.54,
+          "seasons": 1
+        },
+        "dorianthompsonrobinson:QB": {
+          "observedProjected": 45.84,
+          "observedActual": 22.1,
+          "seasons": 1
+        },
+        "kyletrask:QB": {
+          "observedProjected": 10.5,
+          "observedActual": -0.1,
+          "seasons": 1
+        },
+        "claytontune:QB": {
+          "observedProjected": 22.43,
+          "observedActual": 7.38,
+          "seasons": 1
+        },
+        "jakebrowning:QB": {
+          "observedProjected": 105.47,
+          "observedActual": 125.4,
+          "seasons": 1
+        },
+        "seanclifford:QB": {
+          "observedProjected": 12.77,
+          "observedActual": 1.28,
+          "seasons": 1
+        },
+        "zayflowers:WR": {
+          "observedProjected": 239.195,
+          "observedActual": 259.7,
+          "seasons": 2
+        },
+        "jordanaddison:WR": {
+          "observedProjected": 220.7,
+          "observedActual": 276.2,
+          "seasons": 2
+        },
+        "rasheerice:WR": {
+          "observedProjected": 139.47,
+          "observedActual": 174.4,
+          "seasons": 2
+        },
+        "michaelthomas:WR": {
+          "observedProjected": 83.28,
+          "observedActual": 50.8,
+          "seasons": 1
+        },
+        "treypalmer:WR": {
+          "observedProjected": 91.84,
+          "observedActual": 78.9,
+          "seasons": 2
+        },
+        "xaviergipson:WR": {
+          "observedProjected": 50.975,
+          "observedActual": 51.2,
+          "seasons": 2
+        },
+        "jaydenreed:WR": {
+          "observedProjected": 238.325,
+          "observedActual": 280.3,
+          "seasons": 2
+        },
+        "joshdowns:WR": {
+          "observedProjected": 184.255,
+          "observedActual": 184.2,
+          "seasons": 2
+        },
+        "jonathanmingo:WR": {
+          "observedProjected": 110.845,
+          "observedActual": 53.4,
+          "seasons": 2
+        },
+        "brandonjohnson:WR": {
+          "observedProjected": 28.79,
+          "observedActual": 32.9,
+          "seasons": 1
+        },
+        "michaelwilson:WR": {
+          "observedProjected": 141.885,
+          "observedActual": 141.6,
+          "seasons": 2
+        },
+        "jaxonsmithnjigba:WR": {
+          "observedProjected": 199.43,
+          "observedActual": 233.9,
+          "seasons": 2
+        },
+        "tylerscott:WR": {
+          "observedProjected": 47.915,
+          "observedActual": 18.2,
+          "seasons": 2
+        },
+        "deventhompkins:WR": {
+          "observedProjected": 33.38,
+          "observedActual": 20.7,
+          "seasons": 2
+        },
+        "quentinjohnston:WR": {
+          "observedProjected": 140.455,
+          "observedActual": 150,
+          "seasons": 2
+        },
+        "marvinmimsjr:WR": {
+          "observedProjected": 100.54,
+          "observedActual": 102.2,
+          "seasons": 2
+        },
+        "xavierhutchinson:WR": {
+          "observedProjected": 44.565,
+          "observedActual": 17.5,
+          "seasons": 2
+        },
+        "justynross:WR": {
+          "observedProjected": 9.91,
+          "observedActual": 0.8,
+          "seasons": 1
+        },
+        "deriusdavis:WR": {
+          "observedProjected": 46.84,
+          "observedActual": 37.3,
+          "seasons": 2
+        },
+        "ronniebell:WR": {
+          "observedProjected": 23.625,
+          "observedActual": 20.5,
+          "seasons": 2
+        },
+        "jakebobo:WR": {
+          "observedProjected": 51.66,
+          "observedActual": 47.3,
+          "seasons": 2
+        },
+        "kayshonboutte:WR": {
+          "observedProjected": 56.43,
+          "observedActual": 60.1,
+          "seasons": 2
+        },
+        "antoinegreen:WR": {
+          "observedProjected": 6.29,
+          "observedActual": 0.2,
+          "seasons": 1
+        },
+        "malikheath:WR": {
+          "observedProjected": 38.39,
+          "observedActual": 23.1,
+          "seasons": 2
+        },
+        "jalinhyatt:WR": {
+          "observedProjected": 68.985,
+          "observedActual": 40.9,
+          "seasons": 2
+        },
+        "andreiiosivas:WR": {
+          "observedProjected": 81.805,
+          "observedActual": 93.2,
+          "seasons": 2
+        },
+        "rakimjarrett:WR": {
+          "observedProjected": 21.335,
+          "observedActual": 10.9,
+          "seasons": 2
+        },
+        "charliejones:WR": {
+          "observedProjected": 14.485,
+          "observedActual": 13,
+          "seasons": 2
+        },
+        "keithkirkwood:WR": {
+          "observedProjected": 8.87,
+          "observedActual": 7.7,
+          "seasons": 1
+        },
+        "cedrictillman:WR": {
+          "observedProjected": 63.105,
+          "observedActual": 70.3,
+          "seasons": 2
+        },
+        "dontayvionwicks:WR": {
+          "observedProjected": 118.46,
+          "observedActual": 124.96,
+          "seasons": 2
+        },
+        "juwannwinfree:WR": {
+          "observedProjected": 3.96,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "pukanacua:WR": {
+          "observedProjected": 266.52,
+          "observedActual": 286.2,
+          "seasons": 2
+        },
+        "tankdell:WR": {
+          "observedProjected": 194.27,
+          "observedActual": 203.6,
+          "seasons": 2
+        },
+        "tretucker:WR": {
+          "observedProjected": 99.495,
+          "observedActual": 114.8,
+          "seasons": 2
+        },
+        "calvinaustiniii:WR": {
+          "observedProjected": 95.035,
+          "observedActual": 112.9,
+          "seasons": 2
+        },
+        "johnmetchieiii:WR": {
+          "observedProjected": 38.325,
+          "observedActual": 39.9,
+          "seasons": 2
+        },
+        "demariodouglas:WR": {
+          "observedProjected": 149.91,
+          "observedActual": 120.6,
+          "seasons": 2
+        },
+        "jalenbrooks:WR": {
+          "observedProjected": 25.82,
+          "observedActual": 24.9,
+          "seasons": 2
+        },
+        "lynnbowden:WR": {
+          "observedProjected": 10.88,
+          "observedActual": 10,
+          "seasons": 1
+        },
+        "trishtonjackson:WR": {
+          "observedProjected": 11.02,
+          "observedActual": 2.9,
+          "seasons": 1
+        },
+        "austintrammell:WR": {
+          "observedProjected": 8.03,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "aidanoconnell:QB": {
+          "observedProjected": 174.47,
+          "observedActual": 158.96,
+          "seasons": 2
+        },
+        "tysonbagent:QB": {
+          "observedProjected": 63.44,
+          "observedActual": 53.26,
+          "seasons": 1
+        },
+        "coltondowell:WR": {
+          "observedProjected": 9.88,
+          "observedActual": 0.3,
+          "seasons": 1
+        },
+        "parkerwashington:WR": {
+          "observedProjected": 67.075,
+          "observedActual": 58.4,
+          "seasons": 2
+        },
+        "jarenhall:QB": {
+          "observedProjected": 36.76,
+          "observedActual": 2.12,
+          "seasons": 1
+        },
+        "jamesonwilliams:WR": {
+          "observedProjected": 146.54,
+          "observedActual": 187.6,
+          "seasons": 2
+        },
+        "irvincharles:WR": {
+          "observedProjected": 11.06,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "kylephilips:WR": {
+          "observedProjected": 17.65,
+          "observedActual": 16.6,
+          "seasons": 1
+        },
+        "tommydevito:QB": {
+          "observedProjected": 89.37,
+          "observedActual": 92.98,
+          "seasons": 1
+        },
+        "elijahcooks:WR": {
+          "observedProjected": 7.27,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "willlevis:QB": {
+          "observedProjected": 269.86,
+          "observedActual": 210.16,
+          "seasons": 2
+        },
+        "jasonbrownlee:WR": {
+          "observedProjected": 6.45,
+          "observedActual": 11.6,
+          "seasons": 1
+        },
+        "atperry:WR": {
+          "observedProjected": 25.06,
+          "observedActual": 31.3,
+          "seasons": 1
+        },
+        "mattbarkley:QB": {
+          "observedProjected": 2.38,
+          "observedActual": -0.3,
+          "seasons": 1
+        },
+        "davidmoore:WR": {
+          "observedProjected": 47.91,
+          "observedActual": 59.1,
+          "seasons": 2
+        },
+        "ajmccarron:QB": {
+          "observedProjected": 4.8,
+          "observedActual": -0.04,
+          "seasons": 1
+        },
+        "jaydendaniels:QB": {
+          "observedProjected": 275.49,
+          "observedActual": 319.82,
+          "seasons": 1
+        },
+        "bonix:QB": {
+          "observedProjected": 202.57,
+          "observedActual": 260.8,
+          "seasons": 1
+        },
+        "calebwilliams:QB": {
+          "observedProjected": 217.53,
+          "observedActual": 237.04,
+          "seasons": 1
+        },
+        "xavierworthy:WR": {
+          "observedProjected": 97.33,
+          "observedActual": 113.3,
+          "seasons": 1
+        },
+        "deebosamuelsr:WR": {
+          "observedProjected": 125.855,
+          "observedActual": 96.5,
+          "seasons": 1
+        },
+        "brianthomasjr:WR": {
+          "observedProjected": 116.31,
+          "observedActual": 169.8,
+          "seasons": 1
+        },
+        "laddmcconkey:WR": {
+          "observedProjected": 101.895,
+          "observedActual": 126,
+          "seasons": 1
+        },
+        "jalenmcmillan:WR": {
+          "observedProjected": 51.25,
+          "observedActual": 66.4,
+          "seasons": 1
+        },
+        "maliknabers:WR": {
+          "observedProjected": 118.245,
+          "observedActual": 123.1,
+          "seasons": 1
+        },
+        "devaughnvele:WR": {
+          "observedProjected": 45.02,
+          "observedActual": 51.8,
+          "seasons": 1
+        },
+        "keoncoleman:WR": {
+          "observedProjected": 64.19,
+          "observedActual": 69.8,
+          "seasons": 1
+        },
+        "xavierlegette:WR": {
+          "observedProjected": 74.095,
+          "observedActual": 70.3,
+          "seasons": 1
+        },
+        "lukemccaffrey:WR": {
+          "observedProjected": 37.555,
+          "observedActual": 16.8,
+          "seasons": 1
+        },
+        "jordanwhittington:WR": {
+          "observedProjected": 29.845,
+          "observedActual": 20.1,
+          "seasons": 1
+        },
+        "jalynnpolk:WR": {
+          "observedProjected": 40.235,
+          "observedActual": 20.7,
+          "seasons": 1
+        },
+        "marvinharrisonjr:WR": {
+          "observedProjected": 129.495,
+          "observedActual": 112.6,
+          "seasons": 1
+        },
+        "adonaimitchell:WR": {
+          "observedProjected": 56.765,
+          "observedActual": 28.56,
+          "seasons": 1
+        },
+        "jermaineburton:WR": {
+          "observedProjected": 19.015,
+          "observedActual": 10.7,
+          "seasons": 1
+        },
+        "malachicorley:WR": {
+          "observedProjected": 8.995,
+          "observedActual": 2.2,
+          "seasons": 1
+        },
+        "jacobcowing:WR": {
+          "observedProjected": 11.475,
+          "observedActual": 5,
+          "seasons": 1
+        },
+        "anthonygould:WR": {
+          "observedProjected": 4.52,
+          "observedActual": 2.3,
+          "seasons": 1
+        },
+        "jhaquanjackson:WR": {
+          "observedProjected": 3.725,
+          "observedActual": 0.3,
+          "seasons": 1
+        },
+        "bubmeans:WR": {
+          "observedProjected": 13.36,
+          "observedActual": 17.8,
+          "seasons": 1
+        },
+        "jamarithrash:WR": {
+          "observedProjected": 5.42,
+          "observedActual": 2.2,
+          "seasons": 1
+        },
+        "johnnywilson:WR": {
+          "observedProjected": 20.455,
+          "observedActual": 7.4,
+          "seasons": 1
+        },
+        "romeodunze:WR": {
+          "observedProjected": 97.78,
+          "observedActual": 87.6,
+          "seasons": 1
+        },
+        "cedrickwilsonjr:WR": {
+          "observedProjected": 31.645,
+          "observedActual": 28.04,
+          "seasons": 1
+        },
+        "javonbaker:WR": {
+          "observedProjected": 5.915,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "troyfranklin:WR": {
+          "observedProjected": 35.69,
+          "observedActual": 38,
+          "seasons": 1
+        },
+        "caseywashington:WR": {
+          "observedProjected": 2.585,
+          "observedActual": 1.4,
+          "seasons": 1
+        },
+        "brendenrice:WR": {
+          "observedProjected": 1.315,
+          "observedActual": 0,
+          "seasons": 1
+        },
+        "malikwashington:WR": {
+          "observedProjected": 15.715,
+          "observedActual": 23,
+          "seasons": 1
+        },
+        "masontipton:WR": {
+          "observedProjected": 19.975,
+          "observedActual": 8.2,
+          "seasons": 1
+        },
+        "ryanflournoy:WR": {
+          "observedProjected": 5.185,
+          "observedActual": 6.5,
+          "seasons": 1
+        },
+        "drakemaye:QB": {
+          "observedProjected": 130.2,
+          "observedActual": 165.18,
+          "seasons": 1
+        },
+        "spencerrattler:QB": {
+          "observedProjected": 39.9,
+          "observedActual": 29.86,
+          "seasons": 1
+        },
+        "jalencoker:WR": {
+          "observedProjected": 27.775,
+          "observedActual": 43.3,
+          "seasons": 1
+        },
+        "rickypearsall:WR": {
+          "observedProjected": 38.38,
+          "observedActual": 28.9,
+          "seasons": 1
+        },
+        "devontezwalker:WR": {
+          "observedProjected": 1.075,
+          "observedActual": 8.1,
+          "seasons": 1
+        },
+        "ainiassmith:WR": {
+          "observedProjected": 7.65,
+          "observedActual": 0.8,
+          "seasons": 1
+        },
+        "kevinaustinjr:WR": {
+          "observedProjected": 7.075,
+          "observedActual": 7,
+          "seasons": 1
+        }
+      }
+    }
+  }
+}

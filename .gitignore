@@ -1,0 +1,13 @@
+node_modules/
+.pnpm-store/
+.env
+coverage/
+dist/
+data/cache/
+data/private/
+data/reports/
+*.log
+__pycache__/
+*.py[cod]
+.synthetic-tournament.stdout.json
+data/generated/live-deep-replay.local.json

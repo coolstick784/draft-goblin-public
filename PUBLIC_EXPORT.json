@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/coolstick784/draft-goblin",
+  "sourceCommit": "0a967b9cced7d1987756cdb81fb530c44a4ff7e4",
+  "publicationModel": "sanitized-snapshot",
+  "excluded": [
+    "Git history and non-main branches",
+    "Private data, caches, reports, and credentials",
+    "Raw provider projections and snapshots",
+    "Historical draft records",
+    "Vendored datasets and archives",
+    "Private-repository GitHub workflows"
+  ]
+}

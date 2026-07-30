@@ -1,0 +1,59 @@
+{
+  "policyVersion": 1,
+  "rules": {
+    "evaluationNeverPromotes": true,
+    "requireExplicitReviewedPromotion": true,
+    "requireExactCandidateDigest": true,
+    "requireExactEvidenceDigest": true,
+    "requireIndividualSourceSuperiority": true,
+    "requirePureOwnedReplacementSuperiority": true,
+    "requireFrozenCandidateOutcomePopulation": true,
+    "minimumCompletedPreseasonSeasons": 3,
+    "minimumProspectiveShadowSeasons": 3,
+    "excludedAdaptiveDevelopmentSeasons": [
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "models": [
+    {
+      "id": "draft-goblin-owned-2026.12",
+      "status": "shadow",
+      "eligibleForRuntime": false,
+      "candidateSha256": null,
+      "evidenceSha256": null,
+      "promotionCandidateKind": "pure-independent-owned",
+      "promotionGateVersion": 2,
+      "requireIndependentOwnedSuperiority": true,
+      "acceptedResearchPolicies": [
+        "wr-rookie-direct-total-v2026.12"
+      ],
+      "prospectiveOverlay": {
+        "candidateMethod": "position-aware-consensus-anchored-owned-overlay",
+        "scoringFormats": [
+          "STD",
+          "HALF",
+          "PPR"
+        ],
+        "positionOwnedWeights": {
+          "QB": 0.5,
+          "RB": 0.5,
+          "WR": 0.5,
+          "TE": 0.5,
+          "K": 0.5,
+          "DST": 0
+        },
+        "closenessLimits": {
+          "minimumSpearman": 0.95,
+          "maximumMedianStandardizedDistance": 0.2,
+          "maximumP90StandardizedDistance": 0.5
+        },
+        "minimumRowsPerFormatPositionSlice": 10,
+        "immutableAfterCutoff": true,
+        "dstRationale": "The owned DST safety selector rejected its learned ranking."
+      },
+      "notes": "Independent owned forecast with an experimental WR-rookie direct-total specialist. A preregistered position-aware shadow overlay remains close to the current product: 50% owned / 50% final consensus for QB, RB, WR, TE, and K, and 100% final consensus for DST because the owned DST learner failed its safety selector. The overlay is diagnostic and cannot establish source independence. Runtime replacement requires the separately frozen pure independent owned forecast itself to beat the consensus and every provider under the full simultaneous-inference, slice, rank, bias, RMSE, provenance, and prospective-season gates, followed by an explicit reviewed policy commit pinning exact hashes."
+    }
+  ]
+}

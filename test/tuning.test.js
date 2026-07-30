@@ -1,0 +1,2 @@
+import test from"node:test";import assert from"node:assert/strict";import fs from"node:fs";
+test("tuning script enforces season-separated train, validation, and test",()=>{const source=fs.readFileSync(new URL("../scripts/tune-draft-policy.js",import.meta.url),"utf8");assert.match(source,/train2023/);assert.match(source,/validation2024/);assert.match(source,/test2025/);assert.match(source,/test\.logLoss<test\.baselineLogLoss/);assert.match(source,/Rejected:/)});

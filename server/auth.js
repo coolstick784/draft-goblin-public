@@ -1,0 +1,17 @@
+import { DatabaseSync } from "node:sqlite";
+import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import fs from "node:fs";
+
+const normalizeEmail=value=>String(value||"").trim().toLowerCase();
+function passwordHash(password,salt=randomBytes(16).toString("hex")){return{salt,hash:scryptSync(password,salt,64).toString("hex")}}
+export class AuthStore{
+  constructor(path=process.env.DB_PATH||new URL("../data/private/users.sqlite",import.meta.url)){if(path!==":memory:"){const file=path instanceof URL?path:new URL(`file:///${String(path).replaceAll("\\","/")}`);fs.mkdirSync(new URL(".",file),{recursive:true})}this.db=new DatabaseSync(path);this.db.exec("PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY,email TEXT UNIQUE NOT NULL,password_hash TEXT NOT NULL,salt TEXT NOT NULL,preferences TEXT NOT NULL DEFAULT '{}',created_at INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,expires_at INTEGER NOT NULL);")}
+  register(email,password){email=normalizeEmail(email);if(!/^\S+@\S+\.\S+$/.test(email))throw new Error("valid email is required");if(String(password).length<10)throw new Error("password must be at least 10 characters");const id=randomBytes(16).toString("hex"),secret=passwordHash(password);try{this.db.prepare("INSERT INTO users(id,email,password_hash,salt,created_at) VALUES(?,?,?,?,?)").run(id,email,secret.hash,secret.salt,Date.now())}catch(error){if(String(error).includes("UNIQUE"))throw new Error("account already exists");throw error}return this.createSession(id)}
+  login(email,password){const user=this.db.prepare("SELECT * FROM users WHERE email=?").get(normalizeEmail(email));if(!user)throw new Error("invalid email or password");const candidate=Buffer.from(passwordHash(String(password),user.salt).hash,"hex"),expected=Buffer.from(user.password_hash,"hex");if(candidate.length!==expected.length||!timingSafeEqual(candidate,expected))throw new Error("invalid email or password");return this.createSession(user.id)}
+  createSession(userId){const token=randomBytes(32).toString("base64url"),tokenHash=passwordHash(token,"draft-champion-session").hash,expiresAt=Date.now()+30*86400000;this.db.prepare("DELETE FROM sessions WHERE expires_at<?").run(Date.now());this.db.prepare("INSERT INTO sessions(token_hash,user_id,expires_at) VALUES(?,?,?)").run(tokenHash,userId,expiresAt);return{token,expiresAt}}
+  userForToken(token){if(!token)return null;const hash=passwordHash(token,"draft-champion-session").hash,row=this.db.prepare("SELECT users.id,users.email,users.preferences,sessions.expires_at FROM sessions JOIN users ON users.id=sessions.user_id WHERE token_hash=? AND expires_at>?").get(hash,Date.now());return row?{id:row.id,email:row.email,preferences:JSON.parse(row.preferences),expiresAt:row.expires_at}:null}
+  logout(token){if(token)this.db.prepare("DELETE FROM sessions WHERE token_hash=?").run(passwordHash(token,"draft-champion-session").hash)}
+  preferences(userId,value){const safe={strategy:value.strategy,sourceProfile:value.sourceProfile,customWeights:value.customWeights,sourceIds:Array.isArray(value.sourceIds)?value.sourceIds.slice(0,20):undefined};for(const key of Object.keys(safe))if(safe[key]===undefined)delete safe[key];this.db.prepare("UPDATE users SET preferences=? WHERE id=?").run(JSON.stringify(safe),userId);return safe}
+  deleteUser(userId){this.db.prepare("DELETE FROM users WHERE id=?").run(userId)}
+  close(){this.db.close()}
+}

@@ -1,0 +1,9 @@
+import test from"node:test";
+import assert from"node:assert/strict";
+import{backtestPlayerPerformanceRanges,evaluatePlayerRanges}from"../scripts/backtest-player-performance-ranges.js";
+
+function rows(){const output=[];for(const year of[2021,2022,2023,2024])for(const position of["QB","WR"])for(let player=0;player<16;player++)for(let week=1;week<=12;week++){const stable=player<8,projected=position==="QB"?20:12,amplitude=stable?1:7,actual=Math.max(0,projected+(week%3===0?-amplitude:amplitude));output.push({year,week,position,playerId:`${position}-${player}`,name:`${position} Player ${player}`,projected,actual,sourceId:"test"})}return output}
+
+test("player ranges learn stable and boom-bust profiles without using the test year",()=>{const all=rows(),metrics=evaluatePlayerRanges(all.filter(row=>row.year<=2022),all.filter(row=>row.year===2023),{shrinkage:8});assert.ok(metrics.playersWithPrior>0);assert.ok(metrics.volatilityRankCorrelation>.5);const artifact=backtestPlayerPerformanceRanges(all,{generatedAt:"2026-01-01T00:00:00.000Z"}),profiles=Object.values(artifact.profiles);assert.ok(profiles.some(profile=>profile.classification==="stable"));assert.ok(profiles.some(profile=>profile.classification==="boom-bust"));assert.equal(artifact.holdout.year,2024);assert.ok(artifact.rookiePrior.scale>=1);assert.match(artifact.leakageBoundary,/untouched holdout/)});
+
+test("players without prior history retain the positional range",()=>{const training=rows().filter(row=>row.year<=2022),unseen=rows().filter(row=>row.year===2023).map(row=>({...row,name:`New ${row.name}`,playerId:`new-${row.playerId}`})),metrics=evaluatePlayerRanges(training,unseen,{shrinkage:8});assert.equal(metrics.playersWithPrior,0);assert.equal(metrics.candidate.meanIntervalScore,metrics.baseline.meanIntervalScore);assert.equal(metrics.candidate.meanWidth,metrics.baseline.meanWidth)});

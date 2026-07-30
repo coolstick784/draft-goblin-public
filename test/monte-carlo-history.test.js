@@ -1,0 +1,2 @@
+import test from"node:test";import assert from"node:assert/strict";import fs from"node:fs";
+test("large projection and ADP Monte Carlo study preserves its evidence limits",()=>{const report=JSON.parse(fs.readFileSync(new URL("../data/research/projection-adp-monte-carlo.json",import.meta.url)));assert.ok(report.simulationCount>=1000000);assert.equal(report.playerCohort,147);assert.equal(report.projectionAdpBlends.length,3);assert.ok(report.limitations.some(value=>/one preseason season/.test(value)));assert.match(report.promotionRule,/different-season holdout/)});

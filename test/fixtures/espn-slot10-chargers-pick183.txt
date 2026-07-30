@@ -1,0 +1,2528 @@
+ESPN Fantasy Football Draft - Practice Draft for ai test league
+--:--
+Pick Queue
+Autopick
+Rank
+PLAYER
+No players in queue
+Roster
+
+we go's Wild Team
+POS
+Player
+BYE
+QB
+J. Allen
+7
+RB
+A. Jeanty
+13
+RB
+J. Cook III
+7
+WR
+L. McConkey
+7
+WR
+C. Sutton
+10
+TE
+D. Goedert
+10
+FLEX
+C. Skattebo
+8
+D/ST
+Chargers D/ST
+7
+K
+W. Reichard
+6
+BE
+R. Stevenson
+(RB)
+11
+BE
+T. Kraft
+(TE)
+11
+BE
+K. Shakir
+(WR)
+7
+BE
+R. Doubs
+(WR)
+11
+BE
+J. Higgins
+(WR)
+8
+BE
+R. Shaheed
+(WR)
+11
+BE
+M. Willis
+(QB)
+6
+Roster Limits
+16/16 Players
+QB2/4RB4/8WR6/8TE2/3K1/3D/ST1/3
+
+Your Draft is Complete!
+Good luck in your quest to bring home this trophy
+
+Players
+Pick History
+Board
+Rules
+League Manager
+
+
+All Rounds
+Round 1
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+1
+
+Puka Nacua
+LAR
+WR
+Team 11
+375
+356.5
+3
+2
+
+Jaxon Smith-Njigba
+SEA
+WR
+Team 10
+359.9
+326.6
+6
+3
+
+Christian McCaffrey
+SF
+RB
+Team 9
+416.6
+350.4
+5
+4
+
+Jahmyr Gibbs
+DET
+RB
+Team 3
+366.9
+365.1
+2
+5
+
+Bijan Robinson
+ATL
+RB
+Team 8
+370.8
+352.5
+1
+6
+
+Amon-Ra St. Brown
+DET
+WR
+Team 12
+324
+324.3
+7
+7
+
+Ja'Marr Chase
+CIN
+WR
+Team 6
+313.6
+336.1
+4
+8
+
+De'Von Achane
+Q
+MIA
+RB
+Team 7
+322.8
+292.8
+9
+9
+
+Jonathan Taylor
+IND
+RB
+Team 5
+362.3
+308.8
+8
+10
+
+Ashton Jeanty
+LV
+RB
+we go's Wild Team
+245.1
+281.5
+11
+11
+
+CeeDee Lamb
+DAL
+WR
+Team 4
+200.9
+294.8
+10
+12
+
+Jeremiyah Love
+ARI
+RB
+Team 2
+-
+278.8
+14
+Round 2
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+13
+
+Drake London
+Q
+ATL
+WR
+Team 2
+201.9
+269.7
+15
+14
+
+Justin Jefferson
+MIN
+WR
+Team 4
+201.5
+293.5
+12
+15
+
+James Cook III
+BUF
+RB
+we go's Wild Team
+302.2
+279.4
+13
+16
+
+Saquon Barkley
+PHI
+RB
+Team 5
+232.3
+273.4
+16
+17
+
+Derrick Henry
+BAL
+RB
+Team 7
+279.5
+274.1
+18
+18
+
+Rashee Rice
+Q
+KC
+WR
+Team 6
+150.1
+269.8
+17
+19
+
+Nico Collins
+HOU
+WR
+Team 12
+226.2
+249.4
+19
+20
+
+Omarion Hampton
+LAC
+RB
+Team 8
+135.7
+279.3
+20
+21
+
+Trey McBride
+ARI
+TE
+Team 3
+315.9
+251.6
+22
+22
+
+Malik Nabers
+Q
+NYG
+WR
+Team 9
+57.1
+218
+21
+23
+
+Josh Jacobs
+GB
+RB
+Team 10
+237.1
+273.5
+23
+24
+
+Chris Olave
+NO
+WR
+Team 11
+268
+244.6
+26
+Round 3
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+25
+
+Chase Brown
+CIN
+RB
+Team 11
+282.6
+272.3
+25
+26
+
+Brock Bowers
+LV
+TE
+Team 10
+176.2
+240.4
+24
+27
+
+Garrett Wilson
+NYJ
+WR
+Team 9
+99.5
+257.3
+31
+28
+
+George Pickens
+DAL
+WR
+Team 3
+291.9
+239.4
+28
+29
+
+Breece Hall
+NYJ
+RB
+Team 8
+207.7
+273
+27
+30
+
+A.J. Brown
+NE
+WR
+Team 12
+220.3
+248.3
+29
+31
+
+Kenneth Walker III
+KC
+RB
+Team 6
+191.9
+272.5
+30
+32
+
+DeVonta Smith
+PHI
+WR
+Team 7
+201.8
+238.7
+33
+33
+
+Javonte Williams
+DAL
+RB
+Team 5
+242.8
+258.8
+34
+34
+
+Josh Allen
+BUF
+QB
+we go's Wild Team
+364.6
+369.3
+41
+35
+
+Kyren Williams
+LAR
+RB
+Team 4
+263.3
+232.2
+35
+36
+
+Tetairoa McMillan
+Q
+CAR
+WR
+Team 2
+211.4
+238.6
+32
+Round 4
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+37
+
+Zay Flowers
+BAL
+WR
+Team 2
+243.3
+238.9
+37
+38
+
+Travis Etienne Jr.
+NO
+RB
+Team 4
+253.9
+241.3
+36
+39
+
+Cam Skattebo
+Q
+NYG
+RB
+we go's Wild Team
+127.7
+242
+39
+40
+
+Carnell Tate
+TEN
+WR
+Team 5
+-
+211.2
+44
+41
+
+Terry McLaurin
+WSH
+WR
+Team 7
+114.2
+219.2
+38
+42
+
+Tee Higgins
+CIN
+WR
+Team 6
+211.6
+218.4
+40
+43
+
+Colston Loveland
+CHI
+TE
+Team 12
+165.1
+205.9
+45
+44
+
+Davante Adams
+LAR
+WR
+Team 8
+222.9
+232.5
+42
+45
+
+Bucky Irving
+Q
+TB
+RB
+Team 3
+138.5
+216.6
+43
+46
+
+Jaylen Waddle
+DEN
+WR
+Team 9
+194.1
+212.9
+50
+47
+
+Quinshon Judkins
+Q
+CLE
+RB
+Team 10
+169.8
+225
+46
+48
+
+Lamar Jackson
+BAL
+QB
+Team 11
+214.9
+322.1
+47
+Round 5
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+49
+
+Jameson Williams
+DET
+WR
+Team 11
+219.9
+208.6
+53
+50
+
+Jadarian Price
+SEA
+RB
+Team 10
+-
+193.9
+54
+51
+
+Tyler Warren
+IND
+TE
+Team 9
+188.5
+208.1
+51
+52
+
+Luther Burden III
+CHI
+WR
+Team 3
+127.9
+205.9
+56
+53
+
+Emeka Egbuka
+TB
+WR
+Team 8
+195.7
+228.9
+49
+54
+
+TreVeyon Henderson
+NE
+RB
+Team 12
+206.2
+208.2
+52
+55
+
+Jayden Daniels
+WSH
+QB
+Team 6
+114.3
+318.5
+57
+56
+
+Bhayshul Tuten
+JAX
+RB
+Team 7
+88.6
+204.8
+60
+57
+
+DJ Moore
+BUF
+WR
+Team 5
+170.2
+209.8
+55
+58
+
+Ladd McConkey
+Q
+LAC
+WR
+we go's Wild Team
+180.9
+220
+48
+59
+
+Rome Odunze
+CHI
+WR
+Team 4
+146.1
+212.6
+58
+60
+
+Harold Fannin Jr.
+Q
+CLE
+TE
+Team 2
+186.4
+187.2
+62
+Round 6
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+61
+
+D'Andre Swift
+CHI
+RB
+Team 2
+228.6
+211.7
+61
+62
+
+Drake Maye
+NE
+QB
+Team 4
+352
+319
+67
+63
+
+Courtland Sutton
+DEN
+WR
+we go's Wild Team
+219.7
+204
+74
+64
+
+Joe Burrow
+CIN
+QB
+Team 5
+134.5
+304
+68
+65
+
+Jalen Hurts
+PHI
+QB
+Team 7
+299.1
+320.3
+69
+66
+
+David Montgomery
+HOU
+RB
+Team 6
+166.9
+192.2
+63
+67
+
+Chuba Hubbard
+CAR
+RB
+Team 12
+125.4
+184.8
+64
+68
+
+Kyle Pitts Sr.
+ATL
+TE
+Team 8
+210.8
+185.1
+71
+69
+
+Marvin Harrison Jr.
+ARI
+WR
+Team 3
+127.8
+194
+59
+70
+
+Tony Pollard
+TEN
+RB
+Team 9
+185.8
+189.6
+75
+71
+
+Jordyn Tyson
+Q
+NO
+WR
+Team 10
+-
+188.3
+66
+72
+
+Aaron Jones Sr.
+MIN
+RB
+Team 11
+118.7
+188.5
+76
+Round 7
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+73
+
+Sam LaPorta
+Q
+DET
+TE
+Team 11
+106.9
+188.7
+77
+74
+
+Jaxson Dart
+NYG
+QB
+Team 10
+241.6
+301.1
+78
+75
+
+DK Metcalf
+PIT
+WR
+Team 9
+187.2
+195.1
+72
+76
+
+Mike Evans
+SF
+WR
+Team 3
+84.8
+184.8
+73
+77
+
+Michael Pittman Jr.
+PIT
+WR
+Team 8
+202.4
+196.5
+65
+78
+
+Alec Pierce
+Q
+IND
+WR
+Team 12
+183.3
+202.8
+70
+79
+
+Travis Kelce
+KC
+TE
+Team 6
+193.2
+176.8
+95
+80
+
+Christian Watson
+GB
+WR
+Team 7
+132.4
+186
+79
+81
+
+Chris Godwin Jr.
+TB
+WR
+Team 5
+83
+157.3
+81
+82
+
+Dallas Goedert
+PHI
+TE
+we go's Wild Team
+185.1
+176.6
+108
+83
+
+Jaylen Warren
+PIT
+RB
+Team 4
+217.1
+190.9
+80
+84
+
+Parker Washington
+JAX
+WR
+Team 2
+184.7
+187.5
+83
+Round 8
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+85
+
+Jakobi Meyers
+JAX
+WR
+Team 2
+175.8
+181.7
+82
+86
+
+Kenny Gainwell
+TB
+RB
+Team 4
+221.3
+172.2
+85
+87
+
+Rhamondre Stevenson
+NE
+RB
+we go's Wild Team
+178.8
+190.8
+92
+88
+
+Wan'Dale Robinson
+TEN
+WR
+Team 5
+217.9
+174.2
+86
+89
+
+Brian Thomas Jr.
+JAX
+WR
+Team 7
+138.8
+176.4
+84
+90
+
+Rico Dowdle
+PIT
+RB
+Team 6
+216.3
+185.3
+88
+91
+
+Brock Purdy
+SF
+QB
+Team 12
+177.4
+293.1
+103
+92
+
+Dak Prescott
+Q
+DAL
+QB
+Team 8
+313.8
+285.9
+105
+93
+
+J.K. Dobbins
+DEN
+RB
+Team 3
+115.9
+171.4
+89
+94
+
+Makai Lemon
+Q
+PHI
+WR
+Team 9
+-
+173.1
+91
+95
+
+Ricky Pearsall
+SF
+WR
+Team 10
+88.6
+165.3
+93
+96
+
+Michael Wilson
+ARI
+WR
+Team 11
+220.6
+167.3
+96
+Round 9
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+97
+
+Rachaad White
+WSH
+RB
+Team 11
+143
+174.5
+87
+98
+
+RJ Harvey
+DEN
+RB
+Team 10
+206.6
+166.9
+97
+99
+
+Matthew Golden
+GB
+WR
+Team 9
+70
+185.7
+94
+100
+
+Trevor Lawrence
+JAX
+QB
+Team 3
+338.2
+287.4
+117
+101
+
+Travis Hunter
+Q
+JAX
+WRCB
+Team 8
+63.8
+113
+90
+102
+
+Xavier Worthy
+Q
+KC
+WR
+Team 12
+109.9
+172.6
+104
+103
+
+KC Concepcion
+CLE
+WR
+Team 6
+-
+162.5
+98
+104
+
+George Kittle
+Q
+SF
+TE
+Team 7
+161.5
+189.6
+107
+105
+
+Jake Ferguson
+DAL
+TE
+Team 5
+188.1
+167.2
+109
+106
+
+Tucker Kraft
+Q
+GB
+TE
+we go's Wild Team
+117.2
+162.1
+120
+107
+
+Kyle Monangai
+CHI
+RB
+Team 4
+146.7
+176.2
+99
+108
+
+Caleb Williams
+CHI
+QB
+Team 2
+318.2
+281.7
+125
+Round 10
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+109
+
+Josh Downs
+IND
+WR
+Team 2
+136.4
+164.8
+100
+110
+
+Jordan Addison
+MIN
+WR
+Team 4
+135.1
+170.4
+102
+111
+
+Khalil Shakir
+BUF
+WR
+we go's Wild Team
+166.4
+171.3
+110
+112
+
+Blake Corum
+LAR
+RB
+Team 5
+122.2
+159.4
+101
+113
+
+Jonathon Brooks
+CAR
+RB
+Team 7
+0
+145.4
+106
+114
+
+Tyjae Spears
+TEN
+RB
+Team 6
+111.7
+149.1
+113
+115
+
+Brandon Aubrey
+DAL
+K
+Team 12
+184.6
+171.6
+132
+116
+
+Woody Marks
+HOU
+RB
+Team 8
+151.1
+127.6
+112
+117
+
+Texans D/ST
+HOU
+D/ST
+Team 3
+173
+128
+134
+118
+
+Bo Nix
+Q
+DEN
+QB
+Team 9
+304.8
+294.7
+128
+119
+
+Broncos D/ST
+DEN
+D/ST
+Team 10
+144
+130.7
+135
+120
+
+Jayden Reed
+GB
+WR
+Team 11
+48.5
+170.9
+114
+Round 11
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+121
+
+Jacory Croskey-Merritt
+WSH
+RB
+Team 11
+140.3
+151.6
+111
+122
+
+Isiah Pacheco
+DET
+RB
+Team 10
+87.3
+123.6
+116
+123
+
+Seahawks D/ST
+SEA
+D/ST
+Team 9
+185
+120.5
+140
+124
+
+Zach Charbonnet
+Q
+SEA
+RB
+Team 3
+181.4
+133.7
+115
+125
+
+Quentin Johnston
+LAC
+WR
+Team 8
+171.2
+164.6
+118
+126
+
+Jalen Coker
+CAR
+WR
+Team 12
+90.4
+148.2
+122
+127
+
+Patriots D/ST
+NE
+D/ST
+Team 6
+133
+100.3
+144
+128
+
+Cameron Dicker
+LAC
+K
+Team 7
+167
+161.7
+145
+129
+
+Steelers D/ST
+PIT
+D/ST
+Team 5
+113
+126.3
+146
+130
+
+Romeo Doubs
+NE
+WR
+we go's Wild Team
+165.4
+170.8
+119
+131
+
+Isaiah Likely
+NYG
+TE
+Team 4
+61.7
+156.7
+129
+132
+
+Eagles D/ST
+PHI
+D/ST
+Team 2
+126
+106.8
+147
+Round 12
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+133
+
+Omar Cooper Jr.
+NYJ
+WR
+Team 2
+-
+104.9
+124
+134
+
+Rams D/ST
+LAR
+D/ST
+Team 4
+125
+123.3
+148
+135
+
+Jayden Higgins
+HOU
+WR
+we go's Wild Team
+129.5
+141.5
+126
+136
+
+Ka'imi Fairbairn
+HOU
+K
+Team 5
+190
+157.7
+151
+137
+
+Ravens D/ST
+BAL
+D/ST
+Team 7
+77
+118
+150
+138
+
+Jason Myers
+SEA
+K
+Team 6
+195
+158.4
+152
+139
+
+Chris Rodriguez Jr.
+Q
+JAX
+RB
+Team 12
+92
+71.2
+130
+140
+
+Harrison Mevis
+LAR
+K
+Team 8
+81
+159.5
+156
+141
+
+Tyler Allgeier
+ARI
+RB
+Team 3
+123
+91.4
+133
+142
+
+Eddy Pineiro
+SF
+K
+Team 9
+139
+155.3
+159
+143
+
+Justin Herbert
+LAC
+QB
+Team 10
+286.9
+282.7
+138
+144
+
+Cam Little
+JAX
+K
+Team 11
+162
+146.7
+161
+Round 13
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+145
+
+Alvin Kamara
+NO
+RB
+Team 11
+100.7
+124.4
+121
+146
+
+Jake Bates
+DET
+K
+Team 10
+145
+145.8
+163
+147
+
+Jalen McMillan
+TB
+WR
+Team 9
+29.9
+132.8
+127
+148
+
+Patrick Mahomes
+Q
+KC
+QB
+Team 3
+285.7
+289.7
+136
+149
+
+Vikings D/ST
+MIN
+D/ST
+Team 8
+131
+71.8
+164
+150
+
+Browns D/ST
+CLE
+D/ST
+Team 12
+143
+103.9
+167
+151
+
+Jordan Mason
+MIN
+RB
+Team 6
+128.9
+129.8
+123
+152
+
+Jerry Jeudy
+Q
+CLE
+WR
+Team 7
+120.7
+138
+137
+153
+
+Calvin Ridley
+TEN
+WR
+Team 5
+47.3
+143.8
+131
+154
+
+Rashid Shaheed
+SEA
+WR
+we go's Wild Team
+156.6
+144.4
+143
+155
+
+Harrison Butker
+KC
+K
+Team 4
+144
+148.4
+170
+156
+
+Tyler Loop
+BAL
+K
+Team 2
+140
+145.8
+171
+Round 14
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+157
+
+Matthew Stafford
+LAR
+QB
+Team 2
+350.4
+293.3
+141
+158
+
+Tank Bigsby
+PHI
+RB
+Team 4
+53.8
+64.2
+139
+159
+
+Malik Willis
+MIA
+QB
+we go's Wild Team
+51.2
+237.8
+189
+160
+
+Brian Robinson Jr.
+ATL
+RB
+Team 5
+62.5
+93.8
+149
+161
+
+T.J. Hockenson
+MIN
+TE
+Team 7
+112.8
+158.1
+142
+162
+
+Germie Bernard
+PIT
+WR
+Team 6
+-
+126.8
+153
+163
+
+Chris Bell
+Q
+MIA
+WR
+Team 12
+-
+88.6
+154
+164
+
+Braelon Allen
+NYJ
+RB
+Team 8
+15.3
+87.4
+157
+165
+
+Cairo Santos
+CHI
+K
+Team 3
+127
+144.4
+175
+166
+
+Jauan Jennings
+MIN
+WR
+Team 9
+173.3
+114.5
+158
+167
+
+Kenyon Sadiq
+Q
+NYJ
+TE
+Team 10
+-
+162.4
+155
+168
+
+Jaguars D/ST
+JAX
+D/ST
+Team 11
+139
+81.1
+169
+Round 15
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+169
+
+Mark Andrews
+BAL
+TE
+Team 11
+131
+169.5
+162
+170
+
+Daniel Jones
+Q
+IND
+QB
+Team 10
+226.4
+266.8
+168
+171
+
+Tyler Shough
+NO
+QB
+Team 9
+158
+264.5
+160
+172
+
+Dalton Kincaid
+BUF
+TE
+Team 3
+126.1
+155.6
+165
+173
+
+Denzel Boston
+CLE
+WR
+Team 8
+-
+131.8
+172
+174
+
+Kyler Murray
+MIN
+QB
+Team 12
+77.8
+250.6
+166
+175
+
+Lions D/ST
+DET
+D/ST
+Team 6
+91
+108.2
+174
+176
+
+Darnell Mooney
+NYG
+WR
+Team 7
+82.3
+95.3
+173
+177
+
+Chris Boswell
+PIT
+K
+Team 5
+147
+142.6
+177
+178
+
+Will Reichard
+MIN
+K
+we go's Wild Team
+158
+142.1
+176
+179
+
+Stefon Diggs
+FA
+WR
+Team 4
+210.3
+-
+179
+180
+
+James Conner
+Q
+ARI
+RB
+Team 2
+33.3
+0
+178
+Round 16
+Pick
+Player
+Team
+2025 PTS
+PROJ PTS
+RK
+181
+
+Antonio Williams
+WSH
+WR
+Team 2
+-
+116
+180
+182
+
+Hunter Henry
+NE
+TE
+Team 4
+178.8
+149.7
+186
+183
+
+Chargers D/ST
+LAC
+D/ST
+we go's Wild Team
+119
+94
+181
+184
+
+Jalen Nailor
+LV
+WR
+Team 5
+100.7
+114.9
+182
+185
+
+Jared Goff
+DET
+QB
+Team 7
+297.1
+267.9
+187
+186
+
+Tre Tucker
+LV
+WR
+Team 6
+161.7
+137.8
+183
+187
+
+Mike Washington Jr.
+LV
+RB
+Team 12
+-
+65.5
+185
+188
+
+Tyrone Tracy Jr.
+NYG
+RB
+Team 8
+160.8
+80.3
+184
+189
+
+Baker Mayfield
+TB
+QB
+Team 3
+271.9
+264.8
+188
+190
+
+Chiefs D/ST
+KC
+D/ST
+Team 9
+88
+100.5
+197
+191
+
+Ray Davis
+BUF
+RB
+Team 10
+64.1
+38.1
+191
+192
+
+Adonai Mitchell
+NYJ
+WR
+Team 11
+87.9
+116.3
+190
+Picks
+
+Puka Nacua / LAR WR
+R1, P1 - Team 11
+
+Jaxon Smith-Njigba / SEA WR
+R1, P2 - Team 10
+
+Christian McCaffrey / SF RB
+R1, P3 - Team 9
+
+Jahmyr Gibbs / DET RB
+R1, P4 - Team 3
+
+Bijan Robinson / ATL RB
+R1, P5 - Team 8
+
+Amon-Ra St. Brown / DET WR
+R1, P6 - Team 12
+
+Ja'Marr Chase / CIN WR
+R1, P7 - Team 6
+
+De'Von Achane / MIA RB
+R1, P8 - Team 7
+
+Jonathan Taylor / IND RB
+R1, P9 - Team 5
+
+Ashton Jeanty / LV RB
+R1, P10 - we go's Wild Team
+
+CeeDee Lamb / DAL WR
+R1, P11 - Team 4
+
+Jeremiyah Love / ARI RB
+R1, P12 - Team 2
+
+Drake London / ATL WR
+R2, P1 - Team 2
+
+Justin Jefferson / MIN WR
+R2, P2 - Team 4
+
+James Cook III / BUF RB
+R2, P3 - we go's Wild Team
+
+Saquon Barkley / PHI RB
+R2, P4 - Team 5
+
+Derrick Henry / BAL RB
+R2, P5 - Team 7
+
+Rashee Rice / KC WR
+R2, P6 - Team 6
+
+Nico Collins / HOU WR
+R2, P7 - Team 12
+
+Omarion Hampton / LAC RB
+R2, P8 - Team 8
+
+Trey McBride / ARI TE
+R2, P9 - Team 3
+
+Malik Nabers / NYG WR
+R2, P10 - Team 9
+
+Josh Jacobs / GB RB
+R2, P11 - Team 10
+
+Chris Olave / NO WR
+R2, P12 - Team 11
+
+Chase Brown / CIN RB
+R3, P1 - Team 11
+
+Brock Bowers / LV TE
+R3, P2 - Team 10
+
+Garrett Wilson / NYJ WR
+R3, P3 - Team 9
+
+George Pickens / DAL WR
+R3, P4 - Team 3
+
+Breece Hall / NYJ RB
+R3, P5 - Team 8
+
+A.J. Brown / NE WR
+R3, P6 - Team 12
+
+Kenneth Walker III / KC RB
+R3, P7 - Team 6
+
+DeVonta Smith / PHI WR
+R3, P8 - Team 7
+
+Javonte Williams / DAL RB
+R3, P9 - Team 5
+
+Josh Allen / BUF QB
+R3, P10 - we go's Wild Team
+
+Kyren Williams / LAR RB
+R3, P11 - Team 4
+
+Tetairoa McMillan / CAR WR
+R3, P12 - Team 2
+
+Zay Flowers / BAL WR
+R4, P1 - Team 2
+
+Travis Etienne Jr. / NO RB
+R4, P2 - Team 4
+
+Cam Skattebo / NYG RB
+R4, P3 - we go's Wild Team
+
+Carnell Tate / TEN WR
+R4, P4 - Team 5
+
+Terry McLaurin / WSH WR
+R4, P5 - Team 7
+
+Tee Higgins / CIN WR
+R4, P6 - Team 6
+
+Colston Loveland / CHI TE
+R4, P7 - Team 12
+
+Davante Adams / LAR WR
+R4, P8 - Team 8
+
+Bucky Irving / TB RB
+R4, P9 - Team 3
+
+Jaylen Waddle / DEN WR
+R4, P10 - Team 9
+
+Quinshon Judkins / CLE RB
+R4, P11 - Team 10
+
+Lamar Jackson / BAL QB
+R4, P12 - Team 11
+
+Jameson Williams / DET WR
+R5, P1 - Team 11
+
+Jadarian Price / SEA RB
+R5, P2 - Team 10
+
+Tyler Warren / IND TE
+R5, P3 - Team 9
+
+Luther Burden III / CHI WR
+R5, P4 - Team 3
+
+Emeka Egbuka / TB WR
+R5, P5 - Team 8
+
+TreVeyon Henderson / NE RB
+R5, P6 - Team 12
+
+Jayden Daniels / WSH QB
+R5, P7 - Team 6
+
+Bhayshul Tuten / JAX RB
+R5, P8 - Team 7
+
+DJ Moore / BUF WR
+R5, P9 - Team 5
+
+Ladd McConkey / LAC WR
+R5, P10 - we go's Wild Team
+
+Rome Odunze / CHI WR
+R5, P11 - Team 4
+
+Harold Fannin Jr. / CLE TE
+R5, P12 - Team 2
+
+D'Andre Swift / CHI RB
+R6, P1 - Team 2
+
+Drake Maye / NE QB
+R6, P2 - Team 4
+
+Courtland Sutton / DEN WR
+R6, P3 - we go's Wild Team
+
+Joe Burrow / CIN QB
+R6, P4 - Team 5
+
+Jalen Hurts / PHI QB
+R6, P5 - Team 7
+
+David Montgomery / HOU RB
+R6, P6 - Team 6
+
+Chuba Hubbard / CAR RB
+R6, P7 - Team 12
+
+Kyle Pitts Sr. / ATL TE
+R6, P8 - Team 8
+
+Marvin Harrison Jr. / ARI WR
+R6, P9 - Team 3
+
+Tony Pollard / TEN RB
+R6, P10 - Team 9
+
+Jordyn Tyson / NO WR
+R6, P11 - Team 10
+
+Aaron Jones Sr. / MIN RB
+R6, P12 - Team 11
+
+Sam LaPorta / DET TE
+R7, P1 - Team 11
+
+Jaxson Dart / NYG QB
+R7, P2 - Team 10
+
+DK Metcalf / PIT WR
+R7, P3 - Team 9
+
+Mike Evans / SF WR
+R7, P4 - Team 3
+
+Michael Pittman Jr. / PIT WR
+R7, P5 - Team 8
+
+Alec Pierce / IND WR
+R7, P6 - Team 12
+
+Travis Kelce / KC TE
+R7, P7 - Team 6
+
+Christian Watson / GB WR
+R7, P8 - Team 7
+
+Chris Godwin Jr. / TB WR
+R7, P9 - Team 5
+
+Dallas Goedert / PHI TE
+R7, P10 - we go's Wild Team
+
+Jaylen Warren / PIT RB
+R7, P11 - Team 4
+
+Parker Washington / JAX WR
+R7, P12 - Team 2
+
+Jakobi Meyers / JAX WR
+R8, P1 - Team 2
+
+Kenny Gainwell / TB RB
+R8, P2 - Team 4
+
+Rhamondre Stevenson / NE RB
+R8, P3 - we go's Wild Team
+
+Wan'Dale Robinson / TEN WR
+R8, P4 - Team 5
+
+Brian Thomas Jr. / JAX WR
+R8, P5 - Team 7
+
+Rico Dowdle / PIT RB
+R8, P6 - Team 6
+
+Brock Purdy / SF QB
+R8, P7 - Team 12
+
+Dak Prescott / DAL QB
+R8, P8 - Team 8
+
+J.K. Dobbins / DEN RB
+R8, P9 - Team 3
+
+Makai Lemon / PHI WR
+R8, P10 - Team 9
+
+Ricky Pearsall / SF WR
+R8, P11 - Team 10
+
+Michael Wilson / ARI WR
+R8, P12 - Team 11
+
+Rachaad White / WSH RB
+R9, P1 - Team 11
+
+RJ Harvey / DEN RB
+R9, P2 - Team 10
+
+Matthew Golden / GB WR
+R9, P3 - Team 9
+
+Trevor Lawrence / JAX QB
+R9, P4 - Team 3
+
+Travis Hunter / JAX WR, CB
+R9, P5 - Team 8
+
+Xavier Worthy / KC WR
+R9, P6 - Team 12
+
+KC Concepcion / CLE WR
+R9, P7 - Team 6
+
+George Kittle / SF TE
+R9, P8 - Team 7
+
+Jake Ferguson / DAL TE
+R9, P9 - Team 5
+
+Tucker Kraft / GB TE
+R9, P10 - we go's Wild Team
+
+Kyle Monangai / CHI RB
+R9, P11 - Team 4
+
+Caleb Williams / CHI QB
+R9, P12 - Team 2
+
+Josh Downs / IND WR
+R10, P1 - Team 2
+
+Jordan Addison / MIN WR
+R10, P2 - Team 4
+
+Khalil Shakir / BUF WR
+R10, P3 - we go's Wild Team
+
+Blake Corum / LAR RB
+R10, P4 - Team 5
+
+Jonathon Brooks / CAR RB
+R10, P5 - Team 7
+
+Tyjae Spears / TEN RB
+R10, P6 - Team 6
+
+Brandon Aubrey / DAL K
+R10, P7 - Team 12
+
+Woody Marks / HOU RB
+R10, P8 - Team 8
+
+Texans D/ST / HOU D/ST
+R10, P9 - Team 3
+
+Bo Nix / DEN QB
+R10, P10 - Team 9
+
+Broncos D/ST / DEN D/ST
+R10, P11 - Team 10
+
+Jayden Reed / GB WR
+R10, P12 - Team 11
+
+Jacory Croskey-Merritt / WSH RB
+R11, P1 - Team 11
+
+Isiah Pacheco / DET RB
+R11, P2 - Team 10
+
+Seahawks D/ST / SEA D/ST
+R11, P3 - Team 9
+
+Zach Charbonnet / SEA RB
+R11, P4 - Team 3
+
+Quentin Johnston / LAC WR
+R11, P5 - Team 8
+
+Jalen Coker / CAR WR
+R11, P6 - Team 12
+
+Patriots D/ST / NE D/ST
+R11, P7 - Team 6
+
+Cameron Dicker / LAC K
+R11, P8 - Team 7
+
+Steelers D/ST / PIT D/ST
+R11, P9 - Team 5
+
+Romeo Doubs / NE WR
+R11, P10 - we go's Wild Team
+
+Isaiah Likely / NYG TE
+R11, P11 - Team 4
+
+Eagles D/ST / PHI D/ST
+R11, P12 - Team 2
+
+Omar Cooper Jr. / NYJ WR
+R12, P1 - Team 2
+
+Rams D/ST / LAR D/ST
+R12, P2 - Team 4
+
+Jayden Higgins / HOU WR
+R12, P3 - we go's Wild Team
+
+Ka'imi Fairbairn / HOU K
+R12, P4 - Team 5
+
+Ravens D/ST / BAL D/ST
+R12, P5 - Team 7
+
+Jason Myers / SEA K
+R12, P6 - Team 6
+
+Chris Rodriguez Jr. / JAX RB
+R12, P7 - Team 12
+
+Harrison Mevis / LAR K
+R12, P8 - Team 8
+
+Tyler Allgeier / ARI RB
+R12, P9 - Team 3
+
+Eddy Pineiro / SF K
+R12, P10 - Team 9
+
+Justin Herbert / LAC QB
+R12, P11 - Team 10
+
+Cam Little / JAX K
+R12, P12 - Team 11
+
+Alvin Kamara / NO RB
+R13, P1 - Team 11
+
+Jake Bates / DET K
+R13, P2 - Team 10
+
+Jalen McMillan / TB WR
+R13, P3 - Team 9
+
+Patrick Mahomes / KC QB
+R13, P4 - Team 3
+
+Vikings D/ST / MIN D/ST
+R13, P5 - Team 8
+
+Browns D/ST / CLE D/ST
+R13, P6 - Team 12
+
+Jordan Mason / MIN RB
+R13, P7 - Team 6
+
+Jerry Jeudy / CLE WR
+R13, P8 - Team 7
+
+Calvin Ridley / TEN WR
+R13, P9 - Team 5
+
+Rashid Shaheed / SEA WR
+R13, P10 - we go's Wild Team
+
+Harrison Butker / KC K
+R13, P11 - Team 4
+
+Tyler Loop / BAL K
+R13, P12 - Team 2
+
+Matthew Stafford / LAR QB
+R14, P1 - Team 2
+
+Tank Bigsby / PHI RB
+R14, P2 - Team 4
+
+Malik Willis / MIA QB
+R14, P3 - we go's Wild Team
+
+Brian Robinson Jr. / ATL RB
+R14, P4 - Team 5
+
+T.J. Hockenson / MIN TE
+R14, P5 - Team 7
+
+Germie Bernard / PIT WR
+R14, P6 - Team 6
+
+Chris Bell / MIA WR
+R14, P7 - Team 12
+
+Braelon Allen / NYJ RB
+R14, P8 - Team 8
+
+Cairo Santos / CHI K
+R14, P9 - Team 3
+
+Jauan Jennings / MIN WR
+R14, P10 - Team 9
+
+Kenyon Sadiq / NYJ TE
+R14, P11 - Team 10
+
+Jaguars D/ST / JAX D/ST
+R14, P12 - Team 11
+
+Mark Andrews / BAL TE
+R15, P1 - Team 11
+
+Daniel Jones / IND QB
+R15, P2 - Team 10
+
+Tyler Shough / NO QB
+R15, P3 - Team 9
+
+Dalton Kincaid / BUF TE
+R15, P4 - Team 3
+
+Denzel Boston / CLE WR
+R15, P5 - Team 8
+
+Kyler Murray / MIN QB
+R15, P6 - Team 12
+
+Lions D/ST / DET D/ST
+R15, P7 - Team 6
+
+Darnell Mooney / NYG WR
+R15, P8 - Team 7
+
+Chris Boswell / PIT K
+R15, P9 - Team 5
+
+Will Reichard / MIN K
+R15, P10 - we go's Wild Team
+
+Stefon Diggs / FA WR
+R15, P11 - Team 4
+
+James Conner / ARI RB
+R15, P12 - Team 2
+
+Antonio Williams / WSH WR
+R16, P1 - Team 2
+
+Hunter Henry / NE TE
+R16, P2 - Team 4
+
+Chargers D/ST / LAC D/ST
+R16, P3 - we go's Wild Team
+
+Jalen Nailor / LV WR
+R16, P4 - Team 5
+
+Jared Goff / DET QB
+R16, P5 - Team 7
+
+Tre Tucker / LV WR
+R16, P6 - Team 6
+
+Mike Washington Jr. / LV RB
+R16, P7 - Team 12
+
+Tyrone Tracy Jr. / NYG RB
+R16, P8 - Team 8
+
+Baker Mayfield / TB QB
+R16, P9 - Team 3
+
+Chiefs D/ST / KC D/ST
+R16, P10 - Team 9
+
+Ray Davis / BUF RB
+R16, P11 - Team 10
+
+Adonai Mitchell / NYJ WR
+R16, P12 - Team 11

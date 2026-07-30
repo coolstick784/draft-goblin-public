@@ -1,0 +1,67 @@
+{
+    "manifest_version":  3,
+    "name":  "Draft Goblin",
+    "version":  "0.4.10",
+    "description":  "Compare live projections, ranges, roster fit, and next-pick availability beside ESPN and Sleeper drafts.",
+    "icons":  {
+                  "16":  "icons/icon-16.png",
+                  "32":  "icons/icon-32.png",
+                  "48":  "icons/icon-48.png",
+                  "128":  "icons/icon-128.png"
+              },
+    "minimum_chrome_version":  "116",
+    "permissions":  [
+                        "sidePanel",
+                        "storage",
+                        "alarms",
+                        "offscreen",
+                        "activeTab",
+                        "scripting"
+                    ],
+    "host_permissions":  [
+                             "https://api.sleeper.app/*",
+                             "https://api.sleeper.com/projections/nfl/*",
+                             "https://sleeper.com/*",
+                             "https://www.sleeper.com/*",
+                             "https://sleeper.app/*",
+                             "https://www.sleeper.app/*",
+                             "https://fantasy.espn.com/*",
+                             "https://lm-api-reads.fantasy.espn.com/*",
+                             "https://coolstick784.github.io/*"
+                         ],
+    "background":  {
+                       "service_worker":  "background.js",
+                       "type":  "module"
+                   },
+    "action":  {
+                   "default_title":  "Open Draft Goblin",
+                   "default_icon":  {
+                                        "16":  "icons/icon-16.png",
+                                        "32":  "icons/icon-32.png",
+                                        "48":  "icons/icon-48.png",
+                                        "128":  "icons/icon-128.png"
+                                    }
+               },
+    "content_scripts":  [
+                            {
+                                "matches":  [
+                                                "https://sleeper.com/*",
+                                                "https://www.sleeper.com/*",
+                                                "https://sleeper.app/*",
+                                                "https://www.sleeper.app/*"
+                                            ],
+                                "js":  [
+                                           "draft-launcher.js",
+                                           "adapters/sleeper.js"
+                                       ]
+                            },
+                            {
+                                "matches":  [
+                                                "https://fantasy.espn.com/*"
+                                            ],
+                                "js":  [
+                                           "draft-launcher.js"
+                                       ]
+                            }
+                        ]
+}

@@ -1,0 +1,2 @@
+import fs from"node:fs";import{collect}from"./collect-sleeper-history.js";
+const output=process.argv[2]||"data/historical/sleeper-drafts.json",maxLeagues=Number(process.argv[3]||60),maxUsers=Number(process.argv[4]||Math.max(200,maxLeagues*4)),result=await collect({maxLeagues,maxUsers});fs.mkdirSync(new URL(".",new URL(`../${output}`,import.meta.url)),{recursive:true});fs.writeFileSync(output,JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify({output,records:result.records.length,...result.diagnostics},null,2));

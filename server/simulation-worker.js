@@ -1,0 +1,3 @@
+import{parentPort,workerData}from"node:worker_threads";
+import{simulateCandidate}from"../core/simulate.js";
+try{const simulation=simulateCandidate({state:workerData.state,candidate:workerData.candidate,userSlot:workerData.userSlot,iterations:workerData.iterations,seed:workerData.seed||2026}),scenarioWins=simulation.scenarioWins,planScenarioWins=simulation.planScenarioWins,scenarioSelected=simulation.scenarioSelected;parentPort.postMessage({ok:true,simulation,scenarioWins,planScenarioWins,scenarioSelected},[scenarioWins.buffer,planScenarioWins.buffer,scenarioSelected.buffer])}catch(error){parentPort.postMessage({ok:false,error:error.message})}

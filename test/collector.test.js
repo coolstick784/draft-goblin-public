@@ -1,0 +1,2 @@
+import test from"node:test";import assert from"node:assert/strict";import fs from"node:fs";
+test("historical collector source strips personal and league identifiers",()=>{const source=fs.readFileSync(new URL("../scripts/collect-sleeper-history.js",import.meta.url),"utf8"),mapping=source.match(/records\.push\((\{.*?\})\)/s)?.[1]||"";assert.doesNotMatch(mapping,/userId|league_id|draft_id|roster_id/);assert.match(mapping,/championSlot/);assert.match(mapping,/picks:/)});

@@ -1,0 +1,1 @@
+.position-filter{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;padding:9px;border:1px solid var(--line);border-radius:10px}.position-filter legend{color:var(--muted);font-size:12px}.position-filter label{display:flex;align-items:center;gap:4px;padding:5px 7px;border-radius:8px;background:var(--panel);color:var(--text)}.position-filter input{width:auto;padding:0}

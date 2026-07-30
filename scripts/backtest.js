@@ -1,0 +1,2 @@
+import fs from "node:fs"; import { walkForward } from "../core/backtest.js";
+const file=process.argv[2];if(!file){console.error("Usage: npm run backtest -- historical-records.json");process.exitCode=1}else{const records=JSON.parse(fs.readFileSync(file,"utf8"));const result=walkForward(records,(row,training)=>{const peers=training.filter(x=>x.platform===row.platform);return peers.length?peers.filter(x=>x.champion).length/peers.length:1/Number(row.teams||12)});console.log(JSON.stringify(result,null,2));}

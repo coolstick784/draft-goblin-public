@@ -1,0 +1,7001 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "player-performance-range-scale:2021-2024",
+  "generatedAt": "2026-07-22T02:53:26.704Z",
+  "status": "promoted",
+  "method": "Player weekly absolute projection error relative to the same-position and projection-tier median, empirically shrunk toward 1.0. Confirmed rookies use a separately selected uncertainty multiplier. Width changes do not move the mean or change injury availability.",
+  "leakageBoundary": "Player shrinkage and the rookie multiplier were selected on 2023 using 2021-2022 only; 2024 is the untouched holdout. Final profiles use 2021-2024 only after the gate decision.",
+  "dataQuality": {
+    "excludedMissingOutcomeWeeks": [
+      "2021:10",
+      "2021:11",
+      "2022:16",
+      "2022:17",
+      "2024:17"
+    ],
+    "promotionGatePassed": true
+  },
+  "selection": {
+    "validationYear": 2023,
+    "parameterSweep": [
+      {
+        "shrinkage": 128,
+        "rookieScale": 1.2,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.653643,
+            "coverage": 0.862745,
+            "meanWidth": 53.875746
+          },
+          "intervalScoreImprovement": 0.004502,
+          "widthChange": 0.041202,
+          "volatilityRankCorrelation": 0.026431
+        }
+      },
+      {
+        "shrinkage": 128,
+        "rookieScale": 1.3,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.678562,
+            "coverage": 0.864528,
+            "meanWidth": 54.745598
+          },
+          "intervalScoreImprovement": 0.004198,
+          "widthChange": 0.058013,
+          "volatilityRankCorrelation": 0.026431
+        }
+      },
+      {
+        "shrinkage": 128,
+        "rookieScale": 1.1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.787135,
+            "coverage": 0.85918,
+            "meanWidth": 52.989213
+          },
+          "intervalScoreImprovement": 0.002874,
+          "widthChange": 0.024069,
+          "volatilityRankCorrelation": 0.026431
+        }
+      },
+      {
+        "shrinkage": 64,
+        "rookieScale": 1.2,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.794053,
+            "coverage": 0.862745,
+            "meanWidth": 54.127725
+          },
+          "intervalScoreImprovement": 0.00279,
+          "widthChange": 0.046072,
+          "volatilityRankCorrelation": 0.025684
+        }
+      },
+      {
+        "shrinkage": 64,
+        "rookieScale": 1.3,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.818972,
+            "coverage": 0.864528,
+            "meanWidth": 54.997576
+          },
+          "intervalScoreImprovement": 0.002486,
+          "widthChange": 0.062883,
+          "volatilityRankCorrelation": 0.025684
+        }
+      },
+      {
+        "shrinkage": 64,
+        "rookieScale": 1.1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.927545,
+            "coverage": 0.85918,
+            "meanWidth": 53.241192
+          },
+          "intervalScoreImprovement": 0.001162,
+          "widthChange": 0.028939,
+          "volatilityRankCorrelation": 0.025684
+        }
+      },
+      {
+        "shrinkage": 128,
+        "rookieScale": 1.4,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.936283,
+            "coverage": 0.869875,
+            "meanWidth": 55.598308
+          },
+          "intervalScoreImprovement": 0.001056,
+          "widthChange": 0.074492,
+          "volatilityRankCorrelation": 0.026431
+        }
+      },
+      {
+        "shrinkage": 128,
+        "rookieScale": 1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 81.96431,
+            "coverage": 0.85918,
+            "meanWidth": 52.081715
+          },
+          "intervalScoreImprovement": 0.000714,
+          "widthChange": 0.006531,
+          "volatilityRankCorrelation": 0.026431
+        }
+      },
+      {
+        "shrinkage": 64,
+        "rookieScale": 1.4,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.076692,
+            "coverage": 0.869875,
+            "meanWidth": 55.850286
+          },
+          "intervalScoreImprovement": -0.000656,
+          "widthChange": 0.079362,
+          "volatilityRankCorrelation": 0.025684
+        }
+      },
+      {
+        "shrinkage": 64,
+        "rookieScale": 1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.10472,
+            "coverage": 0.85918,
+            "meanWidth": 52.333693
+          },
+          "intervalScoreImprovement": -0.000998,
+          "widthChange": 0.0114,
+          "volatilityRankCorrelation": 0.025684
+        }
+      },
+      {
+        "shrinkage": 32,
+        "rookieScale": 1.2,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.39762,
+            "coverage": 0.862745,
+            "meanWidth": 54.44306
+          },
+          "intervalScoreImprovement": -0.004569,
+          "widthChange": 0.052166,
+          "volatilityRankCorrelation": 0.024226
+        }
+      },
+      {
+        "shrinkage": 32,
+        "rookieScale": 1.3,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.42254,
+            "coverage": 0.864528,
+            "meanWidth": 55.312912
+          },
+          "intervalScoreImprovement": -0.004872,
+          "widthChange": 0.068977,
+          "volatilityRankCorrelation": 0.024226
+        }
+      },
+      {
+        "shrinkage": 32,
+        "rookieScale": 1.1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.531112,
+            "coverage": 0.85918,
+            "meanWidth": 53.556527
+          },
+          "intervalScoreImprovement": -0.006196,
+          "widthChange": 0.035033,
+          "volatilityRankCorrelation": 0.024226
+        }
+      },
+      {
+        "shrinkage": 32,
+        "rookieScale": 1.4,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.68026,
+            "coverage": 0.869875,
+            "meanWidth": 56.165622
+          },
+          "intervalScoreImprovement": -0.008015,
+          "widthChange": 0.085456,
+          "volatilityRankCorrelation": 0.024226
+        }
+      },
+      {
+        "shrinkage": 32,
+        "rookieScale": 1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 82.708288,
+            "coverage": 0.85918,
+            "meanWidth": 52.649029
+          },
+          "intervalScoreImprovement": -0.008356,
+          "widthChange": 0.017495,
+          "volatilityRankCorrelation": 0.024226
+        }
+      },
+      {
+        "shrinkage": 16,
+        "rookieScale": 1.2,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 83.168865,
+            "coverage": 0.860963,
+            "meanWidth": 54.7215
+          },
+          "intervalScoreImprovement": -0.013971,
+          "widthChange": 0.057547,
+          "volatilityRankCorrelation": 0.023949
+        }
+      },
+      {
+        "shrinkage": 16,
+        "rookieScale": 1.3,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 83.193784,
+            "coverage": 0.862745,
+            "meanWidth": 55.591351
+          },
+          "intervalScoreImprovement": -0.014275,
+          "widthChange": 0.074358,
+          "volatilityRankCorrelation": 0.023949
+        }
+      },
+      {
+        "shrinkage": 16,
+        "rookieScale": 1.1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 83.302357,
+            "coverage": 0.857398,
+            "meanWidth": 53.834967
+          },
+          "intervalScoreImprovement": -0.015599,
+          "widthChange": 0.040414,
+          "volatilityRankCorrelation": 0.023949
+        }
+      },
+      {
+        "shrinkage": 16,
+        "rookieScale": 1.4,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 83.451505,
+            "coverage": 0.868093,
+            "meanWidth": 56.444061
+          },
+          "intervalScoreImprovement": -0.017417,
+          "widthChange": 0.090837,
+          "volatilityRankCorrelation": 0.023949
+        }
+      },
+      {
+        "shrinkage": 16,
+        "rookieScale": 1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 83.479532,
+            "coverage": 0.857398,
+            "meanWidth": 52.927468
+          },
+          "intervalScoreImprovement": -0.017759,
+          "widthChange": 0.022876,
+          "volatilityRankCorrelation": 0.023949
+        }
+      },
+      {
+        "shrinkage": 8,
+        "rookieScale": 1.2,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 84.026209,
+            "coverage": 0.850267,
+            "meanWidth": 54.968072
+          },
+          "intervalScoreImprovement": -0.024424,
+          "widthChange": 0.062312,
+          "volatilityRankCorrelation": 0.023389
+        }
+      },
+      {
+        "shrinkage": 8,
+        "rookieScale": 1.3,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 84.051128,
+            "coverage": 0.85205,
+            "meanWidth": 55.837923
+          },
+          "intervalScoreImprovement": -0.024728,
+          "widthChange": 0.079123,
+          "volatilityRankCorrelation": 0.023389
+        }
+      },
+      {
+        "shrinkage": 8,
+        "rookieScale": 1.1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 84.159701,
+            "coverage": 0.846702,
+            "meanWidth": 54.081539
+          },
+          "intervalScoreImprovement": -0.026051,
+          "widthChange": 0.045179,
+          "volatilityRankCorrelation": 0.023389
+        }
+      },
+      {
+        "shrinkage": 8,
+        "rookieScale": 1.4,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 84.308849,
+            "coverage": 0.857398,
+            "meanWidth": 56.690633
+          },
+          "intervalScoreImprovement": -0.02787,
+          "widthChange": 0.095603,
+          "volatilityRankCorrelation": 0.023389
+        }
+      },
+      {
+        "shrinkage": 8,
+        "rookieScale": 1,
+        "metrics": {
+          "rows": 561,
+          "playersWithPrior": 444,
+          "rookies": 117,
+          "baseline": {
+            "meanIntervalScore": 82.022884,
+            "coverage": 0.860963,
+            "meanWidth": 51.743793
+          },
+          "candidate": {
+            "meanIntervalScore": 84.336876,
+            "coverage": 0.846702,
+            "meanWidth": 53.17404
+          },
+          "intervalScoreImprovement": -0.028212,
+          "widthChange": 0.027641,
+          "volatilityRankCorrelation": 0.023389
+        }
+      }
+    ],
+    "selectedShrinkage": 128,
+    "selectedRookieScale": 1.2
+  },
+  "holdout": {
+    "year": 2024,
+    "rows": 457,
+    "playersWithPrior": 380,
+    "rookies": 77,
+    "baseline": {
+      "meanIntervalScore": 98.066562,
+      "coverage": 0.83151,
+      "meanWidth": 54.191858
+    },
+    "candidate": {
+      "meanIntervalScore": 96.8066,
+      "coverage": 0.844639,
+      "meanWidth": 56.140515
+    },
+    "intervalScoreImprovement": 0.012848,
+    "widthChange": 0.035958,
+    "volatilityRankCorrelation": 0.096957
+  },
+  "scaleLimits": [
+    0.65,
+    1.5
+  ],
+  "rookiePrior": {
+    "scale": 1.2,
+    "classification": "rookie-uncertain",
+    "evidence": "First appearance in the validation or holdout data is used as the historical rookie proxy; live use requires years of experience equal to zero."
+  },
+  "classificationThresholds": {
+    "minimumWeeklyRows": 8,
+    "stableAtOrBelow": 0.9771,
+    "boomBustAtOrAbove": 1.0244,
+    "basis": "Bottom and top quartiles of out-of-time-selected, projection-tier-adjusted player scales."
+  },
+  "profiles": {
+    "robbiegould:K": {
+      "scale": 0.9667,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "stable"
+    },
+    "chrisboswell:K": {
+      "scale": 1.0316,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "mattgay:K": {
+      "scale": 0.9419,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "dustinhopkins:K": {
+      "scale": 1.0698,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "boom-bust"
+    },
+    "tylerbass:K": {
+      "scale": 0.9187,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "danielcarlson:K": {
+      "scale": 1.0127,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "nickfolk:K": {
+      "scale": 1.0026,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "evanmcpherson:K": {
+      "scale": 1.0419,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "boom-bust"
+    },
+    "justintucker:K": {
+      "scale": 1,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "harrisonbutker:K": {
+      "scale": 0.9358,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "stable"
+    },
+    "brandonmcmanus:K": {
+      "scale": 1.0436,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "gregjoseph:K": {
+      "scale": 0.9907,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "typical"
+    },
+    "mattprater:K": {
+      "scale": 1.0321,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "tristanvizcaino:K": {
+      "scale": 1.0366,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "gregzuerlein:K": {
+      "scale": 1.0141,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "typical"
+    },
+    "jakeelliott:K": {
+      "scale": 1.0244,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "boom-bust"
+    },
+    "ryansuccop:K": {
+      "scale": 0.9665,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "younghoekoo:K": {
+      "scale": 0.959,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "stable"
+    },
+    "jasonsanders:K": {
+      "scale": 0.9513,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "austinseibert:K": {
+      "scale": 1.0583,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "boom-bust"
+    },
+    "jasonmyers:K": {
+      "scale": 0.9357,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "ryansantoso:K": {
+      "scale": 0.9929,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "masoncrosby:K": {
+      "scale": 0.9587,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "joshlambo:K": {
+      "scale": 1.021,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "chasemclaughlin:K": {
+      "scale": 1.0104,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "cairosantos:K": {
+      "scale": 1.0204,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "grahamgano:K": {
+      "scale": 1.0845,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "boom-bust"
+    },
+    "mikebadgley:K": {
+      "scale": 0.9507,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "stable"
+    },
+    "kylermurray:QB": {
+      "scale": 0.9497,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "patrickmahomes:QB": {
+      "scale": 1.0056,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "jaredgoff:QB": {
+      "scale": 1.0926,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "boom-bust"
+    },
+    "jalenhurts:QB": {
+      "scale": 0.9838,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "tombrady:QB": {
+      "scale": 1.035,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "dakprescott:QB": {
+      "scale": 1.0503,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "boom-bust"
+    },
+    "matthewstafford:QB": {
+      "scale": 1.0102,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "derekcarr:QB": {
+      "scale": 1.0061,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "kirkcousins:QB": {
+      "scale": 1.0123,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "tyrodtaylor:QB": {
+      "scale": 1.0127,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "typical"
+    },
+    "danieljones:QB": {
+      "scale": 1.1082,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "boom-bust"
+    },
+    "teddybridgewater:QB": {
+      "scale": 1.0117,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "trevorlawrence:QB": {
+      "scale": 1.0206,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "typical"
+    },
+    "samdarnold:QB": {
+      "scale": 1.0426,
+      "weeklyRows": 47,
+      "localEvidenceWeight": 0.2686,
+      "classification": "boom-bust"
+    },
+    "joeburrow:QB": {
+      "scale": 0.9331,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "stable"
+    },
+    "lamarjackson:QB": {
+      "scale": 1.0848,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "carsonwentz:QB": {
+      "scale": 1.0029,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "zachwilson:QB": {
+      "scale": 1.1428,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "boom-bust"
+    },
+    "joshallen:QB": {
+      "scale": 1.0193,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "tuatagovailoa:QB": {
+      "scale": 1.0482,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "boom-bust"
+    },
+    "jimmygaroppolo:QB": {
+      "scale": 0.9424,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "stable"
+    },
+    "ryantannehill:QB": {
+      "scale": 1.0438,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "boom-bust"
+    },
+    "justinherbert:QB": {
+      "scale": 1.0426,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "boom-bust"
+    },
+    "macjones:QB": {
+      "scale": 1.1124,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "boom-bust"
+    },
+    "bakermayfield:QB": {
+      "scale": 1.0655,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "taylorheinicke:QB": {
+      "scale": 1.0439,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "benroethlisberger:QB": {
+      "scale": 1.0165,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "justinfields:QB": {
+      "scale": 1.0071,
+      "weeklyRows": 47,
+      "localEvidenceWeight": 0.2686,
+      "classification": "typical"
+    },
+    "andydalton:QB": {
+      "scale": 0.9835,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "typical"
+    },
+    "mattryan:QB": {
+      "scale": 1.0482,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "treylance:QB": {
+      "scale": 0.9688,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "stable"
+    },
+    "marcusmariota:QB": {
+      "scale": 0.9824,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "aaronrodgers:QB": {
+      "scale": 0.9426,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "stable"
+    },
+    "jordanlove:QB": {
+      "scale": 0.9388,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "stable"
+    },
+    "jacobybrissett:QB": {
+      "scale": 0.9965,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "typical"
+    },
+    "taysomhill:QB": {
+      "scale": 1.0332,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "boom-bust"
+    },
+    "brandonallen:QB": {
+      "scale": 1.0045,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "cjbeathard:QB": {
+      "scale": 0.9777,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "davidblough:QB": {
+      "scale": 0.976,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "jacobeason:QB": {
+      "scale": 0.973,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "joeflacco:QB": {
+      "scale": 0.9761,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "blainegabbert:QB": {
+      "scale": 0.9959,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "mikeglennon:QB": {
+      "scale": 1.03,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "chadhenne:QB": {
+      "scale": 0.963,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "brianhoyer:QB": {
+      "scale": 1.013,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "tylerhuntley:QB": {
+      "scale": 1.0191,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "casekeenum:QB": {
+      "scale": 0.9648,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "stable"
+    },
+    "drewlock:QB": {
+      "scale": 0.9454,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "seanmannion:QB": {
+      "scale": 0.9741,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "davismills:QB": {
+      "scale": 1.0165,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "typical"
+    },
+    "joshrosen:QB": {
+      "scale": 0.976,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "masonrudolph:QB": {
+      "scale": 0.9581,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "stable"
+    },
+    "cooperrush:QB": {
+      "scale": 0.9638,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "stable"
+    },
+    "genosmith:QB": {
+      "scale": 1.0049,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "mitchelltrubisky:QB": {
+      "scale": 1.0039,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "pjwalker:QB": {
+      "scale": 1.0325,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "boom-bust"
+    },
+    "mikewhite:QB": {
+      "scale": 0.9762,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "stable"
+    },
+    "johnwolford:QB": {
+      "scale": 0.9741,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "stable"
+    },
+    "loganwoodside:QB": {
+      "scale": 0.9947,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "christianmccaffrey:RB": {
+      "scale": 0.9945,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "joemixon:RB": {
+      "scale": 1.0392,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "nickchubb:RB": {
+      "scale": 1.0278,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "boom-bust"
+    },
+    "jamaalwilliams:RB": {
+      "scale": 1.0147,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "dandreswift:RB": {
+      "scale": 0.9689,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "stable"
+    },
+    "melvingordon:RB": {
+      "scale": 0.9718,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "davidmontgomery:RB": {
+      "scale": 0.9513,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "stable"
+    },
+    "dalvincook:RB": {
+      "scale": 0.9854,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "typical"
+    },
+    "tysonwilliams:RB": {
+      "scale": 1.0029,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "alvinkamara:RB": {
+      "scale": 1.0645,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "joshjacobs:RB": {
+      "scale": 0.9809,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "darrellhenderson:RB": {
+      "scale": 1.0073,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "jonathantaylor:RB": {
+      "scale": 1.0127,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "typical"
+    },
+    "markingram:RB": {
+      "scale": 1.0035,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "chaseedmonds:RB": {
+      "scale": 0.9529,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "stable"
+    },
+    "austinekeler:RB": {
+      "scale": 1.0175,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "typical"
+    },
+    "kennethgainwell:RB": {
+      "scale": 1.0452,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "boom-bust"
+    },
+    "nyheimhines:RB": {
+      "scale": 1.0443,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "damienharris:RB": {
+      "scale": 0.9962,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "davidjohnson:RB": {
+      "scale": 1.0198,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "mylesgaskin:RB": {
+      "scale": 1.0371,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "boom-bust"
+    },
+    "kenyandrake:RB": {
+      "scale": 1.1125,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "boom-bust"
+    },
+    "cordarrellepatterson:RB": {
+      "scale": 0.999,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "typical"
+    },
+    "leonardfournette:RB": {
+      "scale": 0.9558,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "stable"
+    },
+    "lataviusmurray:RB": {
+      "scale": 1.0125,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "mikedavis:RB": {
+      "scale": 1.011,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "philliplindsay:RB": {
+      "scale": 1.0038,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "antoniogibson:RB": {
+      "scale": 0.9692,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "stable"
+    },
+    "jamycalhasty:RB": {
+      "scale": 1,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "typical"
+    },
+    "jamesrobinson:RB": {
+      "scale": 1.0593,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "boom-bust"
+    },
+    "carloshyde:RB": {
+      "scale": 1.0172,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "samajeperine:RB": {
+      "scale": 0.9552,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "tonypollard:RB": {
+      "scale": 0.9542,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "stable"
+    },
+    "damienwilliams:RB": {
+      "scale": 0.9782,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "devinsingletary:RB": {
+      "scale": 0.9902,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "najeeharris:RB": {
+      "scale": 0.9086,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "keithsmith:RB": {
+      "scale": 0.9258,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "stable"
+    },
+    "jamesconner:RB": {
+      "scale": 1.021,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "typical"
+    },
+    "ezekielelliott:RB": {
+      "scale": 1.0093,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "typical"
+    },
+    "jeremymcnichols:RB": {
+      "scale": 1.0611,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "javontewilliams:RB": {
+      "scale": 0.9851,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "alecingold:RB": {
+      "scale": 1.0846,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "boom-bust"
+    },
+    "tyjohnson:RB": {
+      "scale": 1.0383,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "salvonahmed:RB": {
+      "scale": 1.0011,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "typical"
+    },
+    "justinjackson:RB": {
+      "scale": 1.0092,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "dareogunbowale:RB": {
+      "scale": 0.9948,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "typical"
+    },
+    "saquonbarkley:RB": {
+      "scale": 1.0332,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "boom-bust"
+    },
+    "aaronjones:RB": {
+      "scale": 1.0242,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "typical"
+    },
+    "ajdillon:RB": {
+      "scale": 0.9107,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "ameerabdullah:RB": {
+      "scale": 1.0613,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "boom-bust"
+    },
+    "jasoncabinda:RB": {
+      "scale": 0.9486,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "stable"
+    },
+    "michaelcarter:RB": {
+      "scale": 0.9864,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "patrickricard:RB": {
+      "scale": 0.9902,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "tevincoleman:RB": {
+      "scale": 0.9671,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "giovanibernard:RB": {
+      "scale": 1.0234,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "trentoncannon:RB": {
+      "scale": 0.9986,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "cjham:RB": {
+      "scale": 0.943,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "devontaebooker:RB": {
+      "scale": 0.9549,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "tymontgomery:RB": {
+      "scale": 1.0104,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "coreyclement:RB": {
+      "scale": 1.0339,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "boom-bust"
+    },
+    "godwinigwebuike:RB": {
+      "scale": 0.9232,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "stable"
+    },
+    "derekwatt:RB": {
+      "scale": 0.9634,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "deejaydallas:RB": {
+      "scale": 1.0624,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "boom-bust"
+    },
+    "chubahubbard:RB": {
+      "scale": 0.9662,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "stable"
+    },
+    "kylejuszczyk:RB": {
+      "scale": 1.1537,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "garybrightwell:RB": {
+      "scale": 1.0477,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "rexburkhead:RB": {
+      "scale": 0.9982,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "alexandermattison:RB": {
+      "scale": 1.0309,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "jaretpatterson:RB": {
+      "scale": 1.0045,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "travishomer:RB": {
+      "scale": 0.9931,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "jdmckissic:RB": {
+      "scale": 1.0151,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "rashaadpenny:RB": {
+      "scale": 1.0249,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "boom-bust"
+    },
+    "bostonscott:RB": {
+      "scale": 1.0124,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "typical"
+    },
+    "bennysnell:RB": {
+      "scale": 1.0124,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "brandonbolden:RB": {
+      "scale": 1.0369,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "mattbreida:RB": {
+      "scale": 0.944,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "stable"
+    },
+    "darrelwilliams:RB": {
+      "scale": 1.0169,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "michaelburton:RB": {
+      "scale": 0.9169,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "stable"
+    },
+    "sonymichel:RB": {
+      "scale": 1.0393,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "gabenabers:RB": {
+      "scale": 0.971,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "kalenballage:RB": {
+      "scale": 1.0432,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "peytonbarber:RB": {
+      "scale": 1.0144,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "damareacrockett:RB": {
+      "scale": 1.011,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "chrisevans:RB": {
+      "scale": 1.073,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "demetricfelton:RB": {
+      "scale": 1.0541,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "boom-bust"
+    },
+    "cullengillaspia:RB": {
+      "scale": 0.973,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "khalilherbert:RB": {
+      "scale": 1.0313,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "boom-bust"
+    },
+    "andyjanovich:RB": {
+      "scale": 0.9646,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "stable"
+    },
+    "dernestjohnson:RB": {
+      "scale": 0.9553,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "stable"
+    },
+    "jakobjohnson:RB": {
+      "scale": 0.8698,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "stable"
+    },
+    "taiwanjones:RB": {
+      "scale": 0.9388,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "marlonmack:RB": {
+      "scale": 1.0328,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "boom-bust"
+    },
+    "jerickmckinnon:RB": {
+      "scale": 1.0124,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "elijhaapenny:RB": {
+      "scale": 1.0005,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "treyragas:RB": {
+      "scale": 1.002,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "jonathanward:RB": {
+      "scale": 0.9985,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "dwaynewashington:RB": {
+      "scale": 0.9318,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "stable"
+    },
+    "jordanwilkins:RB": {
+      "scale": 0.997,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "rhamondrestevenson:RB": {
+      "scale": 1.0234,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "ronaldjones:RB": {
+      "scale": 1.0168,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "robgronkowski:TE": {
+      "scale": 1.0817,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "boom-bust"
+    },
+    "traviskelce:TE": {
+      "scale": 1.074,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "boom-bust"
+    },
+    "tjhockenson:TE": {
+      "scale": 1,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "darrenwaller:TE": {
+      "scale": 1.0744,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "juwanjohnson:TE": {
+      "scale": 1.1006,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "boom-bust"
+    },
+    "dallasgoedert:TE": {
+      "scale": 0.9589,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "georgekittle:TE": {
+      "scale": 1.2251,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "boom-bust"
+    },
+    "tylerhigbee:TE": {
+      "scale": 0.9936,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "noahfant:TE": {
+      "scale": 0.9656,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "stable"
+    },
+    "davidnjoku:TE": {
+      "scale": 1.0215,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "typical"
+    },
+    "geraldeverett:TE": {
+      "scale": 1.0162,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "pharaohbrown:TE": {
+      "scale": 1.002,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "chrismanhertz:TE": {
+      "scale": 1.0227,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "jaredcook:TE": {
+      "scale": 0.965,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "daltonschultz:TE": {
+      "scale": 1.0487,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "albertokwuegbunam:TE": {
+      "scale": 0.9965,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "colekmet:TE": {
+      "scale": 0.9924,
+      "weeklyRows": 60,
+      "localEvidenceWeight": 0.3191,
+      "classification": "typical"
+    },
+    "jonnusmith:TE": {
+      "scale": 1.0266,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "boom-bust"
+    },
+    "tylerconklin:TE": {
+      "scale": 0.9308,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "stable"
+    },
+    "dawsonknox:TE": {
+      "scale": 1.0708,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "willdissly:TE": {
+      "scale": 0.9464,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "stable"
+    },
+    "anthonyfirkser:TE": {
+      "scale": 1.0073,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "typical"
+    },
+    "kylepitts:TE": {
+      "scale": 1.0655,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "haydenhurst:TE": {
+      "scale": 0.9824,
+      "weeklyRows": 40,
+      "localEvidenceWeight": 0.2381,
+      "classification": "typical"
+    },
+    "hunterhenry:TE": {
+      "scale": 1.0275,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "boom-bust"
+    },
+    "cjuzomah:TE": {
+      "scale": 0.917,
+      "weeklyRows": 40,
+      "localEvidenceWeight": 0.2381,
+      "classification": "stable"
+    },
+    "zachertz:TE": {
+      "scale": 0.9987,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "typical"
+    },
+    "austinhooper:TE": {
+      "scale": 0.9944,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "harrisonbryant:TE": {
+      "scale": 1.0637,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "ryangriffin:TE": {
+      "scale": 1.0159,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "jackdoyle:TE": {
+      "scale": 1.0288,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "markandrews:TE": {
+      "scale": 1.1973,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "boom-bust"
+    },
+    "adamtrautman:TE": {
+      "scale": 1.0663,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "boom-bust"
+    },
+    "stephenanderson:TE": {
+      "scale": 0.9967,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "patfreiermuth:TE": {
+      "scale": 0.9653,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "stable"
+    },
+    "ericebron:TE": {
+      "scale": 1.0275,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "marcedeslewis:TE": {
+      "scale": 1.064,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "durhamsmythe:TE": {
+      "scale": 1.0661,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "boom-bust"
+    },
+    "ianthomas:TE": {
+      "scale": 1.0329,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "kylerudolph:TE": {
+      "scale": 0.9957,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "mikegesicki:TE": {
+      "scale": 1.0219,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "demetriusharris:TE": {
+      "scale": 1.0182,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "kadensmith:TE": {
+      "scale": 1.0024,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "danarnold:TE": {
+      "scale": 0.956,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "stable"
+    },
+    "jimmygraham:TE": {
+      "scale": 1.1036,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "ericsaubert:TE": {
+      "scale": 0.9861,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "typical"
+    },
+    "blakebell:TE": {
+      "scale": 0.9873,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "danielbrown:TE": {
+      "scale": 0.9996,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "zachgentry:TE": {
+      "scale": 0.9951,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "jordanakins:TE": {
+      "scale": 1.0381,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "boom-bust"
+    },
+    "moaliecox:TE": {
+      "scale": 1.059,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "boom-bust"
+    },
+    "antonyauclair:TE": {
+      "scale": 0.9613,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "johnbates:TE": {
+      "scale": 0.9876,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "typical"
+    },
+    "cameronbrate:TE": {
+      "scale": 1.0102,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "cethancarter:TE": {
+      "scale": 0.9706,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "dominiquedafney:TE": {
+      "scale": 0.9858,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "darrelldaniels:TE": {
+      "scale": 1.0051,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "josiahdeguara:TE": {
+      "scale": 1.0246,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "boom-bust"
+    },
+    "brandondillon:TE": {
+      "scale": 0.9962,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "rossdwelley:TE": {
+      "scale": 1.0136,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "lukefarrell:TE": {
+      "scale": 0.9482,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "stable"
+    },
+    "reggiegilliam:TE": {
+      "scale": 0.9335,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "stable"
+    },
+    "kylengranson:TE": {
+      "scale": 0.9792,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "typical"
+    },
+    "noahgray:TE": {
+      "scale": 0.9961,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "garrettgriffin:TE": {
+      "scale": 0.99,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "chrisherndon:TE": {
+      "scale": 1.0193,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "jpholtz:TE": {
+      "scale": 0.9664,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "brycenhopkins:TE": {
+      "scale": 0.9697,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "stable"
+    },
+    "ojhoward:TE": {
+      "scale": 1.0318,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "jessejames:TE": {
+      "scale": 0.9951,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "hunterlong:TE": {
+      "scale": 0.9604,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "stable"
+    },
+    "tylermabry:TE": {
+      "scale": 0.992,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "fostermoreau:TE": {
+      "scale": 1.03,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "josholiver:TE": {
+      "scale": 1.0717,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "donaldparham:TE": {
+      "scale": 1.0573,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "boom-bust"
+    },
+    "mycolepruitt:TE": {
+      "scale": 1.068,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "boom-bust"
+    },
+    "giovanniricci:TE": {
+      "scale": 0.9859,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "drewsample:TE": {
+      "scale": 1.001,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "typical"
+    },
+    "rickysealsjones:TE": {
+      "scale": 1.0466,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "boom-bust"
+    },
+    "leesmith:TE": {
+      "scale": 1.0148,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "geoffswaim:TE": {
+      "scale": 1.0279,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "tommysweeney:TE": {
+      "scale": 1.0257,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "tommytremble:TE": {
+      "scale": 1.0916,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "boom-bust"
+    },
+    "trevonwesco:TE": {
+      "scale": 0.9592,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "mitchellwilcox:TE": {
+      "scale": 0.9694,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "charliewoerner:TE": {
+      "scale": 1.0068,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "amaricooper:WR": {
+      "scale": 1.1349,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "tyreekhill:WR": {
+      "scale": 1.1235,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "boom-bust"
+    },
+    "deebosamuel:WR": {
+      "scale": 0.9988,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "typical"
+    },
+    "adamthielen:WR": {
+      "scale": 1.0169,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "typical"
+    },
+    "coreydavis:WR": {
+      "scale": 1.0167,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "tylerlockett:WR": {
+      "scale": 1.0221,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "deandrehopkins:WR": {
+      "scale": 0.9756,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "christiankirk:WR": {
+      "scale": 0.9801,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "typical"
+    },
+    "antoniobrown:WR": {
+      "scale": 1.0339,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "sterlingshepard:WR": {
+      "scale": 0.9897,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "chrisgodwin:WR": {
+      "scale": 0.9534,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "stable"
+    },
+    "cooperkupp:WR": {
+      "scale": 1.0977,
+      "weeklyRows": 47,
+      "localEvidenceWeight": 0.2686,
+      "classification": "boom-bust"
+    },
+    "ceedeelamb:WR": {
+      "scale": 1.0025,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "typical"
+    },
+    "jamarrchase:WR": {
+      "scale": 1.0898,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "zachpascal:WR": {
+      "scale": 1.0294,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "mikewilliams:WR": {
+      "scale": 1.1126,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "boom-bust"
+    },
+    "ajbrown:WR": {
+      "scale": 1.0562,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "boom-bust"
+    },
+    "jarvislandry:WR": {
+      "scale": 1.0096,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "marquisebrown:WR": {
+      "scale": 0.9889,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "marvinjones:WR": {
+      "scale": 1.0023,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "devontasmith:WR": {
+      "scale": 0.984,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "typical"
+    },
+    "nelsonagholor:WR": {
+      "scale": 0.9794,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "typical"
+    },
+    "brandincooks:WR": {
+      "scale": 1.0133,
+      "weeklyRows": 47,
+      "localEvidenceWeight": 0.2686,
+      "classification": "typical"
+    },
+    "vanjefferson:WR": {
+      "scale": 1.0233,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "deonteharris:WR": {
+      "scale": 1,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "jaylenwaddle:WR": {
+      "scale": 0.9839,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "typical"
+    },
+    "dkmetcalf:WR": {
+      "scale": 0.918,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "stable"
+    },
+    "jalenreagor:WR": {
+      "scale": 1.0845,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "teehiggins:WR": {
+      "scale": 1.0334,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "boom-bust"
+    },
+    "keenanallen:WR": {
+      "scale": 1.0153,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "typical"
+    },
+    "djmoore:WR": {
+      "scale": 1.0604,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "boom-bust"
+    },
+    "robbyanderson:WR": {
+      "scale": 1.0041,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "diontaejohnson:WR": {
+      "scale": 0.9478,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "stable"
+    },
+    "dannyamendola:WR": {
+      "scale": 1.0153,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "timpatrick:WR": {
+      "scale": 1.0612,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "zayjones:WR": {
+      "scale": 0.9983,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "sammywatkins:WR": {
+      "scale": 1.0274,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "boom-bust"
+    },
+    "stefondiggs:WR": {
+      "scale": 0.9801,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "typical"
+    },
+    "kjosborn:WR": {
+      "scale": 1.0791,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "gabrieldavis:WR": {
+      "scale": 1.0003,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "robertwoods:WR": {
+      "scale": 0.9468,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "stable"
+    },
+    "jerryjeudy:WR": {
+      "scale": 0.9294,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "stable"
+    },
+    "bryanedwards:WR": {
+      "scale": 1.0329,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "boom-bust"
+    },
+    "anthonyschwartz:WR": {
+      "scale": 1.0328,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "boom-bust"
+    },
+    "justinjefferson:WR": {
+      "scale": 1.0676,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "boom-bust"
+    },
+    "colebeasley:WR": {
+      "scale": 0.998,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "hunterrenfrow:WR": {
+      "scale": 1.0248,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "laviskashenaultjr:WR": {
+      "scale": 0.9152,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "stable"
+    },
+    "trentsherfield:WR": {
+      "scale": 0.9526,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "rondalemoore:WR": {
+      "scale": 1.0213,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "chaseclaypool:WR": {
+      "scale": 0.9307,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "stable"
+    },
+    "kennygolladay:WR": {
+      "scale": 1.0157,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "terrymclaurin:WR": {
+      "scale": 0.9466,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "stable"
+    },
+    "chesterrogers:WR": {
+      "scale": 0.9898,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "davanteadams:WR": {
+      "scale": 1.1459,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "dariusslayton:WR": {
+      "scale": 1.0132,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "braxtonberrios:WR": {
+      "scale": 0.9696,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "stable"
+    },
+    "calvinridley:WR": {
+      "scale": 1.0383,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "boom-bust"
+    },
+    "jakobimeyers:WR": {
+      "scale": 0.9392,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "stable"
+    },
+    "kalifraymond:WR": {
+      "scale": 1.0151,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "typical"
+    },
+    "emmanuelsanders:WR": {
+      "scale": 0.9929,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "allenrobinson:WR": {
+      "scale": 0.9363,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "stable"
+    },
+    "jalenguyton:WR": {
+      "scale": 1.0034,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "marquisegoodwin:WR": {
+      "scale": 1.0032,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "mikeevans:WR": {
+      "scale": 1.0484,
+      "weeklyRows": 54,
+      "localEvidenceWeight": 0.2967,
+      "classification": "boom-bust"
+    },
+    "cedwilson:WR": {
+      "scale": 1.1054,
+      "weeklyRows": 40,
+      "localEvidenceWeight": 0.2381,
+      "classification": "boom-bust"
+    },
+    "darnellmooney:WR": {
+      "scale": 0.9869,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "tylerboyd:WR": {
+      "scale": 0.9425,
+      "weeklyRows": 60,
+      "localEvidenceWeight": 0.3191,
+      "classification": "stable"
+    },
+    "kjhill:WR": {
+      "scale": 0.9861,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "denzelmims:WR": {
+      "scale": 0.9944,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "juliojones:WR": {
+      "scale": 1.0019,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "michaelpittman:WR": {
+      "scale": 0.9408,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "stable"
+    },
+    "terracemarshalljr:WR": {
+      "scale": 1.0225,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "randallcobb:WR": {
+      "scale": 1.0036,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "quezwatkins:WR": {
+      "scale": 1.0154,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "typical"
+    },
+    "chrisconley:WR": {
+      "scale": 1.0314,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "boom-bust"
+    },
+    "mikestrachan:WR": {
+      "scale": 0.9779,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "ajgreen:WR": {
+      "scale": 1.051,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "trinitybenson:WR": {
+      "scale": 1.0389,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "damierebyrd:WR": {
+      "scale": 1.029,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "ashtondulin:WR": {
+      "scale": 1.0889,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "mecolehardman:WR": {
+      "scale": 0.9657,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "amonrastbrown:WR": {
+      "scale": 0.9841,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "marcuskemp:WR": {
+      "scale": 0.9767,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "marquezvaldesscantling:WR": {
+      "scale": 1.0242,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "typical"
+    },
+    "deseanjackson:WR": {
+      "scale": 0.9776,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "camsims:WR": {
+      "scale": 0.9696,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "stable"
+    },
+    "allenlazard:WR": {
+      "scale": 1.0093,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "amarirodgers:WR": {
+      "scale": 0.9825,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "maliktaylor:WR": {
+      "scale": 1.0045,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "kendrickbourne:WR": {
+      "scale": 0.9755,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "joshpalmer:WR": {
+      "scale": 0.9931,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "typical"
+    },
+    "adamhumphries:WR": {
+      "scale": 0.9913,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "jameswashington:WR": {
+      "scale": 1.0069,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "marquezcallaway:WR": {
+      "scale": 1.0466,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "boom-bust"
+    },
+    "courtlandsutton:WR": {
+      "scale": 1.0003,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "pennyhart:WR": {
+      "scale": 1.0134,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "mackhollins:WR": {
+      "scale": 1.0678,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "boom-bust"
+    },
+    "dedewestbrook:WR": {
+      "scale": 1.0055,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "nickwestbrookikhine:WR": {
+      "scale": 1.0935,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "boom-bust"
+    },
+    "demarcusrobinson:WR": {
+      "scale": 1.0397,
+      "weeklyRows": 58,
+      "localEvidenceWeight": 0.3118,
+      "classification": "boom-bust"
+    },
+    "nicocollins:WR": {
+      "scale": 0.9464,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "mohamedsanu:WR": {
+      "scale": 0.9784,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "tyronjohnson:WR": {
+      "scale": 0.9873,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "byronpringle:WR": {
+      "scale": 0.99,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "mikethomas:WR": {
+      "scale": 0.9911,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "donovanpeoplesjones:WR": {
+      "scale": 1.0297,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "boom-bust"
+    },
+    "jjarcegawhiteside:WR": {
+      "scale": 0.9904,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "kadariustoney:WR": {
+      "scale": 1.0457,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "freddieswain:WR": {
+      "scale": 0.9929,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "dyamibrown:WR": {
+      "scale": 0.9741,
+      "weeklyRows": 55,
+      "localEvidenceWeight": 0.3005,
+      "classification": "stable"
+    },
+    "elijahmoore:WR": {
+      "scale": 1.0057,
+      "weeklyRows": 53,
+      "localEvidenceWeight": 0.2928,
+      "classification": "typical"
+    },
+    "devinduvernay:WR": {
+      "scale": 0.9395,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "stable"
+    },
+    "jamalagnew:WR": {
+      "scale": 1.0338,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "brandonaiyuk:WR": {
+      "scale": 1.0108,
+      "weeklyRows": 50,
+      "localEvidenceWeight": 0.2809,
+      "classification": "typical"
+    },
+    "christianblake:WR": {
+      "scale": 0.983,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "deandrecarter:WR": {
+      "scale": 0.9819,
+      "weeklyRows": 57,
+      "localEvidenceWeight": 0.3081,
+      "classification": "typical"
+    },
+    "alexerickson:WR": {
+      "scale": 1.0039,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "simifehoko:WR": {
+      "scale": 0.9965,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "russellgage:WR": {
+      "scale": 1.0695,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "boom-bust"
+    },
+    "jakeemgrant:WR": {
+      "scale": 1.0476,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "boom-bust"
+    },
+    "rashardhiggins:WR": {
+      "scale": 1.0075,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "liljordanhumphrey:WR": {
+      "scale": 0.9939,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "andyisabella:WR": {
+      "scale": 0.9752,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "jauanjennings:WR": {
+      "scale": 0.9965,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "typical"
+    },
+    "tylerjohnson:WR": {
+      "scale": 1.0024,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "jakekumerow:WR": {
+      "scale": 0.9656,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "stable"
+    },
+    "rayraymccloud:WR": {
+      "scale": 0.9934,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "typical"
+    },
+    "jaydonmickens:WR": {
+      "scale": 0.9772,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "daxmilne:WR": {
+      "scale": 0.9745,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "stable"
+    },
+    "stanleymorgan:WR": {
+      "scale": 0.9319,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "gunnerolszewski:WR": {
+      "scale": 0.9187,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "stable"
+    },
+    "jamesproche:WR": {
+      "scale": 1.0208,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "tajaesharpe:WR": {
+      "scale": 0.9856,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "matthewslater:WR": {
+      "scale": 0.8808,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "stable"
+    },
+    "jeffsmith:WR": {
+      "scale": 0.9634,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "stable"
+    },
+    "ihmirsmithmarsette:WR": {
+      "scale": 0.9033,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "stable"
+    },
+    "williesnead:WR": {
+      "scale": 0.9714,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "diontaespencer:WR": {
+      "scale": 0.9715,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "audentate:WR": {
+      "scale": 0.9917,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "tylanwallace:WR": {
+      "scale": 0.9248,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "stable"
+    },
+    "gregward:WR": {
+      "scale": 1.0079,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "nsimbawebster:WR": {
+      "scale": 0.9928,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "albertwilson:WR": {
+      "scale": 1.0051,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "olamidezaccheaus:WR": {
+      "scale": 1.0326,
+      "weeklyRows": 59,
+      "localEvidenceWeight": 0.3155,
+      "classification": "boom-bust"
+    },
+    "isaiahmckenzie:WR": {
+      "scale": 1.0388,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "matthewwright:K": {
+      "scale": 1.0671,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "kaimifairbairn:K": {
+      "scale": 1.0597,
+      "weeklyRows": 51,
+      "localEvidenceWeight": 0.2849,
+      "classification": "boom-bust"
+    },
+    "rileypatterson:K": {
+      "scale": 1.021,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "brettmaher:K": {
+      "scale": 1.0559,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "joeyslye:K": {
+      "scale": 0.9558,
+      "weeklyRows": 48,
+      "localEvidenceWeight": 0.2727,
+      "classification": "stable"
+    },
+    "randybullock:K": {
+      "scale": 1.003,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "russellwilson:QB": {
+      "scale": 0.8783,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "stable"
+    },
+    "trevorsiemian:QB": {
+      "scale": 1.0038,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "camnewton:QB": {
+      "scale": 1.0026,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "joshjohnson:QB": {
+      "scale": 0.9711,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "stable"
+    },
+    "kyleallen:QB": {
+      "scale": 0.9891,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "timboyle:QB": {
+      "scale": 0.9963,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "chasedaniel:QB": {
+      "scale": 0.9574,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "stable"
+    },
+    "samehlinger:QB": {
+      "scale": 0.9922,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "nickfoles:QB": {
+      "scale": 0.9788,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "feleipefranks:QB": {
+      "scale": 1,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "gardnerminshew:QB": {
+      "scale": 1.0273,
+      "weeklyRows": 46,
+      "localEvidenceWeight": 0.2644,
+      "classification": "boom-bust"
+    },
+    "elijahmitchell:RB": {
+      "scale": 0.9813,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "dontrellhilliard:RB": {
+      "scale": 1.0427,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "boom-bust"
+    },
+    "dontaforeman:RB": {
+      "scale": 1.0317,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "milessanders:RB": {
+      "scale": 1.0043,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "typical"
+    },
+    "kenenwangwu:RB": {
+      "scale": 1.0009,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "devontafreeman:RB": {
+      "scale": 0.9788,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "joshuakelley:RB": {
+      "scale": 0.9992,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "tonyjones:RB": {
+      "scale": 1.0278,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "boom-bust"
+    },
+    "kareemhunt:RB": {
+      "scale": 1.0097,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "waynegallman:RB": {
+      "scale": 1.0033,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "anthonymcfarland:RB": {
+      "scale": 1.0016,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "buddyhowell:RB": {
+      "scale": 1.0048,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jeffwilson:RB": {
+      "scale": 1.0261,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "boom-bust"
+    },
+    "nickbawden:RB": {
+      "scale": 0.9185,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "stable"
+    },
+    "mikeboone:RB": {
+      "scale": 0.9987,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "dariusbradwell:RB": {
+      "scale": 1.0023,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "roycefreeman:RB": {
+      "scale": 1.0057,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "deonjackson:RB": {
+      "scale": 1.0359,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "boom-bust"
+    },
+    "jermarjefferson:RB": {
+      "scale": 1.0028,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "ryannall:RB": {
+      "scale": 0.9948,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jalenrichard:RB": {
+      "scale": 0.9865,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "treysermon:RB": {
+      "scale": 1.0119,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "typical"
+    },
+    "patricktaylor:RB": {
+      "scale": 1.0023,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "brevinjordan:TE": {
+      "scale": 1.0242,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "chrismyarick:TE": {
+      "scale": 1.0062,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "nickvannett:TE": {
+      "scale": 0.985,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "seanmckeon:TE": {
+      "scale": 0.9512,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "stable"
+    },
+    "jamesoshaughnessy:TE": {
+      "scale": 0.9815,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "evanengram:TE": {
+      "scale": 0.958,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "stable"
+    },
+    "kendallblanton:TE": {
+      "scale": 0.9943,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "nickboyle:TE": {
+      "scale": 0.9713,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "tylerdavis:TE": {
+      "scale": 0.977,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "stable"
+    },
+    "danielhelm:TE": {
+      "scale": 0.9912,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "tremckitty:TE": {
+      "scale": 0.9921,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "colbyparkinson:TE": {
+      "scale": 0.9514,
+      "weeklyRows": 56,
+      "localEvidenceWeight": 0.3043,
+      "classification": "stable"
+    },
+    "sammisreyes:TE": {
+      "scale": 0.9852,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "lukestocker:TE": {
+      "scale": 0.9966,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "jackstoll:TE": {
+      "scale": 0.9733,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "stable"
+    },
+    "kennyyeboah:TE": {
+      "scale": 0.978,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "odellbeckhamjr:WR": {
+      "scale": 0.996,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "joshreynolds:WR": {
+      "scale": 1.1017,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "tyhilton:WR": {
+      "scale": 1.0112,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "tavonaustin:WR": {
+      "scale": 1.015,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "noahbrown:WR": {
+      "scale": 1.0857,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "laquontreadwell:WR": {
+      "scale": 0.997,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "trequansmith:WR": {
+      "scale": 1.0407,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "boom-bust"
+    },
+    "rashodbateman:WR": {
+      "scale": 0.9617,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "brandonzylstra:WR": {
+      "scale": 0.9877,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "frankdarby:WR": {
+      "scale": 0.9996,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "johnross:WR": {
+      "scale": 0.9921,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "equanimeousstbrown:WR": {
+      "scale": 0.9713,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "stable"
+    },
+    "keelancole:WR": {
+      "scale": 1.0044,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "isaiahford:WR": {
+      "scale": 1.0272,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "boom-bust"
+    },
+    "codyhollister:WR": {
+      "scale": 0.9639,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "jamarcusbradley:WR": {
+      "scale": 0.997,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "scottmiller:WR": {
+      "scale": 0.9396,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "dwayneeskridge:WR": {
+      "scale": 0.9668,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "stable"
+    },
+    "dezfitzpatrick:WR": {
+      "scale": 1.0128,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "curtissamuel:WR": {
+      "scale": 1.0641,
+      "weeklyRows": 47,
+      "localEvidenceWeight": 0.2686,
+      "classification": "boom-bust"
+    },
+    "kendallhinton:WR": {
+      "scale": 0.9546,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "stable"
+    },
+    "khadarelhodge:WR": {
+      "scale": 1.0025,
+      "weeklyRows": 52,
+      "localEvidenceWeight": 0.2889,
+      "classification": "typical"
+    },
+    "pharohcooper:WR": {
+      "scale": 0.9964,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jamisoncrowder:WR": {
+      "scale": 1.0298,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "boom-bust"
+    },
+    "prestonwilliams:WR": {
+      "scale": 1.028,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "anthonymiller:WR": {
+      "scale": 1.0193,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "chrismoore:WR": {
+      "scale": 1.0082,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "landenakers:WR": {
+      "scale": 0.9981,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "travisbenjamin:WR": {
+      "scale": 0.9821,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "johnbrown:WR": {
+      "scale": 1.004,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "danchisena:WR": {
+      "scale": 0.9706,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "isaiahcoulter:WR": {
+      "scale": 0.9971,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "jaelondarden:WR": {
+      "scale": 0.9415,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "stable"
+    },
+    "nkealharry:WR": {
+      "scale": 1.0193,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "collinjohnson:WR": {
+      "scale": 1.0261,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "boom-bust"
+    },
+    "tomkennedy:WR": {
+      "scale": 0.998,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "dezmonpatmon:WR": {
+      "scale": 0.9881,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "andreroberts:WR": {
+      "scale": 0.9841,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "shismith:WR": {
+      "scale": 1.0556,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "boom-bust"
+    },
+    "kennystills:WR": {
+      "scale": 1.0276,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "boom-bust"
+    },
+    "dillonstoner:WR": {
+      "scale": 0.9988,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "malikturner:WR": {
+      "scale": 1.0109,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "codywhite:WR": {
+      "scale": 0.9989,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "kevinwhite:WR": {
+      "scale": 0.9738,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "marquezstevenson:WR": {
+      "scale": 1.0313,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "jjkoski:WR": {
+      "scale": 1.0168,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "brianjohnson:K": {
+      "scale": 0.9755,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "jakefromm:QB": {
+      "scale": 0.9776,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "coltmccoy:QB": {
+      "scale": 1.0246,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "boom-bust"
+    },
+    "reidsinnett:QB": {
+      "scale": 0.9971,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "clydeedwardshelaire:RB": {
+      "scale": 1.0136,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "nickbellore:RB": {
+      "scale": 0.9524,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "stable"
+    },
+    "zackmoss:RB": {
+      "scale": 1.0084,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "wendellsmallwood:RB": {
+      "scale": 1.0028,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "qadreeollison:RB": {
+      "scale": 1.0046,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "austinwalter:RB": {
+      "scale": 0.9982,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "enobenjamin:RB": {
+      "scale": 1.0443,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "boom-bust"
+    },
+    "trayveonwilliams:RB": {
+      "scale": 1.0261,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "mekhisargent:RB": {
+      "scale": 1.0187,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "jaylensamuels:RB": {
+      "scale": 0.9984,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jakebargas:RB": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "tavienfeaster:RB": {
+      "scale": 1.0022,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "derrickgore:RB": {
+      "scale": 1.0176,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "dukejohnson:RB": {
+      "scale": 1.0182,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "pookawilliamsjr:RB": {
+      "scale": 1.0034,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "natemccrary:RB": {
+      "scale": 1.0105,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "erictomlinson:TE": {
+      "scale": 0.9409,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "stable"
+    },
+    "mattbushman:TE": {
+      "scale": 0.9936,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "kevinrader:TE": {
+      "scale": 0.9956,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "devanteparker:WR": {
+      "scale": 1.0169,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "benskowronek:WR": {
+      "scale": 1.0025,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "breshadperriman:WR": {
+      "scale": 1.0453,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "boom-bust"
+    },
+    "rodneyadams:WR": {
+      "scale": 1.0009,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "rivercracraft:WR": {
+      "scale": 0.991,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "joshgordon:WR": {
+      "scale": 1.0328,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "boom-bust"
+    },
+    "antoinewesley:WR": {
+      "scale": 1.0371,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "eddypineiro:K": {
+      "scale": 1.004,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "typical"
+    },
+    "kurtbenkert:QB": {
+      "scale": 0.9956,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "craigreynolds:RB": {
+      "scale": 0.9831,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "typical"
+    },
+    "jonathanwilliams:RB": {
+      "scale": 1.0164,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "lamicalperine:RB": {
+      "scale": 1.0379,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "boom-bust"
+    },
+    "reggiebonnafon:RB": {
+      "scale": 1.0154,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "javianhawkins:RB": {
+      "scale": 1.0005,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "brianhill:RB": {
+      "scale": 1.0056,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "brockwright:TE": {
+      "scale": 0.977,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "stable"
+    },
+    "ianbunting:TE": {
+      "scale": 1.0007,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jaredpinkney:TE": {
+      "scale": 1.006,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "colinthompson:TE": {
+      "scale": 0.9869,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "djmontgomery:WR": {
+      "scale": 1.0116,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "raceymcmath:WR": {
+      "scale": 0.9863,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "jasonmoore:WR": {
+      "scale": 0.9803,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "brandonpowell:WR": {
+      "scale": 1.031,
+      "weeklyRows": 49,
+      "localEvidenceWeight": 0.2768,
+      "classification": "boom-bust"
+    },
+    "vyncintsmith:WR": {
+      "scale": 1.0044,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "nickmullens:QB": {
+      "scale": 0.9896,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "garrettgilbert:QB": {
+      "scale": 1.0116,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jordanhoward:RB": {
+      "scale": 1.0206,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "alexarmah:RB": {
+      "scale": 0.9321,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "stable"
+    },
+    "khariblasingame:RB": {
+      "scale": 0.8928,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "nathancottrell:RB": {
+      "scale": 0.9999,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jakefunk:RB": {
+      "scale": 1.0087,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "johnkelly:RB": {
+      "scale": 1.0047,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "devineozigbo:RB": {
+      "scale": 1.0196,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jacobhollister:TE": {
+      "scale": 0.9968,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "nickbowers:TE": {
+      "scale": 0.9985,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "alexbachman:WR": {
+      "scale": 0.9996,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "codythompson:WR": {
+      "scale": 0.9795,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "milesboykin:WR": {
+      "scale": 0.9382,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "stable"
+    },
+    "dauricefountain:WR": {
+      "scale": 0.9957,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "dazznewsome:WR": {
+      "scale": 1.0023,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "trenttaylor:WR": {
+      "scale": 0.8833,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "juwannwinfree:WR": {
+      "scale": 0.9779,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "dominikeberle:K": {
+      "scale": 1.0091,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "lirimhajrullahu:K": {
+      "scale": 0.99,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "ianbook:QB": {
+      "scale": 1.0192,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "blakebortles:QB": {
+      "scale": 1.0056,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "kellenmond:QB": {
+      "scale": 0.99,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "brettrypien:QB": {
+      "scale": 0.9839,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "eastonstick:QB": {
+      "scale": 0.9744,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "stable"
+    },
+    "treyedmunds:RB": {
+      "scale": 0.9975,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jjtaylor:RB": {
+      "scale": 1.0067,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "leveonbell:RB": {
+      "scale": 1.0155,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "tylerkroft:TE": {
+      "scale": 1.0088,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "ethanwolf:TE": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "jeremysprinkle:TE": {
+      "scale": 0.9778,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "nakiegriffinstewart:TE": {
+      "scale": 1.005,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "tonypoljan:TE": {
+      "scale": 0.9987,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "adamshaheen:TE": {
+      "scale": 0.999,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "stephensullivan:TE": {
+      "scale": 0.9927,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "cyrilgrayson:WR": {
+      "scale": 1.0455,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "kawaanbaker:WR": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "davidsills:WR": {
+      "scale": 0.9732,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "stable"
+    },
+    "jalencamp:WR": {
+      "scale": 1.0022,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "kekecoutee:WR": {
+      "scale": 1.0101,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "joshhammond:WR": {
+      "scale": 1.0029,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "isaiahhodgins:WR": {
+      "scale": 1.0705,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "justinwatson:WR": {
+      "scale": 1.0468,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "boom-bust"
+    },
+    "tracemcsorley:QB": {
+      "scale": 0.9573,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "natesudfeld:QB": {
+      "scale": 1.0093,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "ryquellarmstead:RB": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "spencerbrown:RB": {
+      "scale": 0.9851,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "rosstravis:TE": {
+      "scale": 1.0022,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "kahalewarring:TE": {
+      "scale": 0.9976,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "kristianwilkerson:WR": {
+      "scale": 1.0004,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "sethwilliams:WR": {
+      "scale": 1.0085,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "travisfulgham:WR": {
+      "scale": 1.0086,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "kirkmerritt:WR": {
+      "scale": 0.9921,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "davidmoore:WR": {
+      "scale": 1.0126,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "zanegonzalez:K": {
+      "scale": 0.9813,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "elimitchell:RB": {
+      "scale": 1.0043,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "alexcollins:RB": {
+      "scale": 1.0031,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "demichaelharris:WR": {
+      "scale": 1.005,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jeffdriskel:QB": {
+      "scale": 0.9975,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "bretthundley:QB": {
+      "scale": 1.0085,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "andrewbeck:TE": {
+      "scale": 0.987,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "deonyelder:TE": {
+      "scale": 0.9992,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "phillipdorsett:WR": {
+      "scale": 1.0187,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "codeymcelroy:TE": {
+      "scale": 1.0034,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "trentonirwin:WR": {
+      "scale": 1.0569,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "boom-bust"
+    },
+    "tyriecleveland:WR": {
+      "scale": 0.9645,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "stable"
+    },
+    "artavispierce:RB": {
+      "scale": 1.0099,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jesperhorsted:TE": {
+      "scale": 0.9423,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "tannerhudson:TE": {
+      "scale": 1.0251,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "marcusjohnson:WR": {
+      "scale": 1.035,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "boom-bust"
+    },
+    "antoniogandygolden:WR": {
+      "scale": 0.9937,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "jakeluton:QB": {
+      "scale": 1.0082,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "johnnystanton:RB": {
+      "scale": 0.9942,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "noahtogiai:TE": {
+      "scale": 0.9978,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "geronimoallison:WR": {
+      "scale": 1.0037,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "chrisblewitt:K": {
+      "scale": 0.99,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "richardrodgers:TE": {
+      "scale": 1.0102,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "keithkirkwood:WR": {
+      "scale": 0.9684,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "masonkinsey:WR": {
+      "scale": 0.9799,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "willgrier:QB": {
+      "scale": 0.9958,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "patricklaird:RB": {
+      "scale": 0.9992,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "chrisstreveler:QB": {
+      "scale": 0.9955,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "daviswebb:QB": {
+      "scale": 0.9907,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "adrianpeterson:RB": {
+      "scale": 1.0057,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "tyreejackson:TE": {
+      "scale": 0.9901,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "quintinmorris:TE": {
+      "scale": 0.9946,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "typical"
+    },
+    "marcellateman:WR": {
+      "scale": 1.0065,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "mauriceffrench:WR": {
+      "scale": 1.0015,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "johnhightower:WR": {
+      "scale": 1.0116,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "cadeyork:K": {
+      "scale": 0.9799,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "willutz:K": {
+      "scale": 1.0129,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "typical"
+    },
+    "jameiswinston:QB": {
+      "scale": 0.9359,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "stable"
+    },
+    "armanirogers:QB": {
+      "scale": 0.9906,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "joshuadobbs:QB": {
+      "scale": 1.0263,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "boom-bust"
+    },
+    "kennypickett:QB": {
+      "scale": 1.0077,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "desmondridder:QB": {
+      "scale": 1.0467,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "jarrettstidham:QB": {
+      "scale": 0.9759,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "malikwillis:QB": {
+      "scale": 1.0188,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "isiahpacheco:RB": {
+      "scale": 0.9629,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "stable"
+    },
+    "zanderhorvath:RB": {
+      "scale": 0.9584,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "derrickhenry:RB": {
+      "scale": 1.0949,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "boom-bust"
+    },
+    "breecehall:RB": {
+      "scale": 1.0783,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "travisetienne:RB": {
+      "scale": 1.0267,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "dameonpierce:RB": {
+      "scale": 1.0129,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "raheemmostert:RB": {
+      "scale": 1.0421,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "boom-bust"
+    },
+    "rachaadwhite:RB": {
+      "scale": 0.9202,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "justicehill:RB": {
+      "scale": 1.0127,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "averywilliams:RB": {
+      "scale": 0.9977,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "jeromeford:RB": {
+      "scale": 0.8934,
+      "weeklyRows": 40,
+      "localEvidenceWeight": 0.2381,
+      "classification": "stable"
+    },
+    "jordanmason:RB": {
+      "scale": 0.9575,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "stable"
+    },
+    "jaylenwarren:RB": {
+      "scale": 0.9203,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "stable"
+    },
+    "camakers:RB": {
+      "scale": 0.9821,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "cethancarter:RB": {
+      "scale": 0.9968,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "ricodowdle:RB": {
+      "scale": 0.9949,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "trestanebner:RB": {
+      "scale": 1.0179,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "hassanhaskins:RB": {
+      "scale": 0.948,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "stable"
+    },
+    "adamprentice:RB": {
+      "scale": 0.916,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "stable"
+    },
+    "zamirwhite:RB": {
+      "scale": 1.0351,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "boom-bust"
+    },
+    "kyrenwilliams:RB": {
+      "scale": 1.0101,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "jamescook:RB": {
+      "scale": 1.0476,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "boom-bust"
+    },
+    "taysomhill:TE": {
+      "scale": 1.0153,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "typical"
+    },
+    "jodyfortson:TE": {
+      "scale": 1.0239,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "loganthomas:TE": {
+      "scale": 1.0078,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "roberttonyan:TE": {
+      "scale": 0.9637,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "stable"
+    },
+    "cadeotton:TE": {
+      "scale": 1.007,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "typical"
+    },
+    "johnnymundt:TE": {
+      "scale": 0.9741,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "parkerhesse:TE": {
+      "scale": 0.9711,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "stable"
+    },
+    "chigoziemokonkwo:TE": {
+      "scale": 0.9936,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "connorheyward:TE": {
+      "scale": 0.9825,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "benellefson:TE": {
+      "scale": 0.9847,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "danielbellinger:TE": {
+      "scale": 1.052,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "boom-bust"
+    },
+    "jakeferguson:TE": {
+      "scale": 0.9919,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "typical"
+    },
+    "kokieft:TE": {
+      "scale": 1.0041,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "isaiahlikely:TE": {
+      "scale": 1.0175,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "typical"
+    },
+    "irvsmith:TE": {
+      "scale": 1.0137,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "jaketonges:TE": {
+      "scale": 1.0022,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "maxxwilliams:TE": {
+      "scale": 1.026,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "boom-bust"
+    },
+    "jelaniwoods:TE": {
+      "scale": 1.0244,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "shanezylstra:TE": {
+      "scale": 0.9778,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "michaelthomas:WR": {
+      "scale": 0.9622,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "robbieanderson:WR": {
+      "scale": 1.0504,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "jahandotson:WR": {
+      "scale": 1.0214,
+      "weeklyRows": 40,
+      "localEvidenceWeight": 0.2381,
+      "classification": "typical"
+    },
+    "gabedavis:WR": {
+      "scale": 1.12,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "boom-bust"
+    },
+    "djchark:WR": {
+      "scale": 1.0379,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "drakelondon:WR": {
+      "scale": 0.9466,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "gregdortch:WR": {
+      "scale": 1.074,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "tymontgomery:WR": {
+      "scale": 1.0116,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "richiejames:WR": {
+      "scale": 1.0225,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "typical"
+    },
+    "garrettwilson:WR": {
+      "scale": 0.9745,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "chrisolave:WR": {
+      "scale": 0.9731,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "stable"
+    },
+    "kylephilips:WR": {
+      "scale": 1.0175,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "treylonburks:WR": {
+      "scale": 1.0085,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "jujusmithschuster:WR": {
+      "scale": 1.0225,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "romeodoubs:WR": {
+      "scale": 1.0262,
+      "weeklyRows": 38,
+      "localEvidenceWeight": 0.2289,
+      "classification": "boom-bust"
+    },
+    "parriscampbell:WR": {
+      "scale": 1.0143,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "christianwatson:WR": {
+      "scale": 1.02,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "skyymoore:WR": {
+      "scale": 0.9989,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "typical"
+    },
+    "dennishouston:WR": {
+      "scale": 1.0004,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "wandalerobinson:WR": {
+      "scale": 0.9789,
+      "weeklyRows": 35,
+      "localEvidenceWeight": 0.2147,
+      "classification": "typical"
+    },
+    "deonteharty:WR": {
+      "scale": 1.007,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "georgepickens:WR": {
+      "scale": 0.9352,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "stable"
+    },
+    "andrebaccellia:WR": {
+      "scale": 0.987,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "davidbell:WR": {
+      "scale": 0.9534,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "stable"
+    },
+    "lawrencecager:WR": {
+      "scale": 0.9938,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "quintezcephus:WR": {
+      "scale": 0.9854,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "britaincovey:WR": {
+      "scale": 0.915,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "stable"
+    },
+    "kjhamler:WR": {
+      "scale": 1.0124,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "bisijohnson:WR": {
+      "scale": 0.9951,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "timjones:WR": {
+      "scale": 0.9148,
+      "weeklyRows": 45,
+      "localEvidenceWeight": 0.2601,
+      "classification": "stable"
+    },
+    "jalennailor:WR": {
+      "scale": 0.9759,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "stable"
+    },
+    "alecpierce:WR": {
+      "scale": 1.0394,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "djturner:WR": {
+      "scale": 0.9665,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "stable"
+    },
+    "kavontaeturpin:WR": {
+      "scale": 0.9523,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "stable"
+    },
+    "montrellwashington:WR": {
+      "scale": 0.9944,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "darekeyoung:WR": {
+      "scale": 0.952,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "skylarthompson:QB": {
+      "scale": 0.9705,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "bryceperkins:QB": {
+      "scale": 0.9778,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "samhowell:QB": {
+      "scale": 1.0161,
+      "weeklyRows": 22,
+      "localEvidenceWeight": 0.1467,
+      "classification": "typical"
+    },
+    "brockpurdy:QB": {
+      "scale": 0.9842,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "brianrobinson:RB": {
+      "scale": 0.9385,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "stable"
+    },
+    "kennethwalkeriii:RB": {
+      "scale": 0.9651,
+      "weeklyRows": 37,
+      "localEvidenceWeight": 0.2242,
+      "classification": "stable"
+    },
+    "malikdavis:RB": {
+      "scale": 1.0058,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "raheemblackshear:RB": {
+      "scale": 0.8994,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "stable"
+    },
+    "calebhuntley:RB": {
+      "scale": 0.9865,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "tylerallgeier:RB": {
+      "scale": 1.0017,
+      "weeklyRows": 44,
+      "localEvidenceWeight": 0.2558,
+      "classification": "typical"
+    },
+    "keshawnvaughn:RB": {
+      "scale": 1.0188,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "keaontayingram:RB": {
+      "scale": 0.9995,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "isaiahspiller:RB": {
+      "scale": 1.0057,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "snoopconner:RB": {
+      "scale": 1.0112,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "larryrountreeiii:RB": {
+      "scale": 0.9991,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "gregdulcich:TE": {
+      "scale": 1.0532,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "boom-bust"
+    },
+    "jamesmitchell:TE": {
+      "scale": 0.9847,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "treymcbride:TE": {
+      "scale": 1.0435,
+      "weeklyRows": 43,
+      "localEvidenceWeight": 0.2515,
+      "classification": "boom-bust"
+    },
+    "grantcalcaterra:TE": {
+      "scale": 0.9524,
+      "weeklyRows": 34,
+      "localEvidenceWeight": 0.2099,
+      "classification": "stable"
+    },
+    "millerforristall:TE": {
+      "scale": 0.9948,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "nikolakalinic:TE": {
+      "scale": 0.9944,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "nickmuse:TE": {
+      "scale": 0.9742,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "teaganquitoriano:TE": {
+      "scale": 1.0268,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "peytonhendershot:TE": {
+      "scale": 1.0284,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "boom-bust"
+    },
+    "michaelgallup:WR": {
+      "scale": 1.0364,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "dantepettis:WR": {
+      "scale": 1.0118,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "stevensims:WR": {
+      "scale": 0.9791,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "rashidshaheed:WR": {
+      "scale": 1.0553,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "boom-bust"
+    },
+    "khalilshakir:WR": {
+      "scale": 1.013,
+      "weeklyRows": 42,
+      "localEvidenceWeight": 0.2471,
+      "classification": "typical"
+    },
+    "michaelbandy:WR": {
+      "scale": 1.02,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "dannygray:WR": {
+      "scale": 0.9945,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "jalentolbert:WR": {
+      "scale": 0.998,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "typical"
+    },
+    "samoritoure:WR": {
+      "scale": 0.9894,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "mikewoods:WR": {
+      "scale": 1.0062,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "cjboard:WR": {
+      "scale": 0.9929,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "baileyzappe:QB": {
+      "scale": 0.9272,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "stable"
+    },
+    "pierrestrong:RB": {
+      "scale": 0.9713,
+      "weeklyRows": 41,
+      "localEvidenceWeight": 0.2426,
+      "classification": "stable"
+    },
+    "brittainbrown:RB": {
+      "scale": 1.0021,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "darryntonevans:RB": {
+      "scale": 0.9879,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "jacobharris:TE": {
+      "scale": 1.0102,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "devinasiasi:TE": {
+      "scale": 0.9854,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "coleturner:TE": {
+      "scale": 0.9902,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "tyquanthornton:WR": {
+      "scale": 1.0086,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "tannergentry:WR": {
+      "scale": 1.0083,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "velusjonesjr:WR": {
+      "scale": 1.0236,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "lancemccutcheon:WR": {
+      "scale": 1.0021,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "cornellpowell:WR": {
+      "scale": 1.0004,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jalenvirgil:WR": {
+      "scale": 0.9864,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "raleighwebb:WR": {
+      "scale": 0.9867,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "calebshudak:K": {
+      "scale": 0.9994,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "gusedwards:RB": {
+      "scale": 0.9935,
+      "weeklyRows": 33,
+      "localEvidenceWeight": 0.205,
+      "classification": "typical"
+    },
+    "jeremyruckert:TE": {
+      "scale": 0.949,
+      "weeklyRows": 36,
+      "localEvidenceWeight": 0.2195,
+      "classification": "stable"
+    },
+    "tutuatwell:WR": {
+      "scale": 0.9738,
+      "weeklyRows": 39,
+      "localEvidenceWeight": 0.2335,
+      "classification": "stable"
+    },
+    "deshaunwatson:QB": {
+      "scale": 1.009,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "bamknight:RB": {
+      "scale": 1.0121,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "juliuschestnut:RB": {
+      "scale": 0.9891,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "malcolmbrown:RB": {
+      "scale": 0.9951,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "tyriondavisprice:RB": {
+      "scale": 1.0137,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "kevinharris:RB": {
+      "scale": 1.0175,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "austintrammell:WR": {
+      "scale": 0.9485,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "stable"
+    },
+    "benvictor:WR": {
+      "scale": 0.9928,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "jamesonwilliams:WR": {
+      "scale": 1.0069,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "jkdobbins:RB": {
+      "scale": 1.0163,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "tychandler:RB": {
+      "scale": 0.9909,
+      "weeklyRows": 32,
+      "localEvidenceWeight": 0.2,
+      "classification": "typical"
+    },
+    "taylorbertolet:K": {
+      "scale": 1.0098,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "mattsokol:TE": {
+      "scale": 0.9987,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "dvonteprice:RB": {
+      "scale": 0.9997,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "kyletrask:QB": {
+      "scale": 0.9833,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "cadejohnson:WR": {
+      "scale": 1.0008,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "lynnbowden:WR": {
+      "scale": 0.9747,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "jakemoody:K": {
+      "scale": 0.9581,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "camerondicker:K": {
+      "scale": 1.0084,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "blakegrupe:K": {
+      "scale": 0.9904,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "anderscarlson:K": {
+      "scale": 0.969,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "stable"
+    },
+    "brandonaubrey:K": {
+      "scale": 0.9314,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "stable"
+    },
+    "chadryland:K": {
+      "scale": 0.9965,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "anthonyrichardson:QB": {
+      "scale": 1.0765,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "cjstroud:QB": {
+      "scale": 0.9908,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "bryceyoung:QB": {
+      "scale": 1.1006,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "dorianthompsonrobinson:QB": {
+      "scale": 0.9873,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "claytontune:QB": {
+      "scale": 1.0115,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "jakebrowning:QB": {
+      "scale": 1.0082,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "seanclifford:QB": {
+      "scale": 0.9859,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "bijanrobinson:RB": {
+      "scale": 1.0176,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "roschonjohnson:RB": {
+      "scale": 1.0098,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "tankbigsby:RB": {
+      "scale": 1.047,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "boom-bust"
+    },
+    "jahmyrgibbs:RB": {
+      "scale": 1.022,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "seantucker:RB": {
+      "scale": 0.9851,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "tyjaespears:RB": {
+      "scale": 0.9858,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "evanhull:RB": {
+      "scale": 0.9987,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "zachcharbonnet:RB": {
+      "scale": 0.9866,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "deucevaughn:RB": {
+      "scale": 0.9661,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "chrisrodriguezjr:RB": {
+      "scale": 0.9921,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "chrisbrooks:RB": {
+      "scale": 1.029,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "emaridemercado:RB": {
+      "scale": 1.014,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "typical"
+    },
+    "elijahdotson:RB": {
+      "scale": 1.001,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "ericgray:RB": {
+      "scale": 1.0104,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "hunterluepke:RB": {
+      "scale": 0.9452,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "stable"
+    },
+    "ronnierivers:RB": {
+      "scale": 0.9112,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "stable"
+    },
+    "jaleelmclaughlin:RB": {
+      "scale": 0.9359,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "stable"
+    },
+    "lukemusgrave:TE": {
+      "scale": 0.9969,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "samlaporta:TE": {
+      "scale": 1.0705,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "daltonkincaid:TE": {
+      "scale": 0.9922,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "lawrencecager:TE": {
+      "scale": 1.0369,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "boom-bust"
+    },
+    "andrewogletree:TE": {
+      "scale": 1.0133,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "davisallen:TE": {
+      "scale": 0.9774,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "typical"
+    },
+    "charliekolar:TE": {
+      "scale": 1.065,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "tuckerkraft:TE": {
+      "scale": 1.0274,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "michaelmayer:TE": {
+      "scale": 0.9915,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "lukeschoonmaker:TE": {
+      "scale": 1.0006,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "stonesmartt:TE": {
+      "scale": 1.0013,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "brentonstrange:TE": {
+      "scale": 1.0163,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "darnellwashington:TE": {
+      "scale": 1.0419,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "davidwells:TE": {
+      "scale": 1.0142,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "joshwhyle:TE": {
+      "scale": 1.0271,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "pukanacua:WR": {
+      "scale": 1.0564,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "boom-bust"
+    },
+    "zayflowers:WR": {
+      "scale": 1.0282,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "boom-bust"
+    },
+    "jordanaddison:WR": {
+      "scale": 1.0182,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "rasheerice:WR": {
+      "scale": 1.0209,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "treypalmer:WR": {
+      "scale": 0.9964,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "calvinaustiniii:WR": {
+      "scale": 1.0202,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "demariodouglas:WR": {
+      "scale": 0.9585,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "stable"
+    },
+    "xaviergipson:WR": {
+      "scale": 0.995,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "jaydenreed:WR": {
+      "scale": 0.9781,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "tankdell:WR": {
+      "scale": 1.0061,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "typical"
+    },
+    "joshdowns:WR": {
+      "scale": 0.9893,
+      "weeklyRows": 28,
+      "localEvidenceWeight": 0.1795,
+      "classification": "typical"
+    },
+    "jonathanmingo:WR": {
+      "scale": 0.9976,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "brandonjohnson:WR": {
+      "scale": 1.0346,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "boom-bust"
+    },
+    "michaelwilson:WR": {
+      "scale": 1.029,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "boom-bust"
+    },
+    "jaxonsmithnjigba:WR": {
+      "scale": 0.9698,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "stable"
+    },
+    "tylerscott:WR": {
+      "scale": 0.9277,
+      "weeklyRows": 27,
+      "localEvidenceWeight": 0.1742,
+      "classification": "stable"
+    },
+    "deventhompkins:WR": {
+      "scale": 0.9854,
+      "weeklyRows": 21,
+      "localEvidenceWeight": 0.1409,
+      "classification": "typical"
+    },
+    "quentinjohnston:WR": {
+      "scale": 1.0531,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "boom-bust"
+    },
+    "marvinmimsjr:WR": {
+      "scale": 1.0344,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "boom-bust"
+    },
+    "erikezukanma:WR": {
+      "scale": 0.9948,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "xavierhutchinson:WR": {
+      "scale": 0.9952,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "justynross:WR": {
+      "scale": 1.0017,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "deriusdavis:WR": {
+      "scale": 1.008,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "typical"
+    },
+    "ronniebell:WR": {
+      "scale": 1.0048,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "typical"
+    },
+    "jakebobo:WR": {
+      "scale": 1.0202,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "kayshonboutte:WR": {
+      "scale": 0.9774,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "antoinegreen:WR": {
+      "scale": 0.982,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "malikheath:WR": {
+      "scale": 1.0341,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "boom-bust"
+    },
+    "jalinhyatt:WR": {
+      "scale": 0.9983,
+      "weeklyRows": 31,
+      "localEvidenceWeight": 0.195,
+      "classification": "typical"
+    },
+    "andreiiosivas:WR": {
+      "scale": 0.9902,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "kearisjackson:WR": {
+      "scale": 0.9929,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "rakimjarrett:WR": {
+      "scale": 1.0192,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "typical"
+    },
+    "charliejones:WR": {
+      "scale": 1.0005,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "typical"
+    },
+    "cedrictillman:WR": {
+      "scale": 1.039,
+      "weeklyRows": 24,
+      "localEvidenceWeight": 0.1579,
+      "classification": "boom-bust"
+    },
+    "dontayvionwicks:WR": {
+      "scale": 1.0784,
+      "weeklyRows": 29,
+      "localEvidenceWeight": 0.1847,
+      "classification": "boom-bust"
+    },
+    "tommydevito:QB": {
+      "scale": 1.0016,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "tysonbagent:QB": {
+      "scale": 0.9898,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "aidanoconnell:QB": {
+      "scale": 1.0648,
+      "weeklyRows": 16,
+      "localEvidenceWeight": 0.1111,
+      "classification": "boom-bust"
+    },
+    "willlevis:QB": {
+      "scale": 1.0708,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "boom-bust"
+    },
+    "mattbarkley:QB": {
+      "scale": 1.0014,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "keatonmitchell:RB": {
+      "scale": 1.052,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "boom-bust"
+    },
+    "jashauncorbin:RB": {
+      "scale": 1.0226,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "emanuelwilson:RB": {
+      "scale": 0.9957,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "willmallory:TE": {
+      "scale": 1.0035,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "typical"
+    },
+    "bradyrussell:TE": {
+      "scale": 0.9854,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "stephencarlson:TE": {
+      "scale": 0.9989,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "paynedurham:TE": {
+      "scale": 1.0303,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "johnfitzpatrick:TE": {
+      "scale": 0.9914,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "daltonkeene:TE": {
+      "scale": 0.9996,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "lucaskrull:TE": {
+      "scale": 1.0187,
+      "weeklyRows": 17,
+      "localEvidenceWeight": 0.1172,
+      "classification": "typical"
+    },
+    "bensims:TE": {
+      "scale": 0.9883,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "atperry:WR": {
+      "scale": 0.9839,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "jalenbrooks:WR": {
+      "scale": 1.0244,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "boom-bust"
+    },
+    "johnmetchieiii:WR": {
+      "scale": 0.9248,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "stable"
+    },
+    "shedrickjackson:WR": {
+      "scale": 0.9872,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "rodwilliams:WR": {
+      "scale": 0.9697,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "tretucker:WR": {
+      "scale": 1.0123,
+      "weeklyRows": 30,
+      "localEvidenceWeight": 0.1899,
+      "classification": "typical"
+    },
+    "irvincharles:WR": {
+      "scale": 0.9823,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "elijahcooks:WR": {
+      "scale": 1.0005,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "elijahhiggins:WR": {
+      "scale": 0.9573,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "trishtonjackson:WR": {
+      "scale": 0.9993,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jordanmatthews:WR": {
+      "scale": 1.0049,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "austinwatkinsjr:WR": {
+      "scale": 1.0071,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "israelabanikanda:RB": {
+      "scale": 0.9359,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "devonachane:RB": {
+      "scale": 1.0803,
+      "weeklyRows": 25,
+      "localEvidenceWeight": 0.1634,
+      "classification": "boom-bust"
+    },
+    "zachevans:RB": {
+      "scale": 0.9937,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "nateadkins:TE": {
+      "scale": 1.0287,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "boom-bust"
+    },
+    "blakewhiteheart:TE": {
+      "scale": 1.0005,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "julianhill:TE": {
+      "scale": 1.005,
+      "weeklyRows": 20,
+      "localEvidenceWeight": 0.1351,
+      "classification": "typical"
+    },
+    "robbiechosen:WR": {
+      "scale": 1.0097,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jasonbrownlee:WR": {
+      "scale": 1.0008,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "terrellbynum:WR": {
+      "scale": 0.9987,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "coltondowell:WR": {
+      "scale": 0.9694,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "stable"
+    },
+    "parkerwashington:WR": {
+      "scale": 1.0189,
+      "weeklyRows": 23,
+      "localEvidenceWeight": 0.1523,
+      "classification": "typical"
+    },
+    "chasebrown:RB": {
+      "scale": 0.976,
+      "weeklyRows": 26,
+      "localEvidenceWeight": 0.1688,
+      "classification": "stable"
+    },
+    "kennymcintosh:RB": {
+      "scale": 0.9667,
+      "weeklyRows": 18,
+      "localEvidenceWeight": 0.1233,
+      "classification": "stable"
+    },
+    "henrypearson:RB": {
+      "scale": 0.9905,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "hunterkampmoyer:TE": {
+      "scale": 0.9987,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "bomelton:WR": {
+      "scale": 1.0455,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "ajmccarron:QB": {
+      "scale": 0.9756,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "tylergoodson:RB": {
+      "scale": 0.9651,
+      "weeklyRows": 19,
+      "localEvidenceWeight": 0.1293,
+      "classification": "stable"
+    },
+    "denericprince:RB": {
+      "scale": 1.0277,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "princetonfant:TE": {
+      "scale": 0.9985,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "joshpederson:TE": {
+      "scale": 0.9934,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "ryanmiller:WR": {
+      "scale": 1.0017,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "malikcunningham:QB": {
+      "scale": 0.9993,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "braydenwillis:TE": {
+      "scale": 0.9889,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "maxduggan:QB": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "jarenhall:QB": {
+      "scale": 0.9891,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "tuckerfisk:TE": {
+      "scale": 0.9723,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "ethanfernea:WR": {
+      "scale": 0.9899,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "colefotheringham:TE": {
+      "scale": 0.9917,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "luckyjackson:WR": {
+      "scale": 0.9968,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "zackkuntz:TE": {
+      "scale": 0.9986,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "travisvokolek:TE": {
+      "scale": 0.999,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "keelandoss:WR": {
+      "scale": 0.9995,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "taymartin:WR": {
+      "scale": 1.0033,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "mitchelltinsley:WR": {
+      "scale": 0.9977,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "kendremiller:RB": {
+      "scale": 1.0151,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "joshali:WR": {
+      "scale": 0.9977,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "devonallen:WR": {
+      "scale": 0.9968,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "kwamielassiterii:WR": {
+      "scale": 0.9963,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "dylandrummond:WR": {
+      "scale": 1.0051,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "jordanmims:RB": {
+      "scale": 1.0168,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "tannerconner:TE": {
+      "scale": 0.9912,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "mohamedibrahim:RB": {
+      "scale": 1.0045,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "easopwinston:WR": {
+      "scale": 0.9986,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "owenwright:RB": {
+      "scale": 1.0102,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "dresserwinn:QB": {
+      "scale": 0.9952,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "joshuakarty:K": {
+      "scale": 1.0479,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "jakebates:K": {
+      "scale": 0.9696,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "camlittle:K": {
+      "scale": 0.9927,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "willreichard:K": {
+      "scale": 1.0434,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "boom-bust"
+    },
+    "jaydendaniels:QB": {
+      "scale": 0.9963,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "bonix:QB": {
+      "scale": 1.0332,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "calebwilliams:QB": {
+      "scale": 1.0898,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "buckyirving:RB": {
+      "scale": 1.0419,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "raydavis:RB": {
+      "scale": 1.0259,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "treybenson:RB": {
+      "scale": 0.9714,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "braelonallen:RB": {
+      "scale": 1.0004,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "willshipley:RB": {
+      "scale": 0.9458,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "tyronetracyjr:RB": {
+      "scale": 0.9963,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "blakecorum:RB": {
+      "scale": 0.9511,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "isaacguerendo:RB": {
+      "scale": 1.0571,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "carsonsteele:RB": {
+      "scale": 0.9681,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "isaiahdavis:RB": {
+      "scale": 0.9806,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "audricestime:RB": {
+      "scale": 1.0045,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "chigokonkwo:TE": {
+      "scale": 1.051,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "brockbowers:TE": {
+      "scale": 1.0413,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "elijahhiggins:TE": {
+      "scale": 0.9813,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "jatavionsanders:TE": {
+      "scale": 1.0213,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "ajbarner:TE": {
+      "scale": 0.9984,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "jaheimbell:TE": {
+      "scale": 0.9761,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "tipreiman:TE": {
+      "scale": 0.9728,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "stable"
+    },
+    "bensinnott:TE": {
+      "scale": 1.0272,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "cadestover:TE": {
+      "scale": 1.0181,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "jaredwiley:TE": {
+      "scale": 0.9912,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "xavierworthy:WR": {
+      "scale": 1.0037,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "deebosamuelsr:WR": {
+      "scale": 1.0259,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "brianthomasjr:WR": {
+      "scale": 1.025,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "boom-bust"
+    },
+    "laddmcconkey:WR": {
+      "scale": 0.9727,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "stable"
+    },
+    "jalenmcmillan:WR": {
+      "scale": 1.0174,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "maliknabers:WR": {
+      "scale": 0.981,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "devaughnvele:WR": {
+      "scale": 1.0158,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "keoncoleman:WR": {
+      "scale": 0.9834,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "typical"
+    },
+    "xavierlegette:WR": {
+      "scale": 1.0129,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "lukemccaffrey:WR": {
+      "scale": 0.9859,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "jordanwhittington:WR": {
+      "scale": 1.007,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "jalynnpolk:WR": {
+      "scale": 1.022,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "marvinharrisonjr:WR": {
+      "scale": 1.0239,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "adonaimitchell:WR": {
+      "scale": 0.9853,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "jermaineburton:WR": {
+      "scale": 0.9849,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "typical"
+    },
+    "malachicorley:WR": {
+      "scale": 0.9557,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "stable"
+    },
+    "jacobcowing:WR": {
+      "scale": 0.969,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "anthonygould:WR": {
+      "scale": 1.0022,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jhaquanjackson:WR": {
+      "scale": 0.9604,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "stable"
+    },
+    "bubmeans:WR": {
+      "scale": 0.9924,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "jamarithrash:WR": {
+      "scale": 0.9598,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "stable"
+    },
+    "johnnywilson:WR": {
+      "scale": 1.0603,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "boom-bust"
+    },
+    "romeodunze:WR": {
+      "scale": 0.9839,
+      "weeklyRows": 15,
+      "localEvidenceWeight": 0.1049,
+      "classification": "typical"
+    },
+    "cedrickwilsonjr:WR": {
+      "scale": 0.9563,
+      "weeklyRows": 13,
+      "localEvidenceWeight": 0.0922,
+      "classification": "stable"
+    },
+    "johnparkerromo:K": {
+      "scale": 1.029,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "spencershrader:K": {
+      "scale": 1.0102,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "drakemaye:QB": {
+      "scale": 1.0002,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "jaylenwright:RB": {
+      "scale": 1.0108,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "rasheenali:RB": {
+      "scale": 0.9709,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "codyschrader:RB": {
+      "scale": 0.9663,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "dallinholker:TE": {
+      "scale": 0.9443,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "stable"
+    },
+    "rickypearsall:WR": {
+      "scale": 1.0125,
+      "weeklyRows": 9,
+      "localEvidenceWeight": 0.0657,
+      "classification": "typical"
+    },
+    "malikwashington:WR": {
+      "scale": 0.9945,
+      "weeklyRows": 12,
+      "localEvidenceWeight": 0.0857,
+      "classification": "typical"
+    },
+    "jalencoker:WR": {
+      "scale": 1.0129,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "ainiassmith:WR": {
+      "scale": 1.0061,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "ryanflournoy:WR": {
+      "scale": 1.0124,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "troyfranklin:WR": {
+      "scale": 1.0009,
+      "weeklyRows": 14,
+      "localEvidenceWeight": 0.0986,
+      "classification": "typical"
+    },
+    "javonbaker:WR": {
+      "scale": 0.9663,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "stable"
+    },
+    "jermainejackson:WR": {
+      "scale": 0.9995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "masontipton:WR": {
+      "scale": 0.9924,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "caseywashington:WR": {
+      "scale": 0.9486,
+      "weeklyRows": 11,
+      "localEvidenceWeight": 0.0791,
+      "classification": "stable"
+    },
+    "jasemcclellan:RB": {
+      "scale": 1.0004,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "sionevaki:RB": {
+      "scale": 1.0034,
+      "weeklyRows": 10,
+      "localEvidenceWeight": 0.0725,
+      "classification": "typical"
+    },
+    "jonathonbrooks:RB": {
+      "scale": 1.0114,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "dylanlaube:RB": {
+      "scale": 0.9889,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "sinceremccormick:RB": {
+      "scale": 0.9904,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "kimanividal:RB": {
+      "scale": 0.9945,
+      "weeklyRows": 8,
+      "localEvidenceWeight": 0.0588,
+      "classification": "typical"
+    },
+    "keilanrobinson:RB": {
+      "scale": 0.9907,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "brevynspannford:TE": {
+      "scale": 0.988,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "kevinaustinjr:WR": {
+      "scale": 0.993,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "deeeskridge:WR": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "nikkoremigio:WR": {
+      "scale": 0.9851,
+      "weeklyRows": 3,
+      "localEvidenceWeight": 0.0229,
+      "classification": "limited-history"
+    },
+    "jakehaener:QB": {
+      "scale": 1.0116,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "devontezwalker:WR": {
+      "scale": 0.9756,
+      "weeklyRows": 5,
+      "localEvidenceWeight": 0.0376,
+      "classification": "limited-history"
+    },
+    "bryceoliver:WR": {
+      "scale": 0.9929,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "michaelpenixjr:QB": {
+      "scale": 1.007,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "spencerrattler:QB": {
+      "scale": 1.0031,
+      "weeklyRows": 4,
+      "localEvidenceWeight": 0.0303,
+      "classification": "limited-history"
+    },
+    "devinculp:TE": {
+      "scale": 0.9987,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "tannermclachlan:TE": {
+      "scale": 0.9953,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "marshawnlloyd:RB": {
+      "scale": 0.995,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "erickall:TE": {
+      "scale": 1.0121,
+      "weeklyRows": 7,
+      "localEvidenceWeight": 0.0519,
+      "classification": "limited-history"
+    },
+    "brendenrice:WR": {
+      "scale": 0.9709,
+      "weeklyRows": 6,
+      "localEvidenceWeight": 0.0448,
+      "classification": "limited-history"
+    },
+    "tylerbadie:RB": {
+      "scale": 1.0116,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "blakewatson:RB": {
+      "scale": 1.0066,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "kameronjohnson:WR": {
+      "scale": 1.0003,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "tyreikmcallister:RB": {
+      "scale": 1.0055,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "romanwilson:WR": {
+      "scale": 1.0045,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "josephfortson:TE": {
+      "scale": 1.0027,
+      "weeklyRows": 2,
+      "localEvidenceWeight": 0.0154,
+      "classification": "limited-history"
+    },
+    "xaviersmith:WR": {
+      "scale": 1.0076,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    },
+    "judemcatamney:K": {
+      "scale": 1.0008,
+      "weeklyRows": 1,
+      "localEvidenceWeight": 0.0078,
+      "classification": "limited-history"
+    }
+  }
+}
