@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceRepository": "https://github.com/coolstick784/draft-goblin",
-  "sourceCommit": "be273f55983abe48c89ebb1ad085b79c62c6f41c",
+  "sourceCommit": "17e7ca5db590c8c0c10276d2843bfbd3b4ec87f1",
   "publicationModel": "sanitized-snapshot",
   "excluded": [
     "Git history and non-main branches",
