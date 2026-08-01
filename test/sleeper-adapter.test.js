@@ -9,7 +9,7 @@ const capturedDraft=JSON.parse(fs.readFileSync(new URL("../data/generated/live-d
 const draftId="123456789012345678";
 const userId="1375861210234261504";
 
-async function runAdapter(inputDraft){
+async function runAdapter(inputDraft,{projectionFailure=false,marketCache=null}={}){
   const draft=structuredClone(inputDraft);
   draft.draft_id=draftId;
   draft.draft_order={[userId]:Math.min(Number(draft.settings.teams),2)};
@@ -21,7 +21,7 @@ async function runAdapter(inputDraft){
   let settle;
   const result=new Promise(resolve=>{settle=resolve});
   const messages=[];
-  const chrome={runtime:{async sendMessage(message){messages.push(message);if(message.type==="ADAPTER_ACTIVATED")return{ok:true};if(message.type==="DRAFT_STATE"){settle({state:message.state,messages});return{ok:true}}if(message.type==="DRAFT_ERROR"){settle({error:message.error,messages});return{ok:true}}if(message.type==="SLEEPER_FETCH"){const url=message.url;if(url.includes(`/draft/${draftId}/picks`))return{ok:true,data:[]};if(url.includes(`/draft/${draftId}`))return{ok:true,data:draft};if(url.includes("/players/nfl"))return{ok:true,data:catalog};if(url.includes("api.sleeper.com/projections"))return{ok:true,data:[{season:"2026",player_id:"real",stats:{pts_std:188,adp_std:31.4}},{season:"2026",player_id:"sentinel",stats:{pts_std:175,adp_std:999}},{season:"2026",player_id:"offscreen",stats:{pts_std:164,adp_std:85.2}}]};throw new Error(`Unexpected URL ${url}`)}}}};
+  const marketStorage=new Map(marketCache?[["sleeperMarketRank:2026:adp_std",marketCache]]:[]),chrome={storage:{local:{async get(key){return{[key]:marketStorage.get(key)}},async set(values){for(const[key,value]of Object.entries(values))marketStorage.set(key,value)}}},runtime:{async sendMessage(message){messages.push(message);if(message.type==="ADAPTER_ACTIVATED")return{ok:true};if(message.type==="DRAFT_STATE"){settle({state:message.state,messages,marketStorage});return{ok:true}}if(message.type==="DRAFT_ERROR"){settle({error:message.error,messages,marketStorage});return{ok:true}}if(message.type==="SLEEPER_FETCH"){const url=message.url;if(url.includes(`/draft/${draftId}/picks`))return{ok:true,data:[]};if(url.includes(`/draft/${draftId}`))return{ok:true,data:draft};if(url.includes("/players/nfl"))return{ok:true,data:catalog};if(url.includes("api.sleeper.com/projections"))return projectionFailure?{ok:false,error:"temporary market outage"}:{ok:true,data:[{season:"2026",player_id:"real",stats:{pts_std:188,adp_std:31.4}},{season:"2026",player_id:"sentinel",stats:{pts_std:175,adp_std:999}},{season:"2026",player_id:"offscreen",stats:{pts_std:164,adp_std:85.2}}]};throw new Error(`Unexpected URL ${url}`)}}}};
   const localStorage={length:1,key:index=>index===0?"user":null,getItem:key=>key==="user"?userId:null};
   const cell=(label,value)=>({className:label,textContent:String(value),children:[],getAttribute(name){return name==="data-stat"?label:null}}),row=(id,projection,adp,rowText="")=>({hidden:false,children:[],innerText:rowText,textContent:rowText,getClientRects:()=>[{}],getAttribute(name){return name==="data-player-id"?id:null},querySelector(){return null},querySelectorAll(selector){if(selector==="span,div")return[];return[cell("projected",projection),...(adp?[cell("adp",adp)]:[])]}}),visibleRows=[row("real",190,null),row("real",0,null,"31 Real Rank WR BUF 30.6 7"),row("sentinel",180,null)];
   const document={hidden:false,addEventListener(){},querySelectorAll(selector){return selector.includes("[data-player-id]")?visibleRows:[]}};
@@ -108,7 +108,7 @@ test("Sleeper publishes user pick 106 and immediate autopick 107 even without a 
   const draft=structuredClone(capturedDraft),catalog={live:{player_id:"live",full_name:"Fast Pick",position:"RB",team:"DET",injury_status:null}};
   draft.draft_id=draftId;draft.draft_order={[userId]:2};
   let picks=[],observerCallback,resolveSecond;const states=[],secondState=new Promise(resolve=>{resolveSecond=resolve});let draftFetches=0,pickFetches=0;
-  const chrome={runtime:{async sendMessage(message){if(message.type==="ADAPTER_ACTIVATED")return{ok:true};if(message.type==="DRAFT_STATE"){states.push(message.state);if(states.length===2)resolveSecond(message.state);return{ok:true}}if(message.type==="SLEEPER_FETCH"){if(message.url.includes(`/draft/${draftId}/picks`)){pickFetches++;return{ok:true,data:picks}}if(message.url.includes(`/draft/${draftId}`)){draftFetches++;return{ok:true,data:draft}}if(message.url.includes("/players/nfl"))return{ok:true,data:catalog}}return{ok:true}}}};
+  const chrome={runtime:{async sendMessage(message){if(message.type==="ADAPTER_ACTIVATED")return{ok:true};if(message.type==="DRAFT_STATE"){states.push(message.state);return{ok:true}}if(message.type==="DRAFT_PICK_UPDATE"){resolveSecond(message);return{ok:true}}if(message.type==="SLEEPER_FETCH"){if(message.url.includes(`/draft/${draftId}/picks`)){pickFetches++;return{ok:true,data:picks}}if(message.url.includes(`/draft/${draftId}`)){draftFetches++;return{ok:true,data:draft}}if(message.url.includes("/players/nfl"))return{ok:true,data:catalog}}return{ok:true}}}};
   const board={className:"current-sleeper-layout",getAttribute(){return null}},document={hidden:false,body:board,addEventListener(){},querySelectorAll(selector){return selector==='[class],[data-testid]'?[board]:[]}},localStorage={length:1,key:index=>index===0?"user":null,getItem:key=>key==="user"?userId:null};
   class MutationObserver{constructor(callback){observerCallback=callback}observe(){}disconnect(){}}
   const context=vm.createContext({URL,location:{href:`https://sleeper.com/draft/nfl/${draftId}`,origin:"https://sleeper.com"},chrome,crypto:webcrypto,localStorage,document,MutationObserver,globalThis:null,setInterval(){return 1},clearInterval(){},setTimeout,clearTimeout});context.globalThis=context;
@@ -118,6 +118,32 @@ test("Sleeper publishes user pick 106 and immediate autopick 107 even without a 
   picks=Array.from({length:107},(_,index)=>({pick_no:index+1,player_id:index===105?"user-pick-106":index===106?"autopick-107":`picked-${index+1}`,draft_slot:index%10+1}));const started=Date.now();observerCallback([{type:"childList",addedNodes:[{}],removedNodes:[]}]);
   const state=await Promise.race([secondState,new Promise((_,reject)=>setTimeout(()=>reject(new Error("Sleeper mutation refresh timed out")),500))]);
   assert.equal(state.picks.length,107);assert.equal(state.picks[105].playerId,"user-pick-106");assert.equal(state.picks[106].playerId,"autopick-107");assert.ok(Date.now()-started<300);assert.equal(draftFetches,1);assert.equal(pickFetches,2);
+});
+
+test("Sleeper retains a last verified market rank through a transient projection outage",async()=>{
+  const fetchedAt=Date.now()-60_000,marketCache={schemaVersion:1,season:2026,scoring:"adp_std",entries:{offscreen:{adp:84.7,fetchedAt}}};
+  const{state,messages}=await runAdapter(capturedDraft,{projectionFailure:true,marketCache}),player=state.players.find(candidate=>candidate.id==="offscreen");
+  assert.equal(player.adp,84.7);
+  assert.equal(player.adpSource,"sleeper-last-verified-draft-rank");
+  assert.equal(player.adpFetchedAt,fetchedAt);
+  assert.equal(messages.filter(message=>String(message.url||"").includes("api.sleeper.com/projections")).length,2);
+});
+
+test("Sleeper publishes a mutation pick update while the initial player catalog is still loading",async()=>{
+  const draft=structuredClone(capturedDraft);draft.draft_id=draftId;draft.draft_order={[userId]:2};
+  let picks=[],observerCallback,releaseCatalog;const catalogGate=new Promise(resolve=>{releaseCatalog=resolve}),messages=[];
+  const chrome={runtime:{async sendMessage(message){messages.push(message);if(message.type==="ADAPTER_ACTIVATED"||message.type==="ADAPTER_HEARTBEAT")return{ok:true};if(message.type==="SLEEPER_FETCH"){if(message.url.includes(`/draft/${draftId}/picks`))return{ok:true,data:structuredClone(picks)};if(message.url.includes(`/draft/${draftId}`))return{ok:true,data:draft};if(message.url.includes("/players/nfl")){await catalogGate;return{ok:true,data:{}}}if(message.url.includes("api.sleeper.com/projections"))return{ok:true,data:[]}}return{ok:true}}}};
+  const board={className:"draft-board",getAttribute(){return null}},document={hidden:false,body:board,addEventListener(){},querySelectorAll(selector){return selector==='[class],[data-testid]'?[board]:[]}},localStorage={length:1,key:index=>index===0?"user":null,getItem:key=>key==="user"?userId:null};
+  class MutationObserver{constructor(callback){observerCallback=callback}observe(){}disconnect(){}}
+  const context=vm.createContext({URL,location:{href:`https://sleeper.com/draft/nfl/${draftId}`,origin:"https://sleeper.com"},chrome,crypto:webcrypto,localStorage,document,MutationObserver,globalThis:null,setInterval(){return 1},clearInterval(){},setTimeout,clearTimeout});context.globalThis=context;
+  new vm.Script(source,{filename:"sleeper.js"}).runInContext(context);
+  for(let attempt=0;attempt<40&&!observerCallback;attempt++)await new Promise(resolve=>setTimeout(resolve,2));
+  assert.equal(typeof observerCallback,"function");
+  picks=[{pick_no:1,player_id:"autopick-1",draft_slot:1}];observerCallback([{type:"childList",addedNodes:[{}],removedNodes:[]}]);
+  const deadline=Date.now()+300;while(!messages.some(message=>message.type==="DRAFT_PICK_UPDATE")&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,5));
+  const update=messages.find(message=>message.type==="DRAFT_PICK_UPDATE");
+  assert.ok(update,"pick update should not wait for catalog hydration");assert.equal(update.picks[0].playerId,"autopick-1");assert.equal(messages.some(message=>message.type==="DRAFT_STATE"),false);
+  releaseCatalog();
 });
 
 test("Sleeper adapter can be reinjected in the same tab after a stalled connection",()=>{

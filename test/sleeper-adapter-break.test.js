@@ -44,9 +44,8 @@ test("Sleeper projection selection changes with standard, half-PPR, and PPR meta
   h.draft={...h.draft,metadata:{scoring_type:"ppr"}};await h.cycle();assert.equal(h.states.at(-1).players.find(player=>player.id==="alpha").platformProjection,200);assert.equal(h.states.at(-1).players[0].adpScoring,"ppr");
 });
 
-test("a transient Sleeper projection outage retries instead of caching missing data for the tab lifetime",async()=>{
-  const h=await sleeperHarness({projectionFailures:1});assert.equal(h.states.at(-1).players.find(player=>player.id==="alpha").platformProjection,0);
-  await h.cycle();assert.equal(h.states.at(-1).players.find(player=>player.id==="alpha").platformProjection,100);
+test("a transient Sleeper projection outage retries before publishing incomplete market data",async()=>{
+  const h=await sleeperHarness({projectionFailures:1});assert.equal(h.states.at(-1).players.find(player=>player.id==="alpha").platformProjection,100);
   assert.equal(h.messages.filter(message=>String(message.url||"").includes("api.sleeper.com/projections")).length,2);
 });
 

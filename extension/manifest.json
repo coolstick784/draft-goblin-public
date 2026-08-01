@@ -1,7 +1,7 @@
 {
     "manifest_version":  3,
     "name":  "Draft Goblin",
-    "version":  "0.4.10",
+    "version":  "0.4.11",
     "description":  "Compare live projections, ranges, roster fit, and next-pick availability beside ESPN and Sleeper drafts.",
     "icons":  {
                   "16":  "icons/icon-16.png",
