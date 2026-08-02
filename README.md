@@ -2,6 +2,8 @@
 
 ## YouTube Demo: https://youtu.be/PYyGXFjrtps
 
+## You can download the extension here: https://chromewebstore.google.com/detail/draft-goblin/nhfjbaecnlimfgbkdmlmfgjoaodlobbc
+
 <p align="center">
   <img src="store-assets/draft-goblin-mark-transparent.png" alt="Draft Goblin logo" width="180">
 </p>
