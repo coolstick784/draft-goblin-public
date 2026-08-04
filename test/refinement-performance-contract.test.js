@@ -40,7 +40,7 @@ test("extension 10k gate isolates every case behind a true cold-start boundary",
   assert.match(benchmark,/for\(let repetition=1;repetition<=REPEATS_PER_CASE;repetition\+\+\)/);
   assert.match(benchmark,/p100Ms\+BROWSER_BUDGET_MS<=E2E_TARGET_MS/);
   assert.match(benchmark,/refineIterations:10_000/);
-  assert.match(client,/const MAX_PARALLEL_WORKERS=15/);
+  assert.match(client,/const MAX_PARALLEL_WORKERS=8/);
   assert.doesNotMatch(sidepanel,/EXACT_PREDICTION_BUDGET_SECONDS/);
   assert.match(sidepanel,/longRunning=path==="\/v1\/evaluate"\|\|path==="\/v1\/draft-report"/);
   assert.match(sidepanel,/timeout=longRunning\?null:setTimeout/);

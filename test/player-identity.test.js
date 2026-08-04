@@ -58,6 +58,18 @@ test("team changes do not prevent a unique player-name join",()=>{
   assert.equal(matchPlayerIdentity(index,{name:"DJ Moore",position:"WR",team:"CAR"}).id,"p");
 });
 
+test("Yahoo initial-and-surname labels join full Draft Goblin identities",()=>{
+  const index=buildPlayerIdentityIndex([{id:"achane",name:"De'Von Achane",position:"RB",team:"MIA"},{id:"brown",name:"A.J. Brown",position:"WR",team:"PHI"}]);
+  assert.equal(matchPlayerIdentity(index,{name:"D. Achane",position:"RB",team:"Mia"}).id,"achane");
+  assert.equal(matchPlayerIdentity(index,{name:"A. Brown",position:"WR",team:"Phi"}).id,"brown");
+});
+
+test("ambiguous abbreviated names still fail closed",()=>{
+  const index=buildPlayerIdentityIndex([{id:"one",name:"Alex Smith",position:"QB",team:"SF"},{id:"two",name:"Aaron Smith",position:"QB",team:"GB"}]);
+  assert.equal(matchPlayerIdentity(index,{name:"A. Smith",position:"QB"}),null);
+  assert.equal(matchPlayerIdentity(index,{name:"A. Smith",position:"QB",team:"GB"}).id,"two");
+});
+
 test("duplicate API and visible aliases reconcile for every supported name variant",()=>{
   const cases=[
     {canonical:"Kenneth Walker",api:"Kenneth Walker III",visible:"Kenneth Walker",position:"RB",team:"KC"},

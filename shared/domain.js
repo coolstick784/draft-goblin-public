@@ -18,7 +18,7 @@ export function normalizeSettings(value = {}) { return { ...DEFAULT_SETTINGS, ..
 export function validateDraftState(state) {
   const errors = [];
   if (!state || typeof state !== "object") return { valid: false, errors: ["draft state is missing"] };
-  if (!["sleeper", "espn", "fixture"].includes(state.platform)) errors.push("unsupported platform");
+  if (!["sleeper", "espn", "yahoo", "fixture"].includes(state.platform)) errors.push("unsupported platform");
   if (!state.draftId) errors.push("draftId is required");
   if (!Array.isArray(state.picks)) errors.push("picks must be an array");
   if (!Array.isArray(state.players)) errors.push("players must be an array");

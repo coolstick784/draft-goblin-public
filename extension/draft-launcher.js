@@ -12,6 +12,7 @@
       if(/^\d{10,}$/.test(String(queryId||pathId||"")))return"sleeper";
     }
     if(host==="fantasy.espn.com"&&/^\/football\/draft\/?$/i.test(url.pathname)&&/^\d+$/.test(String(url.searchParams.get("leagueId")||"")))return"espn";
+    if(host==="football.fantasysports.yahoo.com"&&/^\/draftclient\/f1\/\d+\/\d+(?:\/|$)/i.test(url.pathname))return"yahoo";
     return null;
   }
   function setStatus(message,isError=false){

@@ -71,14 +71,14 @@ ordinary Monte Carlo drift.
 9. Warm filter/strategy changes target under 50 ms; a verified pick update
    returns a stable recommendation target under one second while deeper
    refinement continues in the background.
-10. Sleeper and ESPN adapters pass mid-draft attach, on-clock, off-clock,
+10. Sleeper, ESPN, and Yahoo adapters pass mid-draft attach, on-clock, off-clock,
     completed-draft, reload, and stale-response tests.
 
 ## Validation loop
 
 Run deterministic unit and invariant tests, saved real-draft replays,
 walk-forward historical seasons, synthetic leagues by league size and scoring
-format, latency benchmarks, and live Sleeper/ESPN mock drafts. Any observed
+format, latency benchmarks, and live Sleeper/ESPN/Yahoo mock drafts. Any observed
 failure becomes a permanent regression fixture before the next iteration.
 
 ### Portable performance gates

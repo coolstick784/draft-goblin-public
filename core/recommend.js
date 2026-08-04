@@ -162,7 +162,7 @@ export function selectSimulationShortlist(board,{limit=8}={}){
 }
 
 const sourceProjectionValues=(player,platform)=>{
-  const values={sleeper:null,espn:null,fantasyPros:null,owned:null},freshness={};
+  const values={sleeper:null,espn:null,yahoo:null,fantasyPros:null,owned:null},freshness={};
   for(const source of player?.projectionConsensus?.sources||[]){
     if(!source?.available||!Number.isFinite(Number(source.points))||Number(source.points)<=0)continue;
     const key=String(source.key||"");

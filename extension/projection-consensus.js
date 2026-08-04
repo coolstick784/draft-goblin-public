@@ -1,6 +1,7 @@
 export const PROJECTION_SOURCES=Object.freeze([
   {key:"sleeper",label:"Sleeper",baseWeight:1,sourceFamily:"draft-site",calibrationStatus:"provisional"},
   {key:"espn",label:"ESPN",baseWeight:1,sourceFamily:"draft-site",calibrationStatus:"provisional"},
+  {key:"yahoo",label:"Yahoo",baseWeight:1,sourceFamily:"draft-site",calibrationStatus:"provisional"},
   {key:"fantasyPros",label:"FantasyPros",baseWeight:1.15,sourceFamily:"expert-consensus",calibrationStatus:"provisional"},
 ]);
 
@@ -14,7 +15,7 @@ const qualityMultiplier=(source,entry,platform)=>{
 
 export function projectionConsensus({season,platform,platformProjection,modelProjection,sources={}}){
   const values={...sources};
-  if(["sleeper","espn"].includes(platform))values[platform]={points:Number(platformProjection||0),season:Number(season),kind:"draft-site"};
+  if(["sleeper","espn","yahoo"].includes(platform))values[platform]={points:Number(platformProjection||0),season:Number(season),kind:"draft-site"};
   const registered=PROJECTION_SOURCES.map(source=>{
     const entry=values[source.key],available=valid(entry,season);
     const quality=available?qualityMultiplier(source,entry,platform):0;

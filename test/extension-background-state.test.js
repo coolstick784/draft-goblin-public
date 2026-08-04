@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 const session = Object.create(null);
 let onMessage;
 let onUpdated;
+let onConnect;
 const executedScripts = [];
 const sentTabMessages = [];
 const openedPanels = [];
@@ -22,6 +23,7 @@ function selected(keys) {
 globalThis.chrome = {
   runtime: {
     onInstalled: { addListener() {} },
+    onConnect: { addListener(listener) { onConnect = listener; } },
     onMessage: { addListener(listener) { onMessage = listener; } },
     getURL(path){return`chrome-extension://draft-goblin/${path}`},
     async getContexts(){return offscreenDocuments.length?[{contextType:"OFFSCREEN_DOCUMENT"}]:[]},
@@ -80,6 +82,7 @@ async function send(message, from = sender) {
 const activate = (adapterSessionId,from=sender) => send({ type: "ADAPTER_ACTIVATED", platform: "sleeper", draftId: "draft-a", adapterSessionId },from);
 const stateMessage = (state, adapterSessionId) => ({ type: "DRAFT_STATE", adapterSessionId, state });
 async function navigate(url){onUpdated(41,{url});for(let attempt=0;attempt<50;attempt++)await new Promise(resolve=>setTimeout(resolve,0))}
+async function announcePanel(message){let listener;const port={name:"DRAFT_GOBLIN_SIDE_PANEL",onMessage:{addListener(value){listener=value}},onDisconnect:{addListener(){}}};onConnect(port);listener(message);for(let attempt=0;attempt<50&&session.activeDraftTab!==Number(message.tabId);attempt++)await new Promise(resolve=>setTimeout(resolve,0))}
 
 function reset() {
   for (const name of Object.keys(session)) delete session[name];
@@ -109,6 +112,14 @@ test("side-panel availability follows draft navigation",async()=>{
   reset();await navigate("https://sleeper.com/drafts");assert.deepEqual(sidePanelOptions.at(-1),{tabId:41,enabled:false});
   await navigate("https://sleeper.com/draft/nfl/1234567890");assert.deepEqual(sidePanelOptions.at(-1),{tabId:41,path:"sidepanel.html",enabled:true});
   await navigate("https://example.com/");assert.deepEqual(sidePanelOptions.at(-1),{tabId:41,enabled:false});
+});
+
+test("a Yahoo side panel claims its exact tab instead of rendering stale ESPN state",async()=>{
+  reset();session.activeDraftTab=40;session["draft:40"]={...draft({id:"old-espn"}),platform:"espn"};
+  await announcePanel({type:"DRAFT_SIDE_PANEL_OPEN",windowId:9,tabId:44,url:"https://football.fantasysports.yahoo.com/draftclient/f1/8103584/3?auth="});
+  assert.equal(session.activeDraftTab,44);
+  assert.equal(executedScripts.at(-1)?.target?.tabId,44);
+  assert.deepEqual(executedScripts.at(-1)?.files,["adapters/yahoo.js"]);
 });
 
 test("simulation requests are brokered through one persistent offscreen worker document",async()=>{

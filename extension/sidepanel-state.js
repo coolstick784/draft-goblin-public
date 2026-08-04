@@ -4,11 +4,20 @@ const snakeSlot=(pickNo,teams)=>{const round=Math.floor((pickNo-1)/teams)+1,with
 
 export function detectedCurrentPick(state){
   const historyPick=Number(state?.picks?.length||0)+1,clockPick=Number(state?.currentPickNo);
-  return String(state?.platform||"").toLowerCase()==="espn"&&Number.isInteger(clockPick)&&clockPick>=historyPick?clockPick:historyPick;
+  const platform=String(state?.platform||"").toLowerCase(),clockAuthoritative=platform==="espn"||platform==="yahoo";
+  return clockAuthoritative&&Number.isInteger(clockPick)&&clockPick>=historyPick?clockPick:historyPick;
 }
 
 export function pickHistoryIsCurrent(state){
-  return String(state?.platform||"").toLowerCase()!=="espn"||detectedCurrentPick(state)<=Number(state?.picks?.length||0)+1;
+  const platform=String(state?.platform||"").toLowerCase();
+  return !["espn","yahoo"].includes(platform)||detectedCurrentPick(state)<=Number(state?.picks?.length||0)+1;
+}
+
+export function draftCompletionState(state){
+  const teams=Number(state?.settings?.teams),rounds=Number(state?.settings?.rounds),userSlot=Number(state?.userSlot),picks=Array.isArray(state?.picks)?state.picks:[],expectedPicks=teams*rounds;
+  const settingsReady=Number.isInteger(teams)&&teams>=2&&Number.isInteger(rounds)&&rounds>=1;
+  const userPicks=Number.isInteger(userSlot)&&userSlot>=1?picks.filter(pick=>Number(pick.slot)===userSlot).length:0;
+  return{expectedPicks:settingsReady?expectedPicks:0,userPicks,draftComplete:settingsReady&&picks.length>=expectedPicks,userRosterComplete:settingsReady&&Number.isInteger(userSlot)&&userSlot>=1&&userPicks>=rounds};
 }
 
 export function completedDraftProjectionCoverage(state,{minimum=.9}={}){

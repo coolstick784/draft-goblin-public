@@ -523,7 +523,7 @@ test("eligible players outside the simulated shortlist show title odds as N/A",a
   assert.doesNotMatch(h.elements.get("boardRows").innerHTML,/Title odds: calculating/)
 });
 
-test("permanent exact failure keeps the shortlist, withholds odds, and stops automatic retries",async t=>{
+test("exact failure keeps the shortlist stable until the bounded retry interval",async t=>{
   const h=await createHarness();t.after(h.cleanup);
   h.enqueue("/v1/evaluate",new Error("Exact title odds could not finish shard 2 after 3 attempts."));
   await h.panel.uiRefresh(true);await tick();await tick();

@@ -45,6 +45,16 @@ test("shared live enrichment keeps the raw ESPN id on remapped picks",()=>{
   assert.equal(enriched.picks[0].platformPlayerId,"espn-101");
 });
 
+test("Yahoo abbreviated names receive and default to Draft Goblin projections",()=>{
+  const state={platform:"yahoo",projectionSeason:2026,settings:{teams:14,rounds:15,scoring:{reception:.5}},picks:[],players:[{id:"y-401",name:"D. Achane",position:"RB",team:"MIA",platformProjection:234.4,eligibleForRecommendation:true}]};
+  const baseline={modelVersion:"test-2026",players:[{id:"model-achane",name:"De'Von Achane",position:"RB",team:"MIA",adp:8,risk:.25,scarcity:.6}]};
+  const draftGoblinFeed={modelVersion:"dg-2026",players:[{id:"model-achane",name:"De'Von Achane",position:"RB",team:"MIA",points:248.7,season:2026}]};
+  const [player]=enrichLiveDraftState({state,baseline,draftGoblinFeed}).players;
+  assert.equal(player.draftGoblinProjectionRaw,248.7);
+  assert.equal(player.projectionConsensus.selectedDriver,"draftGoblin");
+  assert.notEqual(player.mean,234.4);
+});
+
 test("an injury is penalized without changing the performance-outcome range",()=>{
   const state={platform:"espn",projectionSeason:2026,settings:{teams:10,rounds:16,scoring:{reception:1}},picks:[],players:[{id:"espn-pierce",name:"Alec Pierce",position:"WR",team:"IND",platformProjection:202.8,injuryStatus:"Questionable",eligibleForRecommendation:true}]};
   const baseline={modelVersion:"test-2026",players:[{id:"model-pierce",name:"Alec Pierce",position:"WR",team:"IND",meanPpr:172.86,adp:67,risk:.309,scarcity:.55}]};

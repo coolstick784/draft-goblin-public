@@ -4,7 +4,7 @@
 
 The goal is to improve Draft Goblin's independent projections while keeping the extension free, private, fast, and independent of user API keys. A candidate is not promoted because it looks closer to a provider consensus. It must improve leakage-safe prediction of later fantasy outcomes.
 
-Production now uses the calibrated daily owned model as its default projection driver. The projection already present in the user's current draft site remains an explicit alternative. Raw ESPN/Sleeper values are not collected, transmitted, or published; only the locally selected projection may be retained in a private on-device draft report. The owned-model improvement track is separate and starts in shadow mode.
+Production now uses the calibrated daily owned model as its default projection driver. The projection already present in the user's current draft site remains an explicit alternative. Raw ESPN, Sleeper, and Yahoo values are not collected, transmitted, or published; only the locally selected projection may be retained in a private on-device draft report. The owned-model improvement track is separate and starts in shadow mode.
 
 ## Operational work already in place
 

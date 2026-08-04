@@ -22,13 +22,14 @@ function harness(href){
 
 test("launcher is registered before each platform adapter",()=>{
   assert.ok(Number(manifest.minimum_chrome_version)>=116,"sidePanel.open requires Chrome 116 or newer");
-  const sleeper=manifest.content_scripts.find(script=>script.matches.includes("https://sleeper.com/*")),espn=manifest.content_scripts.find(script=>script.matches.includes("https://fantasy.espn.com/*"));
+  const sleeper=manifest.content_scripts.find(script=>script.matches.includes("https://sleeper.com/*")),espn=manifest.content_scripts.find(script=>script.matches.includes("https://fantasy.espn.com/*")),yahoo=manifest.content_scripts.find(script=>script.matches.includes("https://football.fantasysports.yahoo.com/*"));
   assert.deepEqual(sleeper.js,["draft-launcher.js","adapters/sleeper.js"]);
   assert.deepEqual(espn.js,["draft-launcher.js"]);
+  assert.deepEqual(yahoo.js,["draft-launcher.js","adapters/yahoo.js"]);
 });
 
 test("direct ESPN and Sleeper draft links receive a persistent one-click fallback launcher",()=>{
-  for(const href of ["https://fantasy.espn.com/football/draft/?leagueId=12345","https://sleeper.com/draft/nfl/123456789012345678"]){
+  for(const href of ["https://fantasy.espn.com/football/draft/?leagueId=12345","https://sleeper.com/draft/nfl/123456789012345678","https://football.fantasysports.yahoo.com/draftclient/f1/8103584/3"]){
     const h=harness(href);assert.equal(h.context.__draftGoblinLauncher.host.isConnected,true);h.listeners["button:click"]();const message=h.messages.find(item=>item.type==="OPEN_DRAFT_SIDE_PANEL");assert.equal(message.source,"draft-page-launcher");
   }
 });
@@ -53,5 +54,5 @@ test("direct-link launcher can be dismissed without immediately remounting",()=>
 });
 
 test("non-draft pages stay launcher-free even when they link to a draft",()=>{
-  for(const href of ["https://sleeper.com/leagues","https://sleeper.com/drafts","https://fantasy.espn.com/football/mockdraftlobby","https://example.com/"]){const h=harness(href);assert.equal(h.context.__draftGoblinLauncher.host,null);assert.equal(h.messages.length,0)}
+  for(const href of ["https://sleeper.com/leagues","https://sleeper.com/drafts","https://fantasy.espn.com/football/mockdraftlobby","https://football.fantasysports.yahoo.com/f1/mock_lobby","https://example.com/"]){const h=harness(href);assert.equal(h.context.__draftGoblinLauncher.host,null);assert.equal(h.messages.length,0)}
 });

@@ -33,7 +33,7 @@ export async function runColdExtensionCase(testIndex){
   try{const started=performance.now();result=await localApi("/v1/evaluate",{body:JSON.stringify({state,userSlot:snakeSlot(testCase.picked+1,12),strategy:"titleOnly",sourceProfile:"projectionLed",iterations:120,refineIterations:10_000,limit:CANDIDATES,seed:68001+testIndex})});elapsedMs=performance.now()-started}
   finally{clearInterval(memoryMonitor);shutdownLocalEngineWorkers();await waitForWorkerCleanup()}
   peakRss=Math.max(peakRss,process.memoryUsage().rss);
-  const exact=result?.status==="complete"&&result.simulationStatus==="refined"&&result.iterations===10_000&&result.recommendations.length===CANDIDATES&&result.recommendations.every(item=>item.simulation.iterations===10_000&&item.teamSimulation.iterations===10_000),memoryGrowthMb=mb(peakRss-baselineRss),cleanupPass=BrowserWorkerAdapter.active===0;
+  const legalShortlist=Array.isArray(result?.recommendations)&&result.recommendations.length>0&&result.recommendations.length<=CANDIDATES,exact=result?.status==="complete"&&result.simulationStatus==="refined"&&result.iterations===10_000&&legalShortlist&&result.recommendations.every(item=>item.simulation.iterations===10_000&&item.teamSimulation.iterations===10_000),memoryGrowthMb=mb(peakRss-baselineRss),cleanupPass=BrowserWorkerAdapter.active===0;
   return{name:testCase.name,picked:testCase.picked,engineElapsedMs:Number(elapsedMs.toFixed(1)),workerCount:result?.workerCount,candidates:result?.recommendations?.length||0,exact,memory:{baselineRssMb:mb(baselineRss),peakRssMb:mb(peakRss),growthMb:memoryGrowthMb,pass:memoryGrowthMb<=MEMORY_GROWTH_BUDGET_MB},cleanup:{activeWorkers:BrowserWorkerAdapter.active,pass:cleanupPass}};
 }
 

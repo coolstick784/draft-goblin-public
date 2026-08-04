@@ -32,7 +32,7 @@ These require the publisher's identity, accounts, or live authenticated sessions
 - Enable GitHub private vulnerability reporting or replace the security contact with a monitored private email.
 - Host `PRIVACY.md` at a stable public URL and paste that URL into the dashboard.
 - Enter the values and disclosures in `STORE_LISTING.md`; verify every dashboard answer matches the submitted build.
-- Perform one current authenticated ESPN draft-room smoke test and one current Sleeper draft-room smoke test with the exact packaged version.
+- Perform current ESPN, Sleeper, and Yahoo draft-room smoke tests with the exact packaged version.
 - Capture at least one full-bleed 1280x800 screenshot of the exact packaged extension in a live supported draft room. Do not substitute a mockup; store screenshots must show the actual user experience.
 - Upload `dist/draft-goblin-<version>.zip`, the store assets, and reviewer instructions.
 - Use staged publishing for the first release, review all dashboard warnings, then publish after approval.
