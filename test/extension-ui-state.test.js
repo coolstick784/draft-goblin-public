@@ -523,7 +523,7 @@ test("eligible players outside the simulated shortlist show title odds as N/A",a
   assert.doesNotMatch(h.elements.get("boardRows").innerHTML,/Title odds: calculating/)
 });
 
-test("permanent exact failure keeps the shortlist, withholds odds, and stops automatic retries",async t=>{
+test("exact failure keeps the shortlist stable until the bounded retry interval",async t=>{
   const h=await createHarness();t.after(h.cleanup);
   h.enqueue("/v1/evaluate",new Error("Exact title odds could not finish shard 2 after 3 attempts."));
   await h.panel.uiRefresh(true);await tick();await tick();
@@ -695,14 +695,14 @@ test("switching the simulation projection source changes the evaluated points an
   const ownedResult=refined("owned"),siteResult=refined("site");
   ownedResult.recommendations[0].simulation.championshipProbability=.18;ownedResult.recommendations[0].teamSimulation.championshipProbability=.18;
   siteResult.recommendations[0].simulation.championshipProbability=.11;siteResult.recommendations[0].teamSimulation.championshipProbability=.11;
-  for(let index=0;index<4;index++)h.enqueue("/v1/projections/draftgoblin",feed);h.enqueue("/v1/evaluate",ownedResult);
+  h.enqueue("/v1/projections/draftgoblin",feed);await h.panel.startNewDraft();h.enqueue("/v1/evaluate",ownedResult);
   await h.panel.uiRefresh(true);for(let index=0;index<6;index++)await tick();await h.panel.uiRefresh(false);
   let request=h.requests.find(({path})=>path==="/v1/evaluate");
   assert.equal(request.body.state.players[0].mean,260);
   assert.equal(request.body.state.players[0].projectionConsensus.selectedDriver,"draftGoblin");
   assert.equal(h.elements.get("chance").textContent,"18.0%");
 
-  for(let index=0;index<4;index++)h.enqueue("/v1/projections/draftgoblin",feed);h.enqueue("/v1/evaluate",siteResult);
+  h.enqueue("/v1/evaluate",siteResult);
   h.elements.get("projectionDriver").value="platform";h.elements.get("projectionDriver").listeners.get("change")();
   await new Promise(resolve=>setTimeout(resolve,80));for(let index=0;index<6;index++)await tick();await h.panel.uiRefresh(false);
   request=[...h.requests].reverse().find(({path})=>path==="/v1/evaluate");
@@ -944,6 +944,26 @@ test("a new pick immediately clears every prior recommendation before recalculat
   assert.equal(h.elements.get("range").textContent,"Title odds are supporting evidence and will appear after the exact simulation.");
   assert.equal(h.elements.get("chance").textContent,"—");
   assert.equal(h.panel.pollState().lastEvaluationData,undefined);
+});
+
+test("autopick refresh reuses the loaded Draft Goblin feed instead of blocking on a second fetch",async t=>{
+  const h=await createHarness();t.after(h.cleanup);
+  await h.panel.uiRefresh(true);await tick();
+  assert.equal(h.calls.filter(path=>path==="/v1/projections/draftgoblin").length,1);
+  h.setState({platform:"sleeper",draftId:"draft-a",draftRunId:"run-a",userSlot:1,currentPickNo:2,projectionSeason:2026,settings:{teams:4,rounds:4,scoring:{reception:1}},picks:[{pickNo:1,playerId:"autopick-1",slot:2}],players:[{id:"p1",name:"Player p1",position:"RB",team:"BUF",platformProjection:200,projectionSeason:2026,adp:10,eligibleForRecommendation:true}]});
+  h.panel.resetDraftPresentation();
+  await Promise.race([h.panel.uiRefresh(true),new Promise((_,reject)=>setTimeout(()=>reject(new Error("autopick refresh timed out")),100))]);await tick();
+  assert.equal(h.calls.filter(path=>path==="/v1/projections/draftgoblin").length,1);
+  assert.equal(h.elements.get("recommendations").querySelector(".skeleton"),null);
+});
+
+test("a new autopick aborts obsolete quick evaluation and renders the new clock without waiting",async t=>{
+  const h=await createHarness();t.after(h.cleanup);const obsolete=deferred();h.enqueue("/v1/quick-evaluate",obsolete);
+  const oldRefresh=h.panel.uiRefresh(true);for(let attempt=0;attempt<20&&!h.calls.includes("/v1/quick-evaluate");attempt++)await tick();
+  h.setState({platform:"sleeper",draftId:"draft-a",draftRunId:"run-a",userSlot:1,currentPickNo:2,projectionSeason:2026,settings:{teams:4,rounds:4,scoring:{reception:1}},picks:[{pickNo:1,playerId:"autopick-1",slot:2}],players:[{id:"p1",name:"Player p1",position:"RB",team:"BUF",platformProjection:200,projectionSeason:2026,adp:10,eligibleForRecommendation:true}]});
+  h.panel.resetDraftPresentation();const started=performance.now(),nextRefresh=h.panel.uiRefresh(true);
+  await Promise.race([Promise.all([oldRefresh,nextRefresh]),new Promise((_,reject)=>setTimeout(()=>reject(new Error("new pick stayed serialized behind obsolete quick evaluation")),100))]);await tick();
+  assert.ok(performance.now()-started<100);assert.equal(h.calls.filter(path=>path==="/v1/quick-evaluate").length,2);assert.equal(h.elements.get("recommendations").querySelector(".skeleton"),null);
 });
 
 test("an unchanged refined poll preserves the rendered card node",async t=>{

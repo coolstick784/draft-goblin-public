@@ -3,7 +3,7 @@ export const PROJECTION_DRIVER_METHOD="draft-goblin-primary-user-selectable-curr
 export const PROJECTION_DRIVERS=Object.freeze(["draftGoblin","platform"]);
 
 const positive=value=>{const number=Number(value);return Number.isFinite(number)&&number>0?number:null};
-const platformLabel=value=>String(value||"").toLowerCase()==="espn"?"ESPN":String(value||"").toLowerCase()==="sleeper"?"Sleeper":"Current draft site";
+const platformLabel=value=>String(value||"").toLowerCase()==="espn"?"ESPN":String(value||"").toLowerCase()==="sleeper"?"Sleeper":String(value||"").toLowerCase()==="yahoo"?"Yahoo":"Current draft site";
 
 export function projectionDriverSelection({
   season,

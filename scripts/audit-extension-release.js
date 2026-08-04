@@ -45,7 +45,7 @@ check(!manifest.permissions.includes("cookies"), "extension does not request coo
 check(!manifest.permissions.includes("tabs"), "extension does not request browsing-history access");
 check(
   manifest.host_permissions.every(value =>
-    /^https:\/\/(?:api\.sleeper\.app|(?:www\.)?sleeper\.(?:app|com)|fantasy\.espn\.com|lm-api-reads\.fantasy\.espn\.com|coolstick784\.github\.io)\/\*$/.test(value)
+    /^https:\/\/(?:api\.sleeper\.app|(?:www\.)?sleeper\.(?:app|com)|fantasy\.espn\.com|lm-api-reads\.fantasy\.espn\.com|football\.fantasysports\.yahoo\.com|pub-api\.fantasysports\.yahoo\.com|coolstick784\.github\.io)\/\*$/.test(value)
       || value === "https://api.sleeper.com/projections/nfl/*",
   ),
   "host permissions are restricted to supported draft and projection hosts",
@@ -91,7 +91,7 @@ const listing = read("STORE_LISTING.md");
 for (const permission of manifest.permissions) {
   check(listing.includes(`\`${permission}\``), `store listing explains ${permission}`);
 }
-for (const host of ["ESPN", "Sleeper", "coolstick784.github.io"]) {
+for (const host of ["ESPN", "Sleeper", "Yahoo", "coolstick784.github.io"]) {
   check(listing.includes(host), `store listing explains ${host} access`);
 }
 

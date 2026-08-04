@@ -23,9 +23,11 @@ test("unchanged ESPN connection polls preserve their rendered DOM",()=>{
 test("recommendation polls preserve the visible header status",()=>{
   const panel=fs.readFileSync(new URL("../extension/sidepanel.js",import.meta.url),"utf8");
   assert.match(panel,/const setRecommendationStatus=/);
-  assert.match(panel,/contextKey=userPickContext\(state\);[^\n]+samePresentation=renderedContextKey===contextKey/);
+  assert.match(panel,/requested==="Recommendations unavailable"&&String\(currentLiveState\?\.platform\|\|""\)\.toLowerCase\(\)==="yahoo"\?"Calculating decision context":requested/);
+  assert.match(panel,/contextKey=userPickContext\(state\)[;,][^\n]+samePresentation=renderedContextKey===contextKey/);
   assert.match(panel,/resultVisible=samePresentation&&titleOddsReady\(renderedTitleEvidenceData\)/);
   assert.equal((panel.match(/setRecommendationStatus\(state,waitingForOdds\)/g)||[]).length,2);
+  assert.match(panel,/else if\(consecutiveEvaluationFailures<3\|\|cards\.querySelector\("\.card:not\(\.skeleton\)"\)\)setTextIfChanged\(\$\("status"\),"Calculating decision context"\)/);
 });
 
 test("live draft refreshes never reopen the setup coach while enriching data",()=>{

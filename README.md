@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Your live fantasy football draft companion for ESPN and Sleeper.</strong>
+  <strong>Your live fantasy football draft companion for ESPN, Sleeper, and Yahoo.</strong>
 </p>
 
 Draft Goblin helps you make every pick with confidence. Open it beside your live NFL fantasy draft to compare the best available players, understand how each one fits your roster, and see who is likely to be gone before your next turn.
@@ -49,7 +49,7 @@ These are agreement measurements against consensus, not accuracy measurements ag
 
 ### Live recommendations
 
-Draft Goblin connects to your active ESPN or Sleeper draft and updates as picks are made. It shows eight leading options for your next selection, with one clearly labeled as the current lean.
+Draft Goblin connects to your active ESPN, Sleeper, or Yahoo draft and updates as picks are made. It shows eight leading options for your next selection, with one clearly labeled as the current lean.
 
 For every option, you can see:
 
@@ -113,7 +113,7 @@ Your ten most recent reports are saved locally in Chrome.
 Draft Goblin currently supports:
 
 - NFL fantasy football;
-- ESPN and Sleeper;
+  - ESPN, Sleeper, and Yahoo;
 - snake redraft leagues; and
 - standard, half-PPR, and PPR scoring.
 
@@ -141,7 +141,7 @@ Draft Goblin requires Google Chrome 116 or newer.
 
 ## Use Draft Goblin
 
-1. Open your ESPN or Sleeper snake draft.
+1. Open your ESPN, Sleeper, or Yahoo snake draft.
 2. Select **Open Draft Goblin** on the draft page. If the button is not visible, select the Draft Goblin icon in Chrome's toolbar.
 3. Keep the Draft Goblin side panel open beside your draft room.
 4. Wait for the connection checklist to confirm the draft, league settings, and your draft slot.
@@ -178,7 +178,7 @@ Read the complete [privacy policy](PRIVACY.md) and [security policy](SECURITY.md
 - Make sure you are inside the active draft room, not a league page or draft lobby.
 - Confirm that the league uses a supported format.
 - Select the refresh button in the Draft Goblin header.
-- Reload the ESPN or Sleeper draft tab.
+- Reload the ESPN, Sleeper, or Yahoo draft tab.
 - Open `chrome://extensions`, find Draft Goblin, and select **Reload**.
 - Return to the draft room and select **Open Draft Goblin** again.
 
@@ -206,7 +206,7 @@ Draft Goblin waits until every team's final pick has synced. The report starts a
 
 ### Does Draft Goblin make picks for me?
 
-No. Draft Goblin is strictly read-only. It gives you information and recommendations, but you make every selection on ESPN or Sleeper.
+No. Draft Goblin is strictly read-only. It gives you information and recommendations, but you make every selection on ESPN, Sleeper, or Yahoo.
 
 ### Do I need an account?
 

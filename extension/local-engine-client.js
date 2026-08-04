@@ -11,7 +11,7 @@ let catalogPromise,bundledDraftGoblinPromise,sequence=0;
 // cannot consume the browser-side latency reserve before simulation begins.
 // Keep the working adaptive parallelism from the original exact engine. The
 // payload below is compacted before fan-out to bound clone and memory costs.
-const MAX_PARALLEL_WORKERS=15,WARMUP_BATCH_SIZE=6,WORKER_IDLE_SHUTDOWN_MS=60_000,EXACT_SHARD_INACTIVITY_MS=2000,LOW_CORE_INACTIVITY_MS=5000,EXACT_SHARD_RETRIES=2,EXACT_RECOMMENDATION_PREP_BUDGET_MS=500;
+const MAX_PARALLEL_WORKERS=8,WARMUP_BATCH_SIZE=6,WORKER_IDLE_SHUTDOWN_MS=60_000,EXACT_SHARD_INACTIVITY_MS=2000,LOW_CORE_INACTIVITY_MS=5000,EXACT_SHARD_RETRIES=2,EXACT_RECOMMENDATION_PREP_BUDGET_MS=500;
 const evaluationWorkers=Array(MAX_PARALLEL_WORKERS).fill(null),evaluationWorkerQueues=Array(MAX_PARALLEL_WORKERS).fill(Promise.resolve());let workerWarmPromise,workerIdleTimer;
 const assetJson=path=>fetch(chrome.runtime.getURL(path)).then(response=>{if(!response.ok)throw new Error(`Bundled Draft Goblin data is missing (${response.status}). Reload the extension.`);return response.json()});
 const scoringFromPath=path=>String(new URL(path,"https://extension.invalid").searchParams.get("scoring")||"PPR").toUpperCase();

@@ -48,6 +48,7 @@ const compact=value=>ascii(value).toLowerCase().replace(/\b(?:jr|sr|ii|iii|iv|v)
 const literalName=value=>ascii(value).toLowerCase().replace(/[^a-z0-9]/g,"");
 const position=value=>String(value||"").toUpperCase().replace("D/ST","DST").replace("DEF","DST");
 const marketRank=value=>{const rank=Number(value);return Number.isFinite(rank)&&rank>0&&rank<500?rank:null};
+const initialSurname=value=>{const parts=ascii(value).toLowerCase().replace(/\b(?:jr|sr|ii|iii|iv|v)\.?\s*$/i,"").split(/[^a-z0-9]+/).filter(Boolean);return parts.length>=2?`${parts[0][0]}:${parts.at(-1)}`:""};
 
 function duplicateIdentityMatch(matches,player){
   if(matches.length<2)return matches[0]||null;
@@ -78,8 +79,9 @@ function defenseCode(player){
 }
 
 export function playerIdentityKeys(player){
-  const name=playerIdentityKey(player),pos=position(player?.position),keys=[];
+  const name=playerIdentityKey(player),pos=position(player?.position),shortName=initialSurname(player?.name),keys=[];
   if(name){keys.push(`name:${name}`);if(pos)keys.push(`name-position:${name}:${pos}`)}
+  if(shortName){keys.push(`initial-surname:${shortName}`);if(pos)keys.push(`initial-surname-position:${shortName}:${pos}`)}
   const defense=defenseCode(player);if(defense)keys.unshift(`defense:${defense}`);
   return[...new Set(keys)];
 }

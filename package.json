@@ -1,6 +1,6 @@
 {
   "name": "draft-goblin",
-  "version": "0.4.10",
+  "version": "0.4.25",
   "private": true,
   "type": "module",
   "scripts": {

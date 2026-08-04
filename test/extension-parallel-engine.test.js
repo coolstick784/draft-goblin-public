@@ -42,7 +42,7 @@ class SilentWarmupWorkerAdapter extends BrowserWorkerAdapter{
 const waitForWorkerCleanup=async(timeoutMs=5000)=>{const deadline=Date.now()+timeoutMs;while(BrowserWorkerAdapter.active&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,20));return BrowserWorkerAdapter.active};
 
 test("the bounded exact-simulation pool warms concurrently inside the cold-start budget",async()=>{
-  globalThis.Worker=WarmupTrackingWorkerAdapter;globalThis.chrome={runtime:{getURL:value=>value}};const{warmLocalEngineWorkers,shutdownLocalEngineWorkers}=await import("../extension/local-engine-client.js");shutdownLocalEngineWorkers();await waitForWorkerCleanup();WarmupTrackingWorkerAdapter.activeHealth=0;WarmupTrackingWorkerAdapter.maxActiveHealth=0;await warmLocalEngineWorkers();const expectedWorkers=Math.min(6,15,Math.max(1,(Number(globalThis.navigator?.hardwareConcurrency)||4)-1));assert.equal(WarmupTrackingWorkerAdapter.maxActiveHealth,expectedWorkers);shutdownLocalEngineWorkers();await waitForWorkerCleanup()
+  globalThis.Worker=WarmupTrackingWorkerAdapter;globalThis.chrome={runtime:{getURL:value=>value}};const{warmLocalEngineWorkers,shutdownLocalEngineWorkers}=await import("../extension/local-engine-client.js");shutdownLocalEngineWorkers();await waitForWorkerCleanup();WarmupTrackingWorkerAdapter.activeHealth=0;WarmupTrackingWorkerAdapter.maxActiveHealth=0;await warmLocalEngineWorkers();const expectedWorkers=Math.min(6,8,Math.max(1,(Number(globalThis.navigator?.hardwareConcurrency)||4)-1));assert.equal(WarmupTrackingWorkerAdapter.maxActiveHealth,expectedWorkers);shutdownLocalEngineWorkers();await waitForWorkerCleanup()
 });
 
 test("low-core devices only warm workers the exact simulation can use",async()=>{
@@ -50,14 +50,14 @@ test("low-core devices only warm workers the exact simulation can use",async()=>
 });
 
 test("an idle persistent pool releases every simulation worker between drafts",async()=>{
-  globalThis.Worker=BrowserWorkerAdapter;globalThis.chrome={runtime:{getURL:value=>value}};const{scheduleLocalEngineWorkerShutdown,shutdownLocalEngineWorkers,warmLocalEngineWorkers}=await import("../extension/local-engine-client.js");shutdownLocalEngineWorkers();await waitForWorkerCleanup();await warmLocalEngineWorkers();const expected=Math.min(15,Math.max(1,(Number(globalThis.navigator?.hardwareConcurrency)||4)-1));assert.equal(BrowserWorkerAdapter.active,expected);scheduleLocalEngineWorkerShutdown(10);await new Promise(resolve=>setTimeout(resolve,30));await waitForWorkerCleanup();assert.equal(BrowserWorkerAdapter.active,0)
+  globalThis.Worker=BrowserWorkerAdapter;globalThis.chrome={runtime:{getURL:value=>value}};const{scheduleLocalEngineWorkerShutdown,shutdownLocalEngineWorkers,warmLocalEngineWorkers}=await import("../extension/local-engine-client.js");shutdownLocalEngineWorkers();await waitForWorkerCleanup();await warmLocalEngineWorkers();const expected=Math.min(8,Math.max(1,(Number(globalThis.navigator?.hardwareConcurrency)||4)-1));assert.equal(BrowserWorkerAdapter.active,expected);scheduleLocalEngineWorkerShutdown(10);await new Promise(resolve=>setTimeout(resolve,30));await waitForWorkerCleanup();assert.equal(BrowserWorkerAdapter.active,0)
 });
 
 test("isolated parallel extension workers are bit-exact with the in-process engine",async()=>{
   globalThis.Worker=BrowserWorkerAdapter;globalThis.chrome={runtime:{getURL:value=>value}};
   const{localApi,shutdownLocalEngineWorkers}=await import("../extension/local-engine-client.js");
   const picked=84,seed=7102,state=fixtureState({teams:12,rounds:16,picked});state.draftId=`extension-dedicated-exact-${picked}`;state.updatedAt=Date.now();const payload={state,userSlot:snakeSlot(picked+1,12),strategy:"titleOnly",sourceProfile:"projectionLed",iterations:61,refineIterations:61,limit:5,seed},single=await runEngineRequest("evaluate",payload),dedicated=await localApi("/v1/evaluate",{body:JSON.stringify(payload)});
-  const expectedWorkers=Math.min(15,Math.max(1,Number(globalThis.navigator?.hardwareConcurrency)||4)-1,61);assert.equal(dedicated.workerCount,expectedWorkers);assert.equal(dedicated.iterations,61);assert.deepEqual(dedicated.recommendations,single.recommendations);shutdownLocalEngineWorkers();await waitForWorkerCleanup()
+  const expectedWorkers=Math.min(8,Math.max(1,Number(globalThis.navigator?.hardwareConcurrency)||4)-1,61);assert.equal(dedicated.workerCount,expectedWorkers);assert.equal(dedicated.iterations,61);assert.deepEqual(dedicated.recommendations,single.recommendations);shutdownLocalEngineWorkers();await waitForWorkerCleanup()
 });
 
 test("overlapping board evaluations are serialized per worker without callback loss",async()=>{
